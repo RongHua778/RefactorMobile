@@ -1,0 +1,725 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0168100ba70e486479f31ec9f99a31ad, type: 3}
+  m_Name: Challenge04
+  m_EditorClassIdentifier: 
+  ModeType: 2
+  ModeID: 34
+  Level: 0
+  StartCoin: 500
+  PlayerHealth: 10
+  Wave: 30
+  LevelIntensify: 2
+  WaveSets:
+  - waveIndex: 10
+    baseNum: 2
+    powerNum: 1
+  - waveIndex: 20
+    baseNum: 1
+    powerNum: 1.5
+  - waveIndex: 30
+    baseNum: 1.5
+    powerNum: 1.7
+  NormalEnemies:
+  - {fileID: 11400000, guid: a6b4f2578a98cf54caf0ac3718b54059, type: 2}
+  - {fileID: 11400000, guid: 52077df3b03c9b446a10d3ec4b279ff5, type: 2}
+  - {fileID: 11400000, guid: a2fa830bad8e11c448623ce28354a1bd, type: 2}
+  - {fileID: 11400000, guid: 8efd383e225b02844a5ac997f1e5f924, type: 2}
+  EliteEnemies:
+  - {fileID: 11400000, guid: 2c20ae5eda36dfb4596a984d69a8db4b, type: 2}
+  - {fileID: 11400000, guid: 0a577738dc20fea45a9af16979f88841, type: 2}
+  - {fileID: 11400000, guid: 21089e74ee5b9a64686963eefe850ccb, type: 2}
+  - {fileID: 11400000, guid: 4414d8fdced55104fb97c2c6ed6ec11a, type: 2}
+  Boss1:
+  - {fileID: 11400000, guid: 4868c66738024d74285c7f2ac26477ad, type: 2}
+  Boss2:
+  - {fileID: 11400000, guid: 592bee5b7f81e704c8216f7a919ad1d7, type: 2}
+  Boss3:
+  - {fileID: 11400000, guid: f24cc49abbf71924997026db7b1acf26, type: 2}
+  Boss4: []
+  LevelInfo: CHANLENGE0
+  TrapCount: 0
+  EliteWave: 19
+  ExpIntensify: 5
+  Choices:
+  - Choices:
+    - ChoiceType: 0
+      Value1: BOMBARD
+      Elements: 040000000000000001000000
+    - ChoiceType: 0
+      Value1: CONSTRUCTOR
+      Elements: 030000000200000002000000
+    - ChoiceType: 0
+      Value1: LASER
+      Elements: 010000000100000002000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: CORE
+      Elements: 030000000400000003000000
+    - ChoiceType: 0
+      Value1: CHILLER
+      Elements: 030000000400000000000000
+    - ChoiceType: 0
+      Value1: ROTARY
+      Elements: 020000000100000002000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: BOOMERRANG
+      Elements: 010000000100000004000000
+    - ChoiceType: 0
+      Value1: SNIPER
+      Elements: 030000000300000001000000
+    - ChoiceType: 0
+      Value1: COORDINATOR
+      Elements: 030000000000000001000000
+  - Choices:
+    - ChoiceType: 1
+      Value1: MARKTRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: STUNTRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: BLINKTRAP
+      Elements: 
+  - Choices:
+    - ChoiceType: 2
+      Value1: TECHSUPER
+      Elements: 00000000
+    - ChoiceType: 2
+      Value1: TECHSNIPER
+      Elements: 01000000
+    - ChoiceType: 2
+      Value1: TECHRAPID
+      Elements: 00000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: MORTAR
+      Elements: 020000000400000004000000
+    - ChoiceType: 0
+      Value1: ROTARY
+      Elements: 010000000200000004000000
+    - ChoiceType: 0
+      Value1: ULTRA
+      Elements: 010000000400000001000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: CHILLER
+      Elements: 020000000200000003000000
+    - ChoiceType: 0
+      Value1: FIRER
+      Elements: 000000000200000001000000
+    - ChoiceType: 0
+      Value1: SNIPER
+      Elements: 040000000000000003000000
+  - Choices:
+    - ChoiceType: 1
+      Value1: BLINKTRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: DAMAGETRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: MARKTRAP
+      Elements: 
+  - Choices:
+    - ChoiceType: 0
+      Value1: SCATTER
+      Elements: 040000000200000004000000
+    - ChoiceType: 0
+      Value1: CORE
+      Elements: 010000000200000003000000
+    - ChoiceType: 0
+      Value1: CHILLER
+      Elements: 010000000300000001000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: ULTRA
+      Elements: 020000000400000002000000
+    - ChoiceType: 0
+      Value1: COORDINATOR
+      Elements: 020000000100000004000000
+    - ChoiceType: 0
+      Value1: BOOMERRANG
+      Elements: 020000000000000002000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: COORDINATOR
+      Elements: 030000000300000002000000
+    - ChoiceType: 0
+      Value1: LASER
+      Elements: 020000000100000004000000
+    - ChoiceType: 0
+      Value1: CORE
+      Elements: 020000000100000002000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: SNOW
+      Elements: 000000000200000000000000
+    - ChoiceType: 0
+      Value1: FIRER
+      Elements: 010000000100000004000000
+    - ChoiceType: 0
+      Value1: MINER
+      Elements: 030000000200000000000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: LASER
+      Elements: 030000000000000001000000
+    - ChoiceType: 0
+      Value1: CORE
+      Elements: 020000000400000001000000
+    - ChoiceType: 0
+      Value1: SCATTER
+      Elements: 010000000100000001000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: BOMBARD
+      Elements: 040000000000000000000000
+    - ChoiceType: 0
+      Value1: CONSTRUCTOR
+      Elements: 000000000300000002000000
+    - ChoiceType: 0
+      Value1: FIRER
+      Elements: 010000000400000004000000
+  - Choices:
+    - ChoiceType: 2
+      Value1: TECHCONSTRUCTOR
+      Elements: 00000000
+    - ChoiceType: 2
+      Value1: TECHSCATTER
+      Elements: 00000000
+    - ChoiceType: 2
+      Value1: TECHBOOMERANG
+      Elements: 01000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: CHILLER
+      Elements: 040000000000000000000000
+    - ChoiceType: 0
+      Value1: SNOW
+      Elements: 020000000200000002000000
+    - ChoiceType: 0
+      Value1: LASER
+      Elements: 030000000300000004000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: MINER
+      Elements: 040000000000000004000000
+    - ChoiceType: 0
+      Value1: LASER
+      Elements: 010000000300000000000000
+    - ChoiceType: 0
+      Value1: ROTARY
+      Elements: 010000000000000000000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: CONSTRUCTOR
+      Elements: 000000000300000003000000
+    - ChoiceType: 0
+      Value1: MINER
+      Elements: 000000000300000001000000
+    - ChoiceType: 0
+      Value1: COORDINATOR
+      Elements: 000000000300000003000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: SNIPER
+      Elements: 040000000100000003000000
+    - ChoiceType: 0
+      Value1: FIRER
+      Elements: 010000000400000003000000
+    - ChoiceType: 0
+      Value1: SNOW
+      Elements: 030000000200000001000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: CORE
+      Elements: 030000000000000001000000
+    - ChoiceType: 0
+      Value1: SNOW
+      Elements: 000000000000000003000000
+    - ChoiceType: 0
+      Value1: RAPIDER
+      Elements: 010000000300000002000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: SCATTER
+      Elements: 020000000100000003000000
+    - ChoiceType: 0
+      Value1: NUCLEAR
+      Elements: 040000000200000004000000
+    - ChoiceType: 0
+      Value1: RAPIDER
+      Elements: 000000000000000004000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: ULTRA
+      Elements: 040000000400000004000000
+    - ChoiceType: 0
+      Value1: CORE
+      Elements: 040000000400000001000000
+    - ChoiceType: 0
+      Value1: SUPER
+      Elements: 010000000000000003000000
+  - Choices:
+    - ChoiceType: 1
+      Value1: DAMAGETRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: IMITATETRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: MARKTRAP
+      Elements: 
+  - Choices:
+    - ChoiceType: 0
+      Value1: CHILLER
+      Elements: 040000000400000001000000
+    - ChoiceType: 0
+      Value1: BOOMERRANG
+      Elements: 000000000000000002000000
+    - ChoiceType: 0
+      Value1: SCATTER
+      Elements: 010000000000000003000000
+  - Choices:
+    - ChoiceType: 1
+      Value1: IMITATETRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: BLINKTRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: STUNTRAP
+      Elements: 
+  - Choices:
+    - ChoiceType: 0
+      Value1: ULTRA
+      Elements: 030000000000000001000000
+    - ChoiceType: 0
+      Value1: CONSTRUCTOR
+      Elements: 030000000200000004000000
+    - ChoiceType: 0
+      Value1: SNOW
+      Elements: 030000000000000003000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: SNOW
+      Elements: 000000000000000004000000
+    - ChoiceType: 0
+      Value1: ULTRA
+      Elements: 030000000200000001000000
+    - ChoiceType: 0
+      Value1: ROTARY
+      Elements: 040000000200000003000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: COORDINATOR
+      Elements: 030000000000000003000000
+    - ChoiceType: 0
+      Value1: FIRER
+      Elements: 010000000200000000000000
+    - ChoiceType: 0
+      Value1: CONSTRUCTOR
+      Elements: 030000000400000001000000
+  - Choices:
+    - ChoiceType: 0
+      Value1: SUPER
+      Elements: 030000000400000003000000
+    - ChoiceType: 0
+      Value1: ULTRA
+      Elements: 010000000200000003000000
+    - ChoiceType: 0
+      Value1: MORTAR
+      Elements: 010000000200000002000000
+  - Choices:
+    - ChoiceType: 1
+      Value1: IMITATETRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: DAMAGETRAP
+      Elements: 
+    - ChoiceType: 1
+      Value1: STUNTRAP
+      Elements: 
+  SaveSequences:
+  - SequencesList:
+    - EnemyType: 0
+      Intensify: 0.5
+      Amount: 3
+      CoolDown: 0.3
+      IsBoss: 0
+      Wave: 0
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 2
+      Intensify: 1
+      Amount: 2
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 1
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 0
+      Intensify: 1.5
+      Amount: 5
+      CoolDown: 0.3
+      IsBoss: 0
+      Wave: 2
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 1
+      Intensify: 21.5
+      Amount: 3
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 3
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 1
+      Intensify: 47.5
+      Amount: 4
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 4
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 1
+      Intensify: 79.5
+      Amount: 4
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 5
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 20
+      Intensify: 117.5
+      Amount: 1
+      CoolDown: 2
+      IsBoss: 0
+      Wave: 6
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 1
+      Intensify: 161.5
+      Amount: 5
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 7
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 0
+      Intensify: 211.5
+      Amount: 11
+      CoolDown: 0.3
+      IsBoss: 0
+      Wave: 8
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 10
+      Intensify: 267.5
+      Amount: 1
+      CoolDown: 1
+      IsBoss: 1
+      Wave: 9
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 3
+      Intensify: 332.74554
+      Amount: 2
+      CoolDown: 7
+      IsBoss: 0
+      Wave: 10
+      DmgResist: 0
+      first: 1
+    - EnemyType: 0
+      Intensify: 332.74554
+      Amount: 8
+      CoolDown: 0.6
+      IsBoss: 0
+      Wave: 10
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 3
+      Intensify: 407.7113
+      Amount: 2
+      CoolDown: 7
+      IsBoss: 0
+      Wave: 11
+      DmgResist: 0
+      first: 1
+    - EnemyType: 1
+      Intensify: 407.7113
+      Amount: 4
+      CoolDown: 1.7
+      IsBoss: 0
+      Wave: 11
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 1
+      Intensify: 492.84973
+      Amount: 4
+      CoolDown: 2.5500002
+      IsBoss: 0
+      Wave: 12
+      DmgResist: 0
+      first: 1
+    - EnemyType: 0
+      Intensify: 492.84973
+      Amount: 7
+      CoolDown: 0.90000004
+      IsBoss: 0
+      Wave: 12
+      DmgResist: 0
+      first: 1
+    - EnemyType: 2
+      Intensify: 492.84973
+      Amount: 4
+      CoolDown: 2.5500002
+      IsBoss: 0
+      Wave: 12
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 2
+      Intensify: 588.59406
+      Amount: 7
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 13
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 2
+      Intensify: 695.3605
+      Amount: 8
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 14
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 0
+      Intensify: 813.55
+      Amount: 18
+      CoolDown: 0.3
+      IsBoss: 0
+      Wave: 15
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 20
+      Intensify: 943.55
+      Amount: 1
+      CoolDown: 2
+      IsBoss: 0
+      Wave: 16
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 1
+      Intensify: 1085.7356
+      Amount: 4
+      CoolDown: 2.5500002
+      IsBoss: 0
+      Wave: 17
+      DmgResist: 0
+      first: 1
+    - EnemyType: 3
+      Intensify: 1085.7356
+      Amount: 2
+      CoolDown: 10.5
+      IsBoss: 0
+      Wave: 17
+      DmgResist: 0
+      first: 1
+    - EnemyType: 0
+      Intensify: 1085.7356
+      Amount: 9
+      CoolDown: 0.90000004
+      IsBoss: 0
+      Wave: 17
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 0
+      Intensify: 1240.4707
+      Amount: 21
+      CoolDown: 0.3
+      IsBoss: 0
+      Wave: 18
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 26
+      Intensify: 1408.1089
+      Amount: 1
+      CoolDown: 1
+      IsBoss: 1
+      Wave: 19
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 4
+      Intensify: 1678.437
+      Amount: 6
+      CoolDown: 1.7
+      IsBoss: 0
+      Wave: 20
+      DmgResist: 0
+      first: 1
+    - EnemyType: 5
+      Intensify: 1678.437
+      Amount: 6
+      CoolDown: 1.7
+      IsBoss: 0
+      Wave: 20
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 6
+      Intensify: 1969.1393
+      Amount: 11
+      CoolDown: 0.6
+      IsBoss: 0
+      Wave: 21
+      DmgResist: 0
+      first: 1
+    - EnemyType: 4
+      Intensify: 1969.1393
+      Amount: 6
+      CoolDown: 1.7
+      IsBoss: 0
+      Wave: 21
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 7
+      Intensify: 2280.7068
+      Amount: 2
+      CoolDown: 10.5
+      IsBoss: 0
+      Wave: 22
+      DmgResist: 0
+      first: 1
+    - EnemyType: 5
+      Intensify: 2280.7068
+      Amount: 5
+      CoolDown: 2.5500002
+      IsBoss: 0
+      Wave: 22
+      DmgResist: 0
+      first: 1
+    - EnemyType: 4
+      Intensify: 2280.7068
+      Amount: 5
+      CoolDown: 2.5500002
+      IsBoss: 0
+      Wave: 22
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 4
+      Intensify: 2613.6191
+      Amount: 11
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 23
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 4
+      Intensify: 2968.3457
+      Amount: 12
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 24
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 5
+      Intensify: 3345.3457
+      Amount: 12
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 25
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 20
+      Intensify: 3745.0693
+      Amount: 1
+      CoolDown: 2
+      IsBoss: 0
+      Wave: 26
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 6
+      Intensify: 4167.9575
+      Amount: 10
+      CoolDown: 0.90000004
+      IsBoss: 0
+      Wave: 27
+      DmgResist: 0
+      first: 1
+    - EnemyType: 7
+      Intensify: 4167.9575
+      Amount: 2
+      CoolDown: 10.5
+      IsBoss: 0
+      Wave: 27
+      DmgResist: 0
+      first: 1
+    - EnemyType: 5
+      Intensify: 4167.9575
+      Amount: 6
+      CoolDown: 2.5500002
+      IsBoss: 0
+      Wave: 27
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 5
+      Intensify: 4614.444
+      Amount: 13
+      CoolDown: 0.85
+      IsBoss: 0
+      Wave: 28
+      DmgResist: 0
+      first: 1
+  - SequencesList:
+    - EnemyType: 17
+      Intensify: 5084.953
+      Amount: 1
+      CoolDown: 1
+      IsBoss: 1
+      Wave: 29
+      DmgResist: 0
+      first: 1
+  GuideDialogues: []
+  CanSaveGame: 1
+  WinDialogue: {fileID: 0}
+  LostDialogue: {fileID: 0}
+  WaveDialogue: []

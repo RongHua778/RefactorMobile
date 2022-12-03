@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5e7d9a89618bc4dade5c8c8a6427cf, type: 3}
+  m_Name: GameContentFactory
+  m_EditorClassIdentifier: 
+  emptyAtt: {fileID: 11400000, guid: 4c8da1e145ab6214c944bcc43fad4205, type: 2}
+  spawnPointAtt: {fileID: 11400000, guid: 0263469d903409a46837ef1fb50628ce, type: 2}
+  destinationAtt: {fileID: 11400000, guid: 132429f84cc3e32449aabf043aee0234, type: 2}
+  elementTurrets:
+  - {fileID: 11400000, guid: 493c6f7428affb6409f06eaac5d19930, type: 2}
+  - {fileID: 11400000, guid: 6c3131e68b56a9b4db13891b470a159b, type: 2}
+  - {fileID: 11400000, guid: 0387619ceeeda7746a7e51b43f234353, type: 2}
+  - {fileID: 11400000, guid: 2a0c266b352137f45b20d3723395e650, type: 2}
+  - {fileID: 11400000, guid: 8b69e55deebc49d44b73c6e458a12794, type: 2}
+  compositeTurrets:
+  - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+  - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+  - {fileID: 11400000, guid: 2c1b05c440668c94abe59b6953c69310, type: 2}
+  - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+  - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
+  - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}
+  - {fileID: 11400000, guid: 49b78835926160f46b82645449e248b6, type: 2}
+  - {fileID: 11400000, guid: 95641219ac7af8c4e9a6a2cefe944374, type: 2}
+  - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
+  - {fileID: 11400000, guid: 22a169674acbe2c40a2da0d763cc8641, type: 2}
+  - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+  - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+  buildingTurrets:
+  - {fileID: 11400000, guid: 79afd6087b1bb0047996d439c694e6a7, type: 2}
+  - {fileID: 11400000, guid: dcd29a86c068987429f650a5e5b272e0, type: 2}
+  - {fileID: 11400000, guid: e192e3a7c729905419268d564df5688e, type: 2}
+  trapAtts:
+  - {fileID: 11400000, guid: 2ba4eb431d027a84aaaed5b06a512288, type: 2}
+  - {fileID: 11400000, guid: c09d9ab69fe482743be7a990ad9a6fcd, type: 2}
+  - {fileID: 11400000, guid: 354eee86bbc7cdf4e8be1496b32979b2, type: 2}
+  - {fileID: 11400000, guid: bd18a2582f85635438ff7d96cb4a6138, type: 2}
+  - {fileID: 11400000, guid: b97947ffb3f15a14ca54916da2ef71e6, type: 2}
+  - {fileID: 11400000, guid: 0f5b17d06e53ad249a9d73451828bd4c, type: 2}
+  - {fileID: 11400000, guid: 879c171f538d1b04c886f8130cc13b7d, type: 2}
+  - {fileID: 11400000, guid: 9e9baea813bf2ea498f08bb035fe6300, type: 2}
+  - {fileID: 11400000, guid: 80ce2818211506549833e20d3ac754f7, type: 2}

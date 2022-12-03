@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: Bipolar
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: BIPOLAR
+  Icon: {fileID: -1968120153, guid: 3bb8fedca4a450c4394380955543fa19, type: 3}
+  Prefab: {fileID: -7891664104634831833, guid: 168f4581f317c174b95ad51b306a205b, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 27
+  IsBoss: 1
+  InitCount: 1
+  CountIncrease: 0
+  MaxAmount: 1
+  Health: 150
+  Speed: 0.5
+  CoolDown: 1
+  Frost: 0.3
+  BackGround: 
+  HealthAtt: 4
+  SpeedAtt: 1
+  AmountAtt: 1
+  ReachDamage: 3
+  BossDialogues:
+  - BIPOLAR01

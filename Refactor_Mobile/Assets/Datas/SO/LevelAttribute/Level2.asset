@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0168100ba70e486479f31ec9f99a31ad, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  ModeType: 0
+  ModeID: 2
+  Level: 2
+  StartCoin: 25
+  PlayerHealth: 20
+  Wave: 20
+  LevelIntensify: 0.5
+  WaveSets:
+  - waveIndex: 30
+    baseNum: 0.2
+    powerNum: 1.5
+  NormalEnemies:
+  - {fileID: 11400000, guid: a2fa830bad8e11c448623ce28354a1bd, type: 2}
+  - {fileID: 11400000, guid: a6b4f2578a98cf54caf0ac3718b54059, type: 2}
+  - {fileID: 11400000, guid: 52077df3b03c9b446a10d3ec4b279ff5, type: 2}
+  - {fileID: 11400000, guid: 8efd383e225b02844a5ac997f1e5f924, type: 2}
+  EliteEnemies:
+  - {fileID: 11400000, guid: 2c20ae5eda36dfb4596a984d69a8db4b, type: 2}
+  - {fileID: 11400000, guid: 4414d8fdced55104fb97c2c6ed6ec11a, type: 2}
+  - {fileID: 11400000, guid: 21089e74ee5b9a64686963eefe850ccb, type: 2}
+  - {fileID: 11400000, guid: 0a577738dc20fea45a9af16979f88841, type: 2}
+  Boss1:
+  - {fileID: 11400000, guid: f9558f1a6cffea245a720e078208fccf, type: 2}
+  Boss2:
+  - {fileID: 11400000, guid: 4868c66738024d74285c7f2ac26477ad, type: 2}
+  Boss3:
+  - {fileID: 11400000, guid: bd4a8209b52017c4bb8c391e2596cefb, type: 2}
+  Boss4:
+  - {fileID: 11400000, guid: dbb0595b1b4e1be4599c5c9d1e97b9e3, type: 2}
+  LevelInfo: LEVEL1INFO
+  TrapCount: 0
+  EliteWave: 40
+  ExpIntensify: 2
+  PreTiles:
+  - ContentType: 0
+    Pos: {x: -1, y: -1}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 0
+    Pos: {x: 1, y: -1}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 2
+    Pos: {x: -1, y: 0}
+    Direction: 0
+    ContentName: SPAWNPOINT
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 1
+    IsAbnormalBuilding: 0
+  - ContentType: 1
+    Pos: {x: 1, y: 0}
+    Direction: 0
+    ContentName: DESTINATION
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 1
+    IsAbnormalBuilding: 0
+  - ContentType: 0
+    Pos: {x: -1, y: 1}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 0
+    Pos: {x: 1, y: 1}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 0
+    Pos: {x: -1, y: 2}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 0
+    Pos: {x: 0, y: 2}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 0
+    Pos: {x: 1, y: 2}
+    Direction: 0
+    ContentName: Empty
+    Element: 0
+    Quality: 0
+    TotalDamage: 
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 3
+    Pos: {x: 0, y: 0}
+    Direction: 0
+    ContentName: 
+    Element: 0
+    Quality: 1
+    TotalDamage: 0
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 3
+    Pos: {x: 0, y: -1}
+    Direction: 0
+    ContentName: 
+    Element: 0
+    Quality: 1
+    TotalDamage: 0
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 3
+    Pos: {x: 2, y: 1}
+    Direction: 3
+    ContentName: 
+    Element: 0
+    Quality: 1
+    TotalDamage: 0
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 3
+    Pos: {x: -2, y: 1}
+    Direction: 1
+    ContentName: 
+    Element: 3
+    Quality: 1
+    TotalDamage: 0
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 3
+    Pos: {x: -1, y: 3}
+    Direction: 2
+    ContentName: 
+    Element: 3
+    Quality: 1
+    TotalDamage: 0
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  - ContentType: 3
+    Pos: {x: 2, y: 0}
+    Direction: 0
+    ContentName: 
+    Element: 3
+    Quality: 1
+    TotalDamage: 0
+    ExtraSlot: 0
+    TrapRevealed: 0
+    IsAbnormalBuilding: 0
+  Choices: []
+  SaveSequences: []
+  GuideDialogues:
+  - {fileID: 11400000, guid: 73ba093641633444fb622d935d977522, type: 2}
+  - {fileID: 11400000, guid: fed33e47af7727c42833639f939dda29, type: 2}
+  - {fileID: 11400000, guid: 72caa7d0377b4a94d98874b4fbebc461, type: 2}
+  - {fileID: 11400000, guid: 82895ae1408858c4a895ee1f36205d32, type: 2}
+  - {fileID: 11400000, guid: c76fc60cdd90be9489ac0a9d6929b209, type: 2}
+  - {fileID: 11400000, guid: cef5ca536925b8342af24c90c2c83581, type: 2}
+  - {fileID: 11400000, guid: 184f2db740f83554d881512347668cd3, type: 2}
+  - {fileID: 11400000, guid: 80c73d785bdf6004cb33a48f666cd0b3, type: 2}
+  - {fileID: 11400000, guid: 368628cf6df8bc24fb99a892f62b3d04, type: 2}
+  - {fileID: 11400000, guid: f9ba7a440a8a74a4d88e2a457ca32c5d, type: 2}
+  CanSaveGame: 0
+  WinDialogue: {fileID: 11400000, guid: 3b7319aad1e3c094bbcfa99391fbbb6b, type: 2}
+  LostDialogue: {fileID: 11400000, guid: 677b97dfba4d7a54ebcab04bb7b727c6, type: 2}
+  WaveDialogue:
+  - {fileID: 0}

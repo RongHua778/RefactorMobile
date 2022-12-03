@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: IceBall
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: ICEBALL
+  Icon: {fileID: 8103477730115791145, guid: f754236f3e3a8c94696ea4c3a0681592, type: 3}
+  Prefab: {fileID: 442356482146141927, guid: ad04705b9ca3b3740a02c5c4f3e0eae0, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 14
+  IsBoss: 1
+  InitCount: 1
+  CountIncrease: 0
+  MaxAmount: 1
+  Health: 250
+  Speed: 0.5
+  CoolDown: 1
+  Frost: 0.3
+  BackGround: 
+  HealthAtt: 4
+  SpeedAtt: 1
+  AmountAtt: 1
+  ReachDamage: 5
+  BossDialogues:
+  - BEAR01

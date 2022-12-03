@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650b0935da57941439095681f764f234, type: 3}
+  m_Name: WeeklyParam_Endless
+  m_EditorClassIdentifier: 
+  EndlessParams:
+  - Tips: "\u96BE\u5EA6\u4E2D\uFF0C\u5C0F\u5730\u56FE\u5FAA\u73AF\uFF0C\u8003\u9A8C\u5229\u7528\u9677\u9631\u7684\u80FD\u529B"
+    Version: 0
+    RuleNames: 0000000004000000020000000d000000
+    Recipes:
+    - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+    - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
+    - {fileID: 11400000, guid: 283069950a321db438ba311f3de6f03d, type: 2}
+    - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+  - Tips: "\u96BE\u5EA6\u4E2D\uFF0CAOE\u5C38\u6F6E\u5927\u66B4\u8D70"
+    Version: 1
+    RuleNames: 07000000080000000a00000003000000
+    Recipes:
+    - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
+    - {fileID: 11400000, guid: 49b78835926160f46b82645449e248b6, type: 2}
+    - {fileID: 11400000, guid: 8696283088f82e64c8c5bb20bd9ef79f, type: 2}
+    - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+    - {fileID: 11400000, guid: 8c0106e337765e044b9ce1dd0f6f7417, type: 2}
+    - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}
+  - Tips: "\u96BE\u5EA6\u9AD8\u9AD8\u95F4\u9694\u51B0\u51BB\u6253\u6CD5"
+    Version: 2
+    RuleNames: 01000000060000000b000000
+    Recipes:
+    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+    - {fileID: 11400000, guid: ce57488ac1b2193489c982bd6c711025, type: 2}
+    - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+    - {fileID: 11400000, guid: 95641219ac7af8c4e9a6a2cefe944374, type: 2}
+    - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+  - Tips: "\u51B2\u523A\u654C\u4EBA\uFF0C\u524D\u671F\u9547\u5B88"
+    Version: 3
+    RuleNames: 020000000500000003000000
+    Recipes:
+    - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+    - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+    - {fileID: 11400000, guid: 95641219ac7af8c4e9a6a2cefe944374, type: 2}
+    - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+    - {fileID: 11400000, guid: 22a169674acbe2c40a2da0d763cc8641, type: 2}
+    - {fileID: 11400000, guid: ac7957dafceb0a24cb32b7461316dfb7, type: 2}
+  - Tips: "\u5C0F\u5730\u56FE\uFF0C\u4F4E\u9891\u524D\u671F\u6311\u6218"
+    Version: 4
+    RuleNames: 000000000f0000000c00000009000000
+    Recipes:
+    - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+    - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
+    - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+    - {fileID: 11400000, guid: 2c1b05c440668c94abe59b6953c69310, type: 2}
+    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+  - Tips: "\u6700\u9AD8\u96BE\u5EA6"
+    Version: 5
+    RuleNames: 05000000030000000a000000
+    Recipes:
+    - {fileID: 11400000, guid: 49b78835926160f46b82645449e248b6, type: 2}
+    - {fileID: 11400000, guid: 22a169674acbe2c40a2da0d763cc8641, type: 2}
+    - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
+    - {fileID: 11400000, guid: 283069950a321db438ba311f3de6f03d, type: 2}
+    - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+    - {fileID: 11400000, guid: ac7957dafceb0a24cb32b7461316dfb7, type: 2}
+  - Tips: "\u5BCC\u6709\u7684\u6311\u6218"
+    Version: 6
+    RuleNames: 080000000900000006000000
+    Recipes:
+    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+    - {fileID: 11400000, guid: ce57488ac1b2193489c982bd6c711025, type: 2}
+    - {fileID: 11400000, guid: 8696283088f82e64c8c5bb20bd9ef79f, type: 2}
+    - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+    - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
+  - Tips: 
+    Version: 7
+    RuleNames: 0000000001000000040000000e000000
+    Recipes:
+    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+    - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+    - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
+    - {fileID: 11400000, guid: 283069950a321db438ba311f3de6f03d, type: 2}
+    - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+  - Tips: "\u5927\u5730\u56FE\u533A\u57DF\u4F5C\u6218"
+    Version: 8
+    RuleNames: 07000000020000000c00000003000000
+    Recipes:
+    - {fileID: 11400000, guid: 2c1b05c440668c94abe59b6953c69310, type: 2}
+    - {fileID: 11400000, guid: 22a169674acbe2c40a2da0d763cc8641, type: 2}
+    - {fileID: 11400000, guid: 49b78835926160f46b82645449e248b6, type: 2}
+    - {fileID: 11400000, guid: 8696283088f82e64c8c5bb20bd9ef79f, type: 2}
+    - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+    - {fileID: 11400000, guid: ac7957dafceb0a24cb32b7461316dfb7, type: 2}
+  - Tips: "\u7B80\u5355\uFF0C\u5C0F\u5730\u56FE\u5FAA\u73AF"
+    Version: 9
+    RuleNames: 0d0000000a0000000f000000
+    Recipes:
+    - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
+    - {fileID: 11400000, guid: ce57488ac1b2193489c982bd6c711025, type: 2}
+    - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+    - {fileID: 11400000, guid: 95641219ac7af8c4e9a6a2cefe944374, type: 2}
+    - {fileID: 11400000, guid: 8c0106e337765e044b9ce1dd0f6f7417, type: 2}
+    - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}

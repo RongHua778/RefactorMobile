@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: Tanker
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: TANKER
+  Icon: {fileID: 2490869374071744897, guid: 578e3995339e79c419ae0345354e31ce, type: 3}
+  Prefab: {fileID: 8538428539047822095, guid: f7b1c5b6e3f289240b40cfb7e17d87e4, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 3
+  IsBoss: 0
+  InitCount: 1
+  CountIncrease: 0.5
+  MaxAmount: 6
+  Health: 120
+  Speed: 0.5
+  CoolDown: 3.5
+  Frost: 0.25
+  BackGround: 
+  HealthAtt: 3
+  SpeedAtt: 1
+  AmountAtt: 1
+  ReachDamage: 2
+  BossDialogues: []

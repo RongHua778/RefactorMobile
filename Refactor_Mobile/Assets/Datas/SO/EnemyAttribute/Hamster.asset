@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: Hamster
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: HAMSTER
+  Icon: {fileID: -2708782251966510395, guid: f754236f3e3a8c94696ea4c3a0681592, type: 3}
+  Prefab: {fileID: 5042288069490103953, guid: d3aac527b4cb7b24483e988a8060353a, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 9
+  IsBoss: 1
+  InitCount: 5
+  CountIncrease: 0
+  MaxAmount: 5
+  Health: 50
+  Speed: 0.5
+  CoolDown: 2
+  Frost: 0.2
+  BackGround: 
+  HealthAtt: 3
+  SpeedAtt: 1
+  AmountAtt: 3
+  ReachDamage: 1
+  BossDialogues:
+  - HAMSTER01
+  - HAMSTER02

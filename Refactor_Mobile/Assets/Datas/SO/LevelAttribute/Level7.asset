@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0168100ba70e486479f31ec9f99a31ad, type: 3}
+  m_Name: Level7
+  m_EditorClassIdentifier: 
+  ModeType: 0
+  ModeID: 7
+  Level: 7
+  StartCoin: 25
+  PlayerHealth: 5
+  Wave: 30
+  LevelIntensify: 2
+  WaveSets:
+  - waveIndex: 30
+    baseNum: 0.2
+    powerNum: 1.5
+  NormalEnemies:
+  - {fileID: 11400000, guid: a2fa830bad8e11c448623ce28354a1bd, type: 2}
+  - {fileID: 11400000, guid: a6b4f2578a98cf54caf0ac3718b54059, type: 2}
+  - {fileID: 11400000, guid: 52077df3b03c9b446a10d3ec4b279ff5, type: 2}
+  - {fileID: 11400000, guid: 8efd383e225b02844a5ac997f1e5f924, type: 2}
+  EliteEnemies:
+  - {fileID: 11400000, guid: 2c20ae5eda36dfb4596a984d69a8db4b, type: 2}
+  - {fileID: 11400000, guid: 4414d8fdced55104fb97c2c6ed6ec11a, type: 2}
+  - {fileID: 11400000, guid: 21089e74ee5b9a64686963eefe850ccb, type: 2}
+  - {fileID: 11400000, guid: 0a577738dc20fea45a9af16979f88841, type: 2}
+  Boss1:
+  - {fileID: 11400000, guid: 0d95c4382508c05429f8fafe2a15c7c8, type: 2}
+  Boss2:
+  - {fileID: 11400000, guid: d7d3580ff1fdebd41bf76943da84f56d, type: 2}
+  Boss3:
+  - {fileID: 11400000, guid: a3363470c6d474f43b51c128dc604dcc, type: 2}
+  Boss4:
+  - {fileID: 11400000, guid: bd4a8209b52017c4bb8c391e2596cefb, type: 2}
+  LevelInfo: LEVEL6INFO
+  TrapCount: 30
+  EliteWave: 19
+  ExpIntensify: 7
+  Choices: []
+  SaveSequences: []
+  GuideDialogues: []
+  CanSaveGame: 1
+  WinDialogue: {fileID: 11400000, guid: d6944f4c090e2ed41884702308408e71, type: 2}
+  LostDialogue: {fileID: 11400000, guid: 57cd2a77045b94c42b1dcce4d8b200d7, type: 2}
+  WaveDialogue:
+  - {fileID: 0}

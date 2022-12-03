@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ecd0cdf550451549a89d4b36e2f191b, type: 3}
+  m_Name: DustAttribute
+  m_EditorClassIdentifier: 
+  AttType: 0
+  Name: DUST
+  Icon: {fileID: -302460881117483773, guid: 848bbae097f55734ab0a02c063fd3e70, type: 3}
+  Description: ESKILL
+  Prefab: {fileID: 900867221070031195, guid: 8574fb7c958d9084199e76f94ed13f80, type: 3}
+  isLock: 0
+  initialLock: 0
+  StrategyType: 0
+  RangeType: 0
+  element: 4
+  Bullet: {fileID: 2245073835532274941, guid: 93a6638b5f5d3504e81fbaa4958ebe74, type: 3}
+  BulletSpeed: 6
+  ShootSound: {fileID: 8300000, guid: 649069b7d6a9bce41930cf6d0c4e821d, type: 3}
+  Rare: 0
+  totalLevel: 0
+  elementNumber: 0
+  maxElementLevel: 0
+  TurretSkill: 12
+  TurretLevels:
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 70
+    AttackSpeed: 0.55
+    SplashRange: 0.3
+    CriticalRate: 0
+    SlowRate: 0
+    TurretIcon: {fileID: -6036163202154314397, guid: 848bbae097f55734ab0a02c063fd3e70, type: 3}
+    CannonSprite: {fileID: 5677318413422527814, guid: 6b887e89a4f334f4e876753947f5fd50, type: 3}
+    ShootPointOffset: {x: 0, y: 0.27}
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 105
+    AttackSpeed: 0.55
+    SplashRange: 0.4
+    CriticalRate: 0
+    SlowRate: 0
+    TurretIcon: {fileID: -5104728489556445294, guid: 848bbae097f55734ab0a02c063fd3e70, type: 3}
+    CannonSprite: {fileID: -4508707043556292444, guid: 6b887e89a4f334f4e876753947f5fd50, type: 3}
+    ShootPointOffset: {x: 0, y: 0.3}
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 160
+    AttackSpeed: 0.55
+    SplashRange: 0.5
+    CriticalRate: 0
+    SlowRate: 0
+    TurretIcon: {fileID: 2768713202220553346, guid: 848bbae097f55734ab0a02c063fd3e70, type: 3}
+    CannonSprite: {fileID: -4254847361795187178, guid: 6b887e89a4f334f4e876753947f5fd50, type: 3}
+    ShootPointOffset: {x: 0, y: 0.32}
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 240
+    AttackSpeed: 0.55
+    SplashRange: 0.6
+    CriticalRate: 0
+    SlowRate: 0
+    TurretIcon: {fileID: 3239631297230032197, guid: 848bbae097f55734ab0a02c063fd3e70, type: 3}
+    CannonSprite: {fileID: 9147300514977118220, guid: 6b887e89a4f334f4e876753947f5fd50, type: 3}
+    ShootPointOffset: {x: 0, y: 0.32}
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 360
+    AttackSpeed: 0.55
+    SplashRange: 0.7
+    CriticalRate: 0
+    SlowRate: 0
+    TurretIcon: {fileID: -302460881117483773, guid: 848bbae097f55734ab0a02c063fd3e70, type: 3}
+    CannonSprite: {fileID: -8803647767435065335, guid: 6b887e89a4f334f4e876753947f5fd50, type: 3}
+    ShootPointOffset: {x: 0, y: 0.38}

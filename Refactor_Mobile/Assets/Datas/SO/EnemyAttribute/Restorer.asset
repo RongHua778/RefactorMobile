@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: Restorer
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: RESTORER
+  Icon: {fileID: 2190462774799631289, guid: 578e3995339e79c419ae0345354e31ce, type: 3}
+  Prefab: {fileID: 821673950540951135, guid: 673cb8fb8fac45949b3e29c50a2d7ac3, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 2
+  IsBoss: 0
+  InitCount: 2
+  CountIncrease: 2
+  MaxAmount: 24
+  Health: 35
+  Speed: 0.75
+  CoolDown: 0.85
+  Frost: 0.15
+  BackGround: 
+  HealthAtt: 2
+  SpeedAtt: 1
+  AmountAtt: 2
+  ReachDamage: 1
+  BossDialogues: []

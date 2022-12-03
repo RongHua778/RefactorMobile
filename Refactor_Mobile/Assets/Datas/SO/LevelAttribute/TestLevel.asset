@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0168100ba70e486479f31ec9f99a31ad, type: 3}
+  m_Name: TestLevel
+  m_EditorClassIdentifier: 
+  ModeType: 2
+  ModeID: 30
+  Level: 0
+  ChallengeAtt: {fileID: 11400000, guid: 24e93a06c4f01d247a9c710d74ffab8f, type: 2}
+  StartCoin: 5000
+  PlayerHealth: 1
+  Wave: 50
+  LevelIntensify: 1
+  WaveSets:
+  - waveIndex: 5
+    baseNum: 0.2
+    powerNum: 1.5
+  - waveIndex: 9
+    baseNum: 0.5
+    powerNum: 1.5
+  - waveIndex: 12
+    baseNum: 1
+    powerNum: 2
+  NormalEnemies: []
+  EliteEnemies: []
+  Boss1:
+  - {fileID: 11400000, guid: 56bc6f0aa93753148b97e2e0731037d9, type: 2}
+  Boss2: []
+  Boss3: []
+  Boss4: []
+  LevelInfo: CHANLENGE1
+  TrapCount: 0
+  EliteWave: 99
+  ExpIntensify: 1
+  GuideDialogues: []
+  CanSaveGame: 1
+  WinDialogue: {fileID: 0}
+  LostDialogue: {fileID: 0}
+  WaveDialogue: []

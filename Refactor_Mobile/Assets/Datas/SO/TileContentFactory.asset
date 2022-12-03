@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5e7d9a89618bc4dade5c8c8a6427cf, type: 3}
+  m_Name: TileContentFactory
+  m_EditorClassIdentifier: 
+  emptyAtt: {fileID: 11400000, guid: 4c8da1e145ab6214c944bcc43fad4205, type: 2}
+  spawnPointAtt: {fileID: 11400000, guid: 0263469d903409a46837ef1fb50628ce, type: 2}
+  destinationAtt: {fileID: 11400000, guid: 132429f84cc3e32449aabf043aee0234, type: 2}
+  allRefactorTurrets:
+  - {fileID: 11400000, guid: dcd29a86c068987429f650a5e5b272e0, type: 2}
+  - {fileID: 11400000, guid: e192e3a7c729905419268d564df5688e, type: 2}
+  - {fileID: 11400000, guid: 1818040dca4115e4c8670f9814788a5f, type: 2}
+  - {fileID: 11400000, guid: c2aba76eaa7aaa24bb4e2ea01b17bfa0, type: 2}
+  - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+  - {fileID: 11400000, guid: 49b78835926160f46b82645449e248b6, type: 2}
+  - {fileID: 11400000, guid: ce57488ac1b2193489c982bd6c711025, type: 2}
+  - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+  - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
+  - {fileID: 11400000, guid: 8696283088f82e64c8c5bb20bd9ef79f, type: 2}
+  - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+  - {fileID: 11400000, guid: 95641219ac7af8c4e9a6a2cefe944374, type: 2}
+  - {fileID: 11400000, guid: 283069950a321db438ba311f3de6f03d, type: 2}
+  - {fileID: 11400000, guid: 2c1b05c440668c94abe59b6953c69310, type: 2}
+  - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
+  - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+  - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+  - {fileID: 11400000, guid: 22a169674acbe2c40a2da0d763cc8641, type: 2}
+  - {fileID: 11400000, guid: 8c0106e337765e044b9ce1dd0f6f7417, type: 2}
+  - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}
+  - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
+  - {fileID: 11400000, guid: ac7957dafceb0a24cb32b7461316dfb7, type: 2}
+  allElementTurrets:
+  - {fileID: 11400000, guid: 8b69e55deebc49d44b73c6e458a12794, type: 2}
+  - {fileID: 11400000, guid: 2a0c266b352137f45b20d3723395e650, type: 2}
+  - {fileID: 11400000, guid: 493c6f7428affb6409f06eaac5d19930, type: 2}
+  - {fileID: 11400000, guid: 0387619ceeeda7746a7e51b43f234353, type: 2}
+  - {fileID: 11400000, guid: 6c3131e68b56a9b4db13891b470a159b, type: 2}
+  allTraps:
+  - {fileID: 11400000, guid: b97947ffb3f15a14ca54916da2ef71e6, type: 2}
+  - {fileID: 11400000, guid: 879c171f538d1b04c886f8130cc13b7d, type: 2}
+  - {fileID: 11400000, guid: c09d9ab69fe482743be7a990ad9a6fcd, type: 2}
+  - {fileID: 11400000, guid: 0f5b17d06e53ad249a9d73451828bd4c, type: 2}
+  - {fileID: 11400000, guid: 354eee86bbc7cdf4e8be1496b32979b2, type: 2}
+  - {fileID: 11400000, guid: 80ce2818211506549833e20d3ac754f7, type: 2}
+  - {fileID: 11400000, guid: bd18a2582f85635438ff7d96cb4a6138, type: 2}
+  - {fileID: 11400000, guid: 2ba4eb431d027a84aaaed5b06a512288, type: 2}
+  - {fileID: 11400000, guid: 9e9baea813bf2ea498f08bb035fe6300, type: 2}
+  allTechs:
+  - {fileID: 11400000, guid: e2b3c64a3af0ea4408d083d8da627c0c, type: 2}
+  - {fileID: 11400000, guid: 030ca7734963d9546800c624e39c7c5f, type: 2}
+  - {fileID: 11400000, guid: 5f1295c9daa06c74dbbde35bf906c72c, type: 2}
+  - {fileID: 11400000, guid: 1a1983c10f4ef124fa7801bcb405608f, type: 2}
+  - {fileID: 11400000, guid: 9eea4ed8d9f0fa64da44236aa5fcd63b, type: 2}
+  - {fileID: 11400000, guid: 6d7d5d39d0677e441974997c9d148a30, type: 2}
+  - {fileID: 11400000, guid: bee636fe6ba84f74285f5bb334f9a54f, type: 2}
+  - {fileID: 11400000, guid: 865a7f7004d62a9478058ca3a5970fda, type: 2}
+  - {fileID: 11400000, guid: 676d09d921b09c04cbe38b0ff0899120, type: 2}
+  - {fileID: 11400000, guid: ab9aff27784534542a20f8511c2922ad, type: 2}
+  - {fileID: 11400000, guid: e5b555a50e1088e4b84888cb52e29342, type: 2}
+  - {fileID: 11400000, guid: 01deafeb25e13b147b738095bdda27b6, type: 2}
+  - {fileID: 11400000, guid: 89235c1432037d2408da71fab49e04c3, type: 2}
+  - {fileID: 11400000, guid: 29713803c55f73149bec77fceb51c896, type: 2}
+  - {fileID: 11400000, guid: abd265efaa9d0e243890cb667611a158, type: 2}
+  - {fileID: 11400000, guid: fd3d1146d24251d44a579deacb1b2727, type: 2}
+  - {fileID: 11400000, guid: 3f40d8595462af94bbe109cf68808be4, type: 2}
+  - {fileID: 11400000, guid: dc22e8d6f47e95041ada394173073a60, type: 2}
+  - {fileID: 11400000, guid: 9a049c0099bfa6c479b35a813a2a62bd, type: 2}
+  - {fileID: 11400000, guid: 6656547a5b61522479816c9ecd2e32ab, type: 2}
+  - {fileID: 11400000, guid: f090aff230677a74db27df406bb1e200, type: 2}
+  - {fileID: 11400000, guid: 1f5b8d06686da2542bce6873a6c5aed9, type: 2}
+  - {fileID: 11400000, guid: 4e15f34a9b349b148bdf302125ac014a, type: 2}
+  - {fileID: 11400000, guid: 9dd35c9789be2814ab5db0321beb5228, type: 2}
+  - {fileID: 11400000, guid: cc7ee1176aced3e4d825da2fa765c5b8, type: 2}
+  - {fileID: 11400000, guid: f720b06eab413964da7ba949bc765628, type: 2}
+  - {fileID: 11400000, guid: 1a679b7a784873c4cad959c770b6ce81, type: 2}
+  - {fileID: 11400000, guid: 9080d6a7debad01418b92d185565b33d, type: 2}
+  - {fileID: 11400000, guid: ffae0ebf93f1c0e4b8512f8341114692, type: 2}
+  - {fileID: 11400000, guid: d02ebaf259824404697793b5265d85c7, type: 2}
+  - {fileID: 11400000, guid: c1f9c16b31c3e5048bb6d67def3b7c6e, type: 2}
+  RefactorTurretNames:
+  - CONSTRUCTOR
+  - RAPIDER
+  - CHILLER
+  - SCATTER
+  - COORDINATOR
+  - FIRER
+  - ROTARY
+  - SNOW
+  - LASER
+  - MORTAR
+  - SNIPER
+  - BOMBARD
+  - SUPER
+  - BOOMERRANG
+  - MINER
+  - ULTRA
+  - CORE
+  - NUCLEAR
+  TrapNames:
+  - BLINKTRAP
+  - DAMAGETRAP
+  - EXECUTETRAP
+  - IMITATETRAP
+  - MARKTRAP
+  - PROMOTETRAP
+  - STUNTRAP
+  - WEAKTRAP
+  DefaultRecipes:
+  - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+  - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+  - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+  - {fileID: 11400000, guid: 2c1b05c440668c94abe59b6953c69310, type: 2}
+  - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+  - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}
+  BattleTraps:
+  - {fileID: 11400000, guid: b97947ffb3f15a14ca54916da2ef71e6, type: 2}
+  - {fileID: 11400000, guid: 879c171f538d1b04c886f8130cc13b7d, type: 2}
+  - {fileID: 11400000, guid: c09d9ab69fe482743be7a990ad9a6fcd, type: 2}
+  - {fileID: 11400000, guid: 0f5b17d06e53ad249a9d73451828bd4c, type: 2}
+  - {fileID: 11400000, guid: 354eee86bbc7cdf4e8be1496b32979b2, type: 2}
+  - {fileID: 11400000, guid: 80ce2818211506549833e20d3ac754f7, type: 2}
+  - {fileID: 11400000, guid: bd18a2582f85635438ff7d96cb4a6138, type: 2}
+  - {fileID: 11400000, guid: 2ba4eb431d027a84aaaed5b06a512288, type: 2}
+  - {fileID: 11400000, guid: 9e9baea813bf2ea498f08bb035fe6300, type: 2}
+  BattleRecipes:
+  - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
+  - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
+  - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+  - {fileID: 11400000, guid: 2c1b05c440668c94abe59b6953c69310, type: 2}
+  - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+  - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}

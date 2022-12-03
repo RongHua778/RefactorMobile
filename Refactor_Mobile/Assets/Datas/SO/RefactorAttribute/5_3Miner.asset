@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ecd0cdf550451549a89d4b36e2f191b, type: 3}
+  m_Name: 5_3Miner
+  m_EditorClassIdentifier: 
+  AttType: 0
+  Name: MINER
+  Icon: {fileID: 5665995286692988700, guid: 6495972c570191c4a8e76148c13bbc77, type: 3}
+  Prefab: {fileID: 1665653833842433741, guid: 6f320dfae871ef146b50dee29114dd1f, type: 3}
+  isLock: 0
+  initialLock: 1
+  StrategyType: 1
+  RangeType: 0
+  element: 0
+  Bullet: {fileID: 8365900024733922014, guid: dc78f51ba39fdfd46958733d6011c909, type: 3}
+  BulletSpeed: 6
+  ShootSound: {fileID: 8300000, guid: 13dda026514458648a7809b777482946, type: 3}
+  Rare: 5
+  totalLevel: 10
+  elementNumber: 3
+  maxElementLevel: 5
+  minElementLevel: 2
+  TurretLevels:
+  - AttackRange: 2
+    ForbidRange: 0
+    AttackDamage: 1500
+    AttackSpeed: 0
+    SplashRange: 2
+    CriticalRate: 0
+    SlowRate: 0
+    DamageIntensify: 0
+    TurretIcon: {fileID: 3163233939540284135, guid: 6495972c570191c4a8e76148c13bbc77, type: 3}
+    CannonSprite: {fileID: -8441777624679214025, guid: b5509ced19fbc11438a84078ae9f6cef, type: 3}
+    ShootPointOffset: {x: 0, y: 0.3}
+  - AttackRange: 2
+    ForbidRange: 0
+    AttackDamage: 2200
+    AttackSpeed: 0
+    SplashRange: 2
+    CriticalRate: 0
+    SlowRate: 0
+    DamageIntensify: 0
+    TurretIcon: {fileID: 104092608506494464, guid: 6495972c570191c4a8e76148c13bbc77, type: 3}
+    CannonSprite: {fileID: -8246125601312726516, guid: b5509ced19fbc11438a84078ae9f6cef, type: 3}
+    ShootPointOffset: {x: 0, y: 0.3}
+  - AttackRange: 2
+    ForbidRange: 0
+    AttackDamage: 3200
+    AttackSpeed: 0
+    SplashRange: 2
+    CriticalRate: 0
+    SlowRate: 0
+    DamageIntensify: 0
+    TurretIcon: {fileID: 5665995286692988700, guid: 6495972c570191c4a8e76148c13bbc77, type: 3}
+    CannonSprite: {fileID: -4682648589337791674, guid: b5509ced19fbc11438a84078ae9f6cef, type: 3}
+    ShootPointOffset: {x: 0, y: 0.3}
+  RefactorName: 20

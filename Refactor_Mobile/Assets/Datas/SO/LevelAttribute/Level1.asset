@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0168100ba70e486479f31ec9f99a31ad, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  ModeType: 0
+  ModeID: 1
+  Level: 1
+  StartCoin: 25
+  PlayerHealth: 20
+  Wave: 10
+  LevelIntensify: 0.5
+  WaveSets:
+  - waveIndex: 30
+    baseNum: 0.2
+    powerNum: 1.5
+  NormalEnemies:
+  - {fileID: 11400000, guid: a2fa830bad8e11c448623ce28354a1bd, type: 2}
+  - {fileID: 11400000, guid: a6b4f2578a98cf54caf0ac3718b54059, type: 2}
+  - {fileID: 11400000, guid: 52077df3b03c9b446a10d3ec4b279ff5, type: 2}
+  - {fileID: 11400000, guid: 8efd383e225b02844a5ac997f1e5f924, type: 2}
+  EliteEnemies:
+  - {fileID: 11400000, guid: 2c20ae5eda36dfb4596a984d69a8db4b, type: 2}
+  - {fileID: 11400000, guid: 4414d8fdced55104fb97c2c6ed6ec11a, type: 2}
+  - {fileID: 11400000, guid: 21089e74ee5b9a64686963eefe850ccb, type: 2}
+  - {fileID: 11400000, guid: 0a577738dc20fea45a9af16979f88841, type: 2}
+  Boss1:
+  - {fileID: 11400000, guid: f9558f1a6cffea245a720e078208fccf, type: 2}
+  Boss2:
+  - {fileID: 11400000, guid: 4868c66738024d74285c7f2ac26477ad, type: 2}
+  Boss3:
+  - {fileID: 11400000, guid: bd4a8209b52017c4bb8c391e2596cefb, type: 2}
+  Boss4:
+  - {fileID: 11400000, guid: dbb0595b1b4e1be4599c5c9d1e97b9e3, type: 2}
+  LevelInfo: LEVEL1INFO
+  TrapCount: 0
+  EliteWave: 40
+  ExpIntensify: 2
+  Choices: []
+  SaveSequences: []
+  GuideDialogues:
+  - {fileID: 11400000, guid: 7ab18e11346bed543991323cfd1bc14e, type: 2}
+  - {fileID: 11400000, guid: d811c4f58c4b9ad459d255374e67323d, type: 2}
+  - {fileID: 11400000, guid: 70edb0d0a7e7c0d44975fb26735e072a, type: 2}
+  - {fileID: 11400000, guid: c7caaeb7d74ea924a8b5cf3353dfc87a, type: 2}
+  - {fileID: 11400000, guid: 4acbf4411acc3a34fa318b98a127506a, type: 2}
+  - {fileID: 11400000, guid: fae1774364cc01e459761d7d71fa1aa9, type: 2}
+  - {fileID: 11400000, guid: 9d367bc2b14c7344b96a2b98515ccc48, type: 2}
+  - {fileID: 11400000, guid: 421268c475805784cac75f6198499cb3, type: 2}
+  - {fileID: 11400000, guid: 102babdf495ac7347b6a9c9956544858, type: 2}
+  - {fileID: 11400000, guid: 4961e9ad28af68a429c8e18d83a9b220, type: 2}
+  - {fileID: 11400000, guid: 93cf20f282f08b9418c7c763a92aa20a, type: 2}
+  - {fileID: 11400000, guid: b29e46c7e6f63064d84bc5158c03a9ae, type: 2}
+  - {fileID: 11400000, guid: 578e7dc33203357489def43c86b94f20, type: 2}
+  - {fileID: 11400000, guid: a4a1d21de11944c49abea04e19d0bf44, type: 2}
+  - {fileID: 11400000, guid: da93faa4a28eeaf4f80d517dd53da1bc, type: 2}
+  - {fileID: 11400000, guid: 344d41a01e1dcb646ad4aeef70b93632, type: 2}
+  - {fileID: 11400000, guid: cd7fe804ec97dab458e086fcd1802395, type: 2}
+  - {fileID: 11400000, guid: 972bc55b3e1d1104987ed18dc0d52e96, type: 2}
+  - {fileID: 11400000, guid: 21f8aa377857fa148a8678068f343a63, type: 2}
+  CanSaveGame: 0
+  WinDialogue: {fileID: 11400000, guid: 3b7319aad1e3c094bbcfa99391fbbb6b, type: 2}
+  LostDialogue: {fileID: 11400000, guid: 677b97dfba4d7a54ebcab04bb7b727c6, type: 2}
+  WaveDialogue:
+  - {fileID: 0}

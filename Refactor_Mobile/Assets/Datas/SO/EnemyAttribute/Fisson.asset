@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: Fisson
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: FISSION
+  Icon: {fileID: 5539768995983586216, guid: 578e3995339e79c419ae0345354e31ce, type: 3}
+  Prefab: {fileID: 1207624930699145277, guid: a53d58caa83d0ba409889a6ed7bdf54a, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 6
+  IsBoss: 0
+  InitCount: 3
+  CountIncrease: 4
+  MaxAmount: 60
+  Health: 20
+  Speed: 1
+  CoolDown: 0.3
+  Frost: 0.05
+  BackGround: 
+  HealthAtt: 1
+  SpeedAtt: 2
+  AmountAtt: 3
+  ReachDamage: 1
+  BossDialogues: []

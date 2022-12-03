@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: AircraftCarrier2
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: AIRCRAFT2
+  Icon: {fileID: 4744075180939293737, guid: f754236f3e3a8c94696ea4c3a0681592, type: 3}
+  Prefab: {fileID: 2996149452623329753, guid: 1ac5e0fc0a8b9aa45afec2c4a2ff1d65, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 19
+  IsBoss: 1
+  InitCount: 1
+  CountIncrease: 0
+  MaxAmount: 2
+  Health: 500
+  Speed: 0.6
+  CoolDown: 1
+  Frost: 0.4
+  BackGround: 
+  HealthAtt: 4
+  SpeedAtt: 2
+  AmountAtt: 3
+  ReachDamage: 5
+  BossDialogues:
+  - AIRCRAFTCARRIER01
+  - AIRCRAFTCARRIER02

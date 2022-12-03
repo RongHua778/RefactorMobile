@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614735ba97a8e4b4bbdf8128289355f3, type: 3}
+  m_Name: GoldKeeper
+  m_EditorClassIdentifier: 
+  AttType: 2
+  Name: GOLDKEEPER
+  Icon: {fileID: 21300000, guid: b872626303873e5468df87c50f80136c, type: 3}
+  Prefab: {fileID: -1710581719449573739, guid: 821b74dddf1519344ad3a3ff63562b2e, type: 3}
+  isLock: 0
+  initialLock: 0
+  EnemyType: 20
+  IsBoss: 0
+  InitCount: 1
+  CountIncrease: 0
+  MaxAmount: 1
+  Health: 130
+  Speed: 0.5
+  CoolDown: 2
+  Frost: 0.3
+  BackGround: 
+  HealthAtt: 4
+  SpeedAtt: 1
+  AmountAtt: 1
+  ReachDamage: 0
+  BossDialogues: []

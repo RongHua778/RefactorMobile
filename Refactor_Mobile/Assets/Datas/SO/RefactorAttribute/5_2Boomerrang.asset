@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ecd0cdf550451549a89d4b36e2f191b, type: 3}
+  m_Name: 5_2Boomerrang
+  m_EditorClassIdentifier: 
+  AttType: 0
+  Name: BOOMERRANG
+  Icon: {fileID: -5153134150779752020, guid: a799722f85e58a34993e12144292e1a9, type: 3}
+  Prefab: {fileID: 5634142968415057810, guid: f48e2d78274808848bf0c98accb78f83, type: 3}
+  isLock: 1
+  initialLock: 1
+  StrategyType: 1
+  RangeType: 2
+  element: 0
+  Bullet: {fileID: 0}
+  BulletSpeed: 6
+  ShootSound: {fileID: 8300000, guid: b62d0f10c1466ea4dbb307e0ee6fb3ed, type: 3}
+  Rare: 5
+  totalLevel: 10
+  elementNumber: 3
+  maxElementLevel: 5
+  minElementLevel: 2
+  TurretLevels:
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 4500
+    AttackSpeed: 0.125
+    SplashRange: 0
+    CriticalRate: 0
+    SlowRate: 0
+    DamageIntensify: 0
+    TurretIcon: {fileID: 6252459201115839096, guid: a799722f85e58a34993e12144292e1a9, type: 3}
+    CannonSprite: {fileID: -3111040703750061689, guid: ef329b970cf7ced4888442c7bc757356, type: 3}
+    ShootPointOffset: {x: 0, y: 0}
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 6500
+    AttackSpeed: 0.125
+    SplashRange: 0
+    CriticalRate: 0
+    SlowRate: 0
+    DamageIntensify: 0
+    TurretIcon: {fileID: 3442024006206321382, guid: a799722f85e58a34993e12144292e1a9, type: 3}
+    CannonSprite: {fileID: -4017865521878045518, guid: ef329b970cf7ced4888442c7bc757356, type: 3}
+    ShootPointOffset: {x: 0, y: 0}
+  - AttackRange: 3
+    ForbidRange: 0
+    AttackDamage: 9600
+    AttackSpeed: 0.125
+    SplashRange: 0
+    CriticalRate: 0
+    SlowRate: 0
+    DamageIntensify: 0
+    TurretIcon: {fileID: -5153134150779752020, guid: a799722f85e58a34993e12144292e1a9, type: 3}
+    CannonSprite: {fileID: -3067152747596256526, guid: ef329b970cf7ced4888442c7bc757356, type: 3}
+    ShootPointOffset: {x: 0, y: 0}
+  RefactorName: 9
+  BuildingSkill: 0
