@@ -16,14 +16,23 @@ public class UIEndlessMode : MonoBehaviour
 
     public void Initialize()
     {
-        endlessUnlockText.gameObject.SetActive(LevelManager.Instance.PassDiifcutly <= 4);
-        mainArea.SetActive(LevelManager.Instance.PassDiifcutly > 4);
+        if (LevelManager.Instance.PassDiifcutly < 6)
+        {
+            endlessUnlockText.gameObject.SetActive(true);
+            mainArea.SetActive(false);
+        }
+        else
+        {
+            endlessUnlockText.gameObject.SetActive(false);
+            mainArea.SetActive(true);
 
-        endlessCustom.Initialize();
-        endlessWeekly.Initialize();
+            endlessCustom.Initialize();
+            endlessWeekly.Initialize();
 
-        endlessCustom.gameObject.SetActive(true);
-        endlessWeekly.gameObject.SetActive(false);
+            endlessCustom.gameObject.SetActive(true);
+            endlessWeekly.gameObject.SetActive(false);
+        }
+
 
     }
 

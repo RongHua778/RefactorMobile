@@ -54,10 +54,9 @@ public class GuideGirlSystem : Singleton<GuideGirlSystem>
 
     public void Initialize()
     {
-
         m_Dialogues = LevelManager.Instance.CurrentLevel.GuideDialogues;
 
-        Game.Instance.Tutorial = m_Dialogues.Length > 1;//如果有教学对白就表示开始教学
+        Game.Instance.Tutorial = m_Dialogues.Length >= 1;//如果有教学对白就表示开始教学
 
         GuideObjList.Clear();
         GuideDIC.Clear();

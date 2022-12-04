@@ -36,7 +36,7 @@ MonoBehaviour:
   Boss1:
   - {fileID: 11400000, guid: f9558f1a6cffea245a720e078208fccf, type: 2}
   Boss2:
-  - {fileID: 11400000, guid: 69f15236ccf6c8d468d1e830d7746cd6, type: 2}
+  - {fileID: 11400000, guid: 4868c66738024d74285c7f2ac26477ad, type: 2}
   Boss3:
   - {fileID: 11400000, guid: bd4a8209b52017c4bb8c391e2596cefb, type: 2}
   Boss4:
@@ -48,8 +48,7 @@ MonoBehaviour:
   PreTiles: []
   Choices: []
   SaveSequences: []
-  GuideDialogues:
-  - {fileID: 11400000, guid: ad6d02c88bf5128469e8d9fe74f78c2c, type: 2}
+  GuideDialogues: []
   CanSaveGame: 1
   WinDialogue: {fileID: 11400000, guid: b3e013d6e8df7544f9ae52071245f2db, type: 2}
   LostDialogue: {fileID: 11400000, guid: a14e5d34814bcac41943777fd3acf25d, type: 2}

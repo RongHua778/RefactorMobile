@@ -117,7 +117,7 @@ public class LevelManager : Singleton<LevelManager>
         get => Mathf.Min(PermitDifficulty, PlayerPrefs.GetInt("MaxDiff", 0));
         set
         {
-            PlayerPrefs.SetInt("MaxDiff", Mathf.Min(7, value));
+            PlayerPrefs.SetInt("MaxDiff", Mathf.Min(9, value));
             //if (SteamManager.Initialized)
             //{
             //    SteamUserStats.RequestCurrentStats();
@@ -225,7 +225,7 @@ public class LevelManager : Singleton<LevelManager>
         }
 
         //mobileTest
-        PassDiifcutly = 7;
+        PassDiifcutly = 9;
     }
 
     private void GetSteamStat()

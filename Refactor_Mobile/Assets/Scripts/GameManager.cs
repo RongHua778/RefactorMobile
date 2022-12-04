@@ -212,7 +212,7 @@ public class GameManager : Singleton<GameManager>
         nonEnemies.GameUpdate();
         OperationState.StateUpdate();
 
-        KeyboardControl();
+        //KeyboardControl();
     }
 
 
@@ -284,7 +284,7 @@ public class GameManager : Singleton<GameManager>
 
         if (LevelManager.Instance.CurrentLevel.ModeType != ModeType.Challenge)
         {
-            if (LevelManager.Instance.CurrentLevel.ModeID > 1)
+            if (LevelManager.Instance.CurrentLevel.ModeID >= 6)
             {
                 if (GameRes.CurrentWave <= 99 && (GameRes.CurrentWave + 4) % 10 == 0)
                 {

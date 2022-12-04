@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76869e3c621ad814084d11d5bbdd94e0, type: 3}
-  m_Name: "\u91CD\u678418"
+  m_Name: "\u79D1\u628001"
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -41,10 +41,13 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 2|ShowGuideBook, Assembly-CSharp
-    - Name: PageID
+      Data: 2|ShowGuideGirl, Assembly-CSharp
+    - Name: Show
+      Entry: 5
+      Data: true
+    - Name: PosID
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -66,7 +69,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  TriggerType: 11
-  Words: []
+  TriggerType: 0
+  Words:
+  - Guide501
+  - Guide502
+  - Guide503
   DontNeedClickEnd: 0
-  WaitingTime: 2
+  WaitingTime: 0

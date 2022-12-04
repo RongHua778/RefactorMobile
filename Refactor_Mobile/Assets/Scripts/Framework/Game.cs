@@ -77,9 +77,9 @@ public class Game : Singleton<Game>
                 TipsManager.Instance.ShowMessage(GameMultiLang.GetTraduction("TEST2"));
                 LevelManager.Instance.SetGameLevel(99);
                 LevelManager.Instance.GameExp = 0;
-                LevelManager.Instance.PassDiifcutly = 6;
+                LevelManager.Instance.PassDiifcutly = 9;
                 //LevelManager.Instance.PermitDifficulty = 6;
-                PlayerPrefs.SetInt("MaxDifficulty", 6);
+                PlayerPrefs.SetInt("MaxDifficulty", 9);
             }
 
             //if (Input.GetKeyDown(KeyCode.L))//解锁全内容

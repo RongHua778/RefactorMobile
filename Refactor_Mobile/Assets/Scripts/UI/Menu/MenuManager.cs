@@ -21,7 +21,7 @@ public class MenuManager : Singleton<MenuManager>
     [SerializeField] UIRecipeSet m_UIRecipeSet = default;
     [SerializeField] UIRuleSet m_UIRuleSet = default;
 
-    [SerializeField] TechInfoTips m_TechInfoTips = default;
+    //[SerializeField] TechInfoTips m_TechInfoTips = default;
 
     public void Initinal()
     {
@@ -43,7 +43,7 @@ public class MenuManager : Singleton<MenuManager>
         //m_TurretTips.Initialize();
        // m_TrapTips.Initialize();
         //m_EnemyInfoTips.Initialize();
-        m_TechInfoTips.Initialize();
+        //m_TechInfoTips.Initialize();
 
 
         //SteamLeaderboard.DownloadScore();
@@ -135,13 +135,13 @@ public class MenuManager : Singleton<MenuManager>
         m_UISetting.Show();
     }
 
-    internal void HideTips()
-    {
-        //m_TurretTips.CloseTips();
-        //m_TrapTips.CloseTips();
-        //m_EnemyInfoTips.CloseTips();
-        m_TechInfoTips.CloseTips();
-    }
+    //internal void HideTips()
+    //{
+    //    //m_TurretTips.CloseTips();
+    //    //m_TrapTips.CloseTips();
+    //    //m_EnemyInfoTips.CloseTips();
+    //    m_TechInfoTips.CloseTips();
+    //}
 
     //public void ShowMessage(string content)
     //{

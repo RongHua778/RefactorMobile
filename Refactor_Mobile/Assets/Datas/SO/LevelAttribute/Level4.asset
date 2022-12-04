@@ -18,7 +18,7 @@ MonoBehaviour:
   StartCoin: 25
   PlayerHealth: 15
   Wave: 30
-  LevelIntensify: 0.8
+  LevelIntensify: 0.7
   WaveSets:
   - waveIndex: 30
     baseNum: 0.2
@@ -36,18 +36,20 @@ MonoBehaviour:
   Boss1:
   - {fileID: 11400000, guid: 56bc6f0aa93753148b97e2e0731037d9, type: 2}
   Boss2:
-  - {fileID: 11400000, guid: e35af05bb7f906940b71ae1eed8850ff, type: 2}
+  - {fileID: 11400000, guid: 69f15236ccf6c8d468d1e830d7746cd6, type: 2}
   Boss3:
   - {fileID: 11400000, guid: dbb0595b1b4e1be4599c5c9d1e97b9e3, type: 2}
   Boss4:
   - {fileID: 11400000, guid: dbb0595b1b4e1be4599c5c9d1e97b9e3, type: 2}
   LevelInfo: LEVEL3INFO
-  TrapCount: 30
+  TrapCount: 20
   EliteWave: 19
   ExpIntensify: 4
+  PreTiles: []
   Choices: []
   SaveSequences: []
-  GuideDialogues: []
+  GuideDialogues:
+  - {fileID: 11400000, guid: ad6d02c88bf5128469e8d9fe74f78c2c, type: 2}
   CanSaveGame: 1
   WinDialogue: {fileID: 11400000, guid: c7ffce76877601e4892d6c2bb2d30b71, type: 2}
   LostDialogue: {fileID: 11400000, guid: a06fb438aff11f1499a36263abcec9f5, type: 2}

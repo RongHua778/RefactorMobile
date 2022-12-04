@@ -18,16 +18,28 @@ public class UIChallengeMode : MonoBehaviour
     [SerializeField] ItemSlot[] bossItemSlots = default;
 
     [SerializeField] TextMeshProUGUI highScore_Txt = default;
+    [SerializeField] GameObject challengeUnlockText = default;
+
     //[SerializeField] Image[] stars = default;
     //[SerializeField] Image waveProgress = default;
 
     private LevelAttribute levelAtt;
+    
 
     public void Initialize()
     {
-        GameEvents.Instance.onChallengeLeaderBoardGet += GetLeaderboardCallback;
-        SetArea(PlayfabManager.Instance.ChallengeLeaderboardGot);
-
+        if(LevelManager.Instance.PassDiifcutly < 9)
+        {
+            mainArea.SetActive(false);
+            reconnectArea.SetActive(false);
+            challengeUnlockText.gameObject.SetActive(true);
+        }
+        else
+        {
+            challengeUnlockText.gameObject.SetActive(false);
+            GameEvents.Instance.onChallengeLeaderBoardGet += GetLeaderboardCallback;
+            SetArea(PlayfabManager.Instance.ChallengeLeaderboardGot);
+        }
     }
 
     private void GetLeaderboardCallback(bool value)

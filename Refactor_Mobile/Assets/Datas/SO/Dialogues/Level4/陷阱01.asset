@@ -38,7 +38,19 @@ MonoBehaviour:
       Data: 1|GuideEvent[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|ShowGuideGirl, Assembly-CSharp
+    - Name: Show
+      Entry: 5
+      Data: true
+    - Name: PosID
+      Entry: 3
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -47,34 +59,16 @@ MonoBehaviour:
       Data: 
     - Name: GuideEndEvents
       Entry: 7
-      Data: 2|GuideEvent[], Assembly-CSharp
+      Data: 3|GuideEvent[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 3|ShowGuideBook, Assembly-CSharp
+      Data: 4|ShowGuideBook, Assembly-CSharp
     - Name: PageID
       Entry: 3
       Data: 6
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|EndTutorial, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|SetTriggerOnce, Assembly-CSharp
-    - Name: triggerKey
-      Entry: 1
-      Data: TrapGuide
-    - Name: value
-      Entry: 3
-      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -85,6 +79,10 @@ MonoBehaviour:
       Entry: 8
       Data: 
   TriggerType: 0
-  Words: []
+  Words:
+  - Guide401
+  - Guide402
+  - Guide403
+  - Guide404
   DontNeedClickEnd: 0
-  WaitingTime: 2
+  WaitingTime: 0

@@ -65,10 +65,16 @@ MonoBehaviour:
       Data: 3|GuideEvent[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
-      Data: 4|RectMaskObj, Assembly-CSharp
+      Data: 4|SetTutorial, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|RectMaskObj, Assembly-CSharp
     - Name: Show
       Entry: 5
       Data: false
@@ -83,7 +89,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|ShowGuideGirl, Assembly-CSharp
+      Data: 6|ShowGuideGirl, Assembly-CSharp
     - Name: Show
       Entry: 5
       Data: false
@@ -95,7 +101,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|LockKeyboard, Assembly-CSharp
+      Data: 7|LockKeyboard, Assembly-CSharp
     - Name: isLock
       Entry: 5
       Data: false
@@ -112,6 +118,5 @@ MonoBehaviour:
   Words:
   - Guide213
   - Guide214
-  - Guide215
   DontNeedClickEnd: 0
   WaitingTime: 0

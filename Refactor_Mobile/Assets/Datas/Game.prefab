@@ -5131,7 +5131,7 @@ MonoBehaviour:
     UnlockItems:
     - {fileID: 11400000, guid: ac7957dafceb0a24cb32b7461316dfb7, type: 2}
   permitGameLevel: 99
-  PermitDifficulty: 10
+  PermitDifficulty: 9
   AllContent:
   - {fileID: 11400000, guid: 8b69e55deebc49d44b73c6e458a12794, type: 2}
   - {fileID: 11400000, guid: 2a0c266b352137f45b20d3723395e650, type: 2}
@@ -5190,6 +5190,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 99391903eba8a1041af83dc6b559379e, type: 2}
   - {fileID: 11400000, guid: 00b992198a245254bbe331c2618239cd, type: 2}
   - {fileID: 11400000, guid: aa5a923b0cb87d348914e228fc353f67, type: 2}
+  - {fileID: 11400000, guid: ea5264bf26693924eaf323a1897fdd0c, type: 2}
+  - {fileID: 11400000, guid: cb6bba1949ebe0043b8ba19a91d17a99, type: 2}
   - {fileID: 11400000, guid: b6403761d56b0914599f3e8e647a50b7, type: 2}
   - {fileID: 11400000, guid: 0fdb48a4627659e468951b935b043e1c, type: 2}
   ChallengeLevels:

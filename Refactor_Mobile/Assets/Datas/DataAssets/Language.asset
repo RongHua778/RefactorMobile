@@ -356,40 +356,43 @@ MonoBehaviour:
     Chinese: "\u8DF3\u8FC7\u6559\u7A0B"
     English: Skip tutorial
   - Key: UNLOCKENDLESS
-    Chinese: "\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA64\u540E\u89E3\u9501"
-    English: 'Will be unlocked after passing level 4 in Standard Mode '
+    Chinese: "\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA66\u540E\u89E3\u9501"
+    English: 'Will be unlocked after passing level 6 in Standard Mode '
+  - Key: UNLOCKCHALLENGE
+    Chinese: "\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA69\u540E\u89E3\u9501"
+    English: 'Will be unlocked after passing level 9 in Standard Mode '
   - Key: DIFFICULTY0
     Chinese: "1.\u57FA\u7840\u64CD\u4F5C\u53CA\u6A21\u5757\u6559\u5B66"
     English: 1.Tutorial and basic play
   - Key: DIFFICULTY1
-    Chinese: "1.\u91CD\u6784\u673A\u5236\u6559\u5B66\n2.\u575A\u630130\u6CE2\u8FDB\u653B"
-    English: '1.Refactor Turorial
-
-      2.Resist 30 waves of Invasion'
+    Chinese: "1.\u91CD\u6784\u673A\u5236\u6559\u5B66"
+    English: 1.Refactor Turorial
   - Key: DIFFICULTY2
+    Chinese: "1.\u5143\u7D20\u88C5\u8F7D\u673A\u5236\u6559\u5B66\n2.\u8FCE\u63A520\u6CE2\u6218\u6597"
+    English: '1. Element Equipment Tutorial
+
+      2. Resiste 20 waves of Invasion'
+  - Key: DIFFICULTY3
+    Chinese: "1.\u8FCE\u63A530\u6CE2\u6218\u6597"
+    English: 1.Resist 30 waves of Invasion
+  - Key: DIFFICULTY4
     Chinese: "1.\u52A0\u5165\u6218\u573A\u9677\u9631"
     English: 1. Traps Incoming
-  - Key: DIFFICULTY3
+  - Key: DIFFICULTY5
+    Chinese: "1.\u4E00\u6B21\u6807\u51C6\u7684\u6218\u6597"
+    English: 1. A Standard Battle
+  - Key: DIFFICULTY6
     Chinese: "1.\u52A0\u5165\u79D1\u6280\u7CFB\u7EDF"
     English: 1. Technology Incoming
-  - Key: DIFFICULTY4
+  - Key: DIFFICULTY7
     Chinese: "1.\u4E00\u6B21\u6709\u610F\u4E49\u7684\u6311\u6218"
     English: 1. A Meaningful Challenge
-  - Key: DIFFICULTY5
+  - Key: DIFFICULTY8
     Chinese: "1.\u4E00\u6B21\u8270\u96BE\u7684\u6311\u6218"
     English: 1. A Tough Challenge
-  - Key: DIFFICULTY6
+  - Key: DIFFICULTY9
     Chinese: "1.\u4E0D\u53EF\u80FD\u7684\u4EFB\u52A1"
     English: 1. An Impossible Task
-  - Key: DIFFICULTY7
-    Chinese: 
-    English: 
-  - Key: DIFFICULTY8
-    Chinese: 
-    English: 
-  - Key: DIFFICULTY9
-    Chinese: 
-    English: 
   - Key: NEEDTUTORIAL
     Chinese: "\u662F\u5426\u5F00\u542F\u6559\u7A0B\uFF1F"
     English: Do you want to start the tutorial?
@@ -2347,9 +2350,9 @@ MonoBehaviour:
     English: Based on the element combination of recipe, each refactor turret also
       comes with 1 <color=#FFEA6D> element skill </color>.
   - Key: Guide2101
-    Chinese: "\u6BCF\u4E2A\u5143\u7D20\u6280\u80FD\u4F1A\u4E3A\u91CD\u6784\u5854<color=#FFEA6D>\u589E\u52A03\u4E2A\u5BF9\u5E94\u5143\u7D20</color>,\u91CD\u6784\u5854\u62E5\u6709\u7684\u5143\u7D20\u6570\u91CF\u663E\u793A\u5728\u6280\u80FD\u533A\u4E0A\u65B9\u3002"
-    English: <color=#FFEA6D>Each element skill adds 3 elements to the refactor turret</color>,
-      the number of elements it has is displayed above the skill area.
+    Chinese: "\u76EE\u524D\u6E38\u620F\u4E2D\u5171\u670935\u79CD\u5143\u7D20\u6280\u80FD\u7EC4\u5408\uFF0C\u6BCF\u4E2A\u7EC4\u5408\u5206\u522B\u5BF9\u5E94\u4E00\u4E2A\u7279\u5B9A\u7684\u5143\u7D20\u6280\u80FD."
+    English: At present, there are 35 element combinations in the game, and each
+      combination corresponds to a specific element skill.
   - Key: Guide2102
     Chinese: "\u6BCF\u4E2A\u5143\u7D20\u90FD\u4F1A\u4E3A\u91CD\u6784\u5854\u63D0\u4F9B\u7279\u5B9A\u5C5E\u6027\u52A0\u6210\uFF0C<color=#FFEA6D>\u4E14\u540C\u79CD\u5143\u7D20\u6570\u91CF\u8D8A\u591A\uFF0C\u5219\u8BE5\u5C5E\u6027\u52A0\u6210\u8D8A\u9AD8</color>\u3002"
     English: Each element provides a specific attribute bonus to the refactor turret,
@@ -2384,13 +2387,13 @@ MonoBehaviour:
     English: <color=#FFEA6D>Please stick to 30 waves of attacks</color> to complete
       this tutorial.
   - Key: Guide301
-    Chinese: "\u672C\u6B21\u6559\u7A0B\u5C06\u4ECB\u7ECD\u91CD\u6784\u88C5\u8F7D\u548C\u5143\u7D20\u52A0\u6210\u3002"
+    Chinese: "\u672C\u6B21\u6559\u7A0B\u5C06\u4ECB\u7ECD\u5143\u7D20\u88C5\u8F7D\u548C\u5143\u7D20\u52A0\u6210\u3002"
     English: 
   - Key: Guide302
-    Chinese: "\u91CD\u6784\u88C5\u8F7D\u662F\u8FDB\u4E00\u6B65\u63D0\u5347\u91CD\u6784\u5854\u6218\u6597\u529B\u7684\u91CD\u8981\u673A\u5236\u3002"
+    Chinese: "\u5143\u7D20\u88C5\u8F7D\u662F\u8FDB\u4E00\u6B65\u63D0\u5347\u91CD\u6784\u5854\u6218\u6597\u529B\u7684\u91CD\u8981\u673A\u5236\u3002"
     English: 
   - Key: Guide303
-    Chinese: "\u901A\u8FC7\u5C06\u4E00\u4E2A\u91CD\u6784\u5854\u90E8\u7F72\u5728\u53E6\u4E00\u4E2A\u5DF2\u7ECF\u90E8\u7F72\u7684\u91CD\u6784\u5854\u4E0A\uFF0C\u5373\u53EF\u4F7F\u8BE5\u91CD\u6784\u5854\u7EE7\u627F\u65B0\u91CD\u6784\u5854\u7684\u5143\u7D20\u6280\u80FD\u3002"
+    Chinese: "\u901A\u8FC7<color=#FFEA6D>\u5C06\u4E00\u4E2A\u91CD\u6784\u5854\u90E8\u7F72\u5728\u53E6\u4E00\u4E2A\u5DF2\u7ECF\u90E8\u7F72\u7684\u91CD\u6784\u5854\u4E0A\uFF0C\u5373\u53EF\u4F7F\u8BE5\u91CD\u6784\u5854\u7EE7\u627F\u65B0\u91CD\u6784\u5854\u7684\u5143\u7D20\u6280\u80FD.</color>"
     English: 
   - Key: Guide304
     Chinese: "\u73B0\u5728\u573A\u4E0A\u5DF2\u7ECF\u6709\u8DB3\u591F\u7684\u5408\u6210\u7D20\u6750\uFF0C\u5C31\u6765\u5C1D\u8BD5\u4E00\u4E0B\u5427\u3002"
@@ -2411,7 +2414,7 @@ MonoBehaviour:
     Chinese: "\u62E5\u6709\u591A\u4E2A\u5143\u7D20\u6280\u80FD\u53EF\u4EE5\u5927\u5927\u63D0\u5347\u91CD\u6784\u5854\u7684\u6218\u6597\u529B\u3002"
     English: 
   - Key: Guide310
-    Chinese: "\u4E0D\u8FC7\u8981\u6CE8\u610F\uFF0C\u6BCF\u4E2A\u91CD\u6784\u5854\u9ED8\u8BA4\u62E5\u67093\u4E2A\u5143\u7D20\u6280\u80FD\u69FD\uFF0C\u8D85\u51FA\u7684\u5143\u7D20\u6280\u80FD\u5C06\u65E0\u6CD5\u7EE7\u627F\u3002"
+    Chinese: "\u4E0D\u8FC7\u8981\u6CE8\u610F\uFF0C<color=#FFEA6D>\u6BCF\u4E2A\u91CD\u6784\u5854\u9ED8\u8BA4\u62E5\u67093\u4E2A\u5143\u7D20\u6280\u80FD\u69FD\uFF0C\u8D85\u51FA\u7684\u5143\u7D20\u6280\u80FD\u5C06\u65E0\u6CD5\u7EE7\u627F.</color>"
     English: 
   - Key: Guide311
     Chinese: "\u73B0\u5728\u8BB2\u89E3\u4E00\u4E0B\u5173\u4E8E\u5143\u7D20\u52A0\u6210\u7684\u6548\u679C\u3002"
@@ -2423,13 +2426,34 @@ MonoBehaviour:
     Chinese: "\u91CD\u6784\u5854\u62E5\u6709\u7684\u6BCF\u4E2A\u5143\u7D20\u6280\u80FD\u90FD\u4F1A\u4E3A\u8BE5\u91CD\u6784\u5854\u589E\u52A0\u5BF9\u5E94\u7684\u4E09\u4E2A\u5143\u7D20\u3002"
     English: 
   - Key: Guide314
-    Chinese: "\u4E0D\u540C\u7684\u5143\u7D20\u4F1A\u4E3A\u91CD\u6784\u5854\u5E26\u6765\u7279\u5B9A\u7684\u5C5E\u6027\u52A0\u6210\uFF0C\u4E14\u540C\u79CD\u5143\u7D20\u7684\u6570\u91CF\u8D8A\u591A\uFF0C\u5176\u52A0\u6210\u7684\u5E45\u5EA6\u4E5F\u4F1A\u8D8A\u9AD8\u3002"
+    Chinese: "\u4E0D\u540C\u7684\u5143\u7D20\u4F1A\u4E3A\u91CD\u6784\u5854\u5E26\u6765\u7279\u5B9A\u7684\u5C5E\u6027\u52A0\u6210\uFF0C\u4E14<color=#FFEA6D>\u540C\u79CD\u5143\u7D20\u7684\u6570\u91CF\u8D8A\u591A\uFF0C\u5176\u52A0\u6210\u7684\u5E45\u5EA6\u4E5F\u4F1A\u8D8A\u9AD8.</color>"
     English: 
   - Key: Guide315
     Chinese: "\u901A\u8FC7\u642D\u914D\u5143\u7D20\u6280\u80FD\u548C\u5143\u7D20\u79CD\u7C7B\uFF0C\u4F60\u5C31\u53EF\u4EE5\u6253\u9020\u72EC\u4E00\u65E0\u4E8C\u7684\u5F3A\u529B\u91CD\u6784\u5854\u3002"
     English: 
   - Key: Guide316
     Chinese: "\u672C\u6B21\u6559\u7A0B\u5230\u6B64\u7ED3\u675F\uFF0C\u4F60\u53EF\u4EE5\u968F\u65F6\u901A\u8FC7\u5DE6\u4E0A\u89D2\u7684\u6559\u7A0B\u5165\u53E3\u67E5\u770B\u6240\u6709\u6559\u5B66\u5185\u5BB9\u3002"
+    English: 
+  - Key: Guide401
+    Chinese: "\u7559\u610F\u5230\u573A\u4E0A\u7684\u95EE\u53F7\u683C\u5B50\u4E86\u5417\uFF0C\u8FD9\u4E9B\u662F\u65B0\u52A0\u5165\u7684<color=#FFEA6D>\u9677\u9631\u683C.</color>"
+    English: 
+  - Key: Guide402
+    Chinese: "\u95EE\u53F7\u683C\u5B50\u8868\u793A\u5176\u5904\u4E8E\u672A\u63ED\u793A\u7684\u72B6\u6001\uFF0C<color=#FFEA6D>\u5F53\u6709\u8DEF\u7EBF\u901A\u8FC7\u8FD9\u4E9B\u683C\u5B50\u65F6\uFF0C\u9677\u9631\u5C31\u4F1A\u88AB\u63ED\u793A.</color>"
+    English: 
+  - Key: Guide403
+    Chinese: "\u88AB\u63ED\u793A\u7684\u9677\u9631\u4F1A\u5BF9\u7ECF\u8FC7\u7684\u654C\u4EBA\u89E6\u53D1\u7279\u6B8A\u6548\u679C\uFF0C\u5E76\u4E14<color=#FFEA6D>\u53EF\u4EE5\u88AB\u81EA\u7531\u8C03\u6362\u4F4D\u7F6E.</color>"
+    English: 
+  - Key: Guide404
+    Chinese: "\u5145\u5206\u5229\u7528\u8FD9\u4E9B\u9677\u9631\u5427\uFF0C\u4ED6\u4EEC\u4F1A\u4E3A\u6211\u4EEC\u7684\u9632\u5B88\u63D0\u4F9B\u5DE8\u5927\u7684\u5E2E\u52A9."
+    English: 
+  - Key: Guide501
+    Chinese: "\u4E3A\u4E86\u8FCE\u63A5\u66F4\u8270\u5DE8\u7684\u6311\u6218\uFF0C\u6211\u4EEC\u4E3A\u4F60\u51C6\u5907\u4E86\u5F3A\u6709\u529B\u7684\u652F\u63F4."
+    English: 
+  - Key: Guide502
+    Chinese: "\u4ECE<color=#FFEA6D>\u7B2C5\u6CE2\u8D77\uFF0C\u6BCF10\u6CE2\u4F60\u90FD\u5C06\u83B7\u5F971\u6B21\u9009\u62E9\u79D1\u6280\u52A0\u6210\u7684\u673A\u4F1A.</color>"
+    English: 
+  - Key: Guide503
+    Chinese: "\u9009\u62E9\u5408\u7406\u7684\u79D1\u6280\u4F1A\u8BA9\u6218\u6597\u4E8B\u534A\u529F\u500D\uFF0C\u52A0\u6CB9\u5427\u6307\u6325\u5B98\uFF01"
     English: 
   - Key: "//\u6807\u51C6\u6A21\u5F0F\u80DC\u5229"
     Chinese: 
