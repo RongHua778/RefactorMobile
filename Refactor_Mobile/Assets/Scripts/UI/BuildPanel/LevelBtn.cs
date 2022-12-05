@@ -18,9 +18,10 @@ public class LevelBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (isHolding)
         {
-            if (holdCouter > 0.5f)
+            if (holdCouter > 0.25f)
             {
-                infoPanel.Show();
+                if (!infoPanel.IsVisible())
+                    infoPanel.Show();
             }
             else
             {
@@ -32,16 +33,16 @@ public class LevelBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         isHolding = true;
+        holdCouter = 0;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         isHolding = false;
-        if (holdCouter <= 0.5f)
+        if (holdCouter <= 0.25f)
         {
             LevelBtnClick();
         }
-        holdCouter = 0;
         infoPanel.Hide();
     }
 

@@ -9,6 +9,7 @@ public abstract class Element
     public abstract string GetIntensifyText(string value);
     public abstract string GetSkillText { get; }
     public abstract string GetElementName { get; }
+    public abstract string GetElementNameEN { get; }
     public abstract string GetExtraInfo { get; }
     public abstract string ElementColor { get; }
     public string Colorized(string text)
@@ -24,6 +25,8 @@ public class None : Element
     public override string GetSkillText => throw new System.NotImplementedException();
 
     public override string GetElementName => throw new System.NotImplementedException();
+    public override string GetElementNameEN => throw new System.NotImplementedException();
+
     public override string GetExtraInfo => "";
 
     public override string ElementColor => "#7CF7FF";
@@ -49,7 +52,8 @@ public class Gold : Element
     public override string GetExtraInfo => string.Format(GameMultiLang.GetTraduction("FOLLOW"), 0);
     public override string GetSkillText => "\n" + (GameRes.GameGoldIntensify) * 100 + GameMultiLang.GetTraduction("ATTACKUP");
 
-    public override string GetElementName => "A";
+    public override string GetElementName => "╫П";
+    public override string GetElementNameEN => "A";
 
     public override string ElementColor => "#FFE766";
 
@@ -70,7 +74,9 @@ public class Wood : Element
     public override string ElementColor => "#62C751";
     public override string GetExtraInfo => string.Format(GameMultiLang.GetTraduction("FOLLOW"), 1);
     public override string GetSkillText => "\n" + GameRes.GameWoodIntensify * 100 + GameMultiLang.GetTraduction("SPEEDUP");
-    public override string GetElementName => "B";
+    public override string GetElementName => "д╬";
+    public override string GetElementNameEN => "B";
+
     public override void GetComIntensify(StrategyBase strategy, bool add = true)
     {
         //strategy.ElementFirerateIntensify += add ? StaticData.Instance.WoodFirerateIntensify : -StaticData.Instance.WoodFirerateIntensify;
@@ -88,7 +94,9 @@ public class Water : Element
     public override string ElementColor => "#00B7FF";
     public override string GetExtraInfo => string.Format(GameMultiLang.GetTraduction("FOLLOW"), 2);
     public override string GetSkillText => "\n" + GameRes.GameWaterIntensify + GameMultiLang.GetTraduction("SLOWUP");
-    public override string GetElementName => "C";
+    public override string GetElementName => "к╝";
+    public override string GetElementNameEN => "C";
+
     public override void GetComIntensify(StrategyBase strategy, bool add = true)
     {
         //strategy.ElementSlowIntensify += add ? StaticData.Instance.WaterSlowIntensify : -StaticData.Instance.WaterSlowIntensify;
@@ -106,7 +114,9 @@ public class Fire : Element
 
     public override string GetExtraInfo => string.Format(GameMultiLang.GetTraduction("FOLLOW"), 3);
     public override string GetSkillText => "\n" + GameRes.GameFireIntensify * 100 + GameMultiLang.GetTraduction("CRITICALUP");
-    public override string GetElementName => "D";
+    public override string GetElementName => "╩П";
+    public override string GetElementNameEN => "D";
+
     public override void GetComIntensify(StrategyBase strategy, bool add = true)
     {
         //strategy.ElementCritIntensify += add ? StaticData.Instance.FireCritIntensify : -StaticData.Instance.FireCritIntensify;
@@ -123,7 +133,9 @@ public class Dust : Element
     public override string ElementColor => "#E84BA3";
     public override string GetExtraInfo => string.Format(GameMultiLang.GetTraduction("FOLLOW"), 4);
     public override string GetSkillText => "\n" + GameRes.GameDustIntensify + GameMultiLang.GetTraduction("SPUTTERINGUP");
-    public override string GetElementName => "E";
+    public override string GetElementName => "ма";
+    public override string GetElementNameEN => "E";
+
     public override void GetComIntensify(StrategyBase strategy, bool add = true)
     {
         //strategy.ElementSplashIntensify += add ? StaticData.Instance.DustSplashIntensify : -StaticData.Instance.DustSplashIntensify;

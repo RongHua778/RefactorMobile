@@ -16,7 +16,7 @@ public class UIEndlessMode : MonoBehaviour
 
     public void Initialize()
     {
-        if (LevelManager.Instance.PassDiifcutly < 6)
+        if (LevelManager.Instance.PassDifficulty < 6)
         {
             endlessUnlockText.gameObject.SetActive(true);
             mainArea.SetActive(false);

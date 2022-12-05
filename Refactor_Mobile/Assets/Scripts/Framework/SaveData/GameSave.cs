@@ -7,9 +7,15 @@ using System;
 [Serializable]
 public class GameSave
 {
+
+    //玩家等级保存
+    public int GameLevel;
+    public int GameExp;
+    public int PassDifficulty;
+
+
+    //临时游戏保存
     public bool HasLastGame;
-
-
     public List<BlueprintStruct> SaveBluePrints=new List<BlueprintStruct>();
     public List<TechnologyStruct> SaveTechnologies = new List<TechnologyStruct>();
     public List<TechnologyStruct> SavePickingTechs = new List<TechnologyStruct>();
@@ -20,10 +26,7 @@ public class GameSave
     public List<int> SaveRules = new List<int>();
     public GameResStruct SaveRes;
 
-    //临时游戏保存
     public List<ContentStruct> SaveContents = new List<ContentStruct>();
-
-    //public ContentStruct SaveDraggingDShapeContent;
 
     public List<string> SaveBattleRecipes = new List<string>();
 
@@ -42,6 +45,20 @@ public class GameSave
         SaveRes = null;
         SaveContents.Clear();
         SaveSequences.Clear();
+    }
+
+    public void ClearData()
+    {
+        GameLevel = 0;
+        GameExp = 0;
+        PassDifficulty = 0;
+    }
+
+    public void SaveData(int gameLevel,int gameExp,int passDifficulty)
+    {
+        GameLevel = gameLevel;
+        GameExp = gameExp;
+        PassDifficulty = passDifficulty;
     }
 
     public void SaveGame(List<TechnologyStruct> saveTechs,List<TechnologyStruct> savePickingTechs, List<BlueprintStruct> saveBlueprints, 

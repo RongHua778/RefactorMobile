@@ -54,7 +54,7 @@ public class BluePrintGrid : ReusableObject//, IPointerEnterHandler, IPointerExi
         string key = "";
         foreach (var element in ((ElementSkill)strategy.TurretSkills[1]).InitElements)
         {
-            key += StaticData.ElementDIC[(ElementType)element].GetElementName;
+            key += StaticData.ElementDIC[(ElementType)element].GetElementNameEN;
         }
         skillNameTxt.text = GameMultiLang.GetTraduction(key);
 

@@ -140,7 +140,7 @@ public class TurretSkillFactory
                         string key = "";
                         foreach (var e in skillReturn.Elements)
                         {
-                            key += StaticData.ElementDIC[(ElementType)(e % 10)].GetElementName;
+                            key += StaticData.ElementDIC[(ElementType)(e % 10)].GetElementNameEN;
                         }
                         key += offset > 0 ? offset.ToString() : "";
                         skillReturn.SkillDescription = GameMultiLang.GetTraduction(key + "INFO");

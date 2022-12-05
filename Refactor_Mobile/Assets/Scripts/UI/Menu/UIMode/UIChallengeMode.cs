@@ -28,7 +28,7 @@ public class UIChallengeMode : MonoBehaviour
 
     public void Initialize()
     {
-        if(LevelManager.Instance.PassDiifcutly < 9)
+        if(LevelManager.Instance.PassDifficulty < 9)
         {
             mainArea.SetActive(false);
             reconnectArea.SetActive(false);

@@ -67,7 +67,7 @@ public class Game : Singleton<Game>
                 TipsManager.Instance.ShowMessage(GameMultiLang.GetTraduction("TEST1"));
                 LevelManager.Instance.SetGameLevel(0);
                 LevelManager.Instance.GameExp = 0;
-                LevelManager.Instance.PassDiifcutly = 0;
+                LevelManager.Instance.PassDifficulty = 0;
                 //LevelManager.Instance.ClearAllSteamStats();
                 //LevelManager.Instance.PermitDifficulty = 2;
                 PlayerPrefs.DeleteAll();
@@ -77,7 +77,7 @@ public class Game : Singleton<Game>
                 TipsManager.Instance.ShowMessage(GameMultiLang.GetTraduction("TEST2"));
                 LevelManager.Instance.SetGameLevel(99);
                 LevelManager.Instance.GameExp = 0;
-                LevelManager.Instance.PassDiifcutly = 9;
+                LevelManager.Instance.PassDifficulty = 9;
                 //LevelManager.Instance.PermitDifficulty = 6;
                 PlayerPrefs.SetInt("MaxDifficulty", 9);
             }

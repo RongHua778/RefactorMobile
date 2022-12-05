@@ -107,8 +107,8 @@ public class TurretTips : TileTips
         switch (att.StrategyType)
         {
             case StrategyType.Element:
-                string element = StaticData.FormElementName(att.element, quality);
-                nameTxt = element + nameTxt;
+                //string element = StaticData.FormElementName(att.element, quality);
+                nameTxt = nameTxt + quality;
 
                 AttributeArea.SetActive(true);
                 DesArea.SetActive(true);

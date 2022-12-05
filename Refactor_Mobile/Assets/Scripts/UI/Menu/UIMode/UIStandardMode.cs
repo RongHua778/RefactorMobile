@@ -13,13 +13,13 @@ public class UIStandardMode : MonoBehaviour
     private int SelectDifficulty
     {
         get => selectDifficulty;
-        set => selectDifficulty = Mathf.Clamp(value, 0, LevelManager.Instance.PassDiifcutly);
+        set => selectDifficulty = Mathf.Clamp(value, 0, LevelManager.Instance.PassDifficulty);
     }
 
     public void Initialize()
     {
         m_BattleRecipe.Initialize();
-        selectDifficulty = LevelManager.Instance.PassDiifcutly;
+        selectDifficulty = LevelManager.Instance.PassDifficulty;
         DifficultyBtnClick(0);
     }
 

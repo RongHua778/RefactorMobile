@@ -476,14 +476,14 @@ MonoBehaviour:
     English: Data Exception probability; Each time you select a non-exception technology,
       the probability of exception increases by 15% thereafter.
   - Key: DRAGGUIDE
-    Chinese: "\u6309\u4F4F\u5DE6\u952E\u62D6\u52A8\u89C6\u89D2"
-    English: Left-click and drag to move the map
+    Chinese: "\u6309\u4F4F\u5C4F\u5E55\u62D6\u52A8"
+    English: Hold and drag to move
   - Key: WHEELGUIDE
-    Chinese: "\u6ED1\u52A8\u6EDA\u8F6E\u7F29\u653E\u89C6\u89D2"
-    English: Scroll the mouse wheel to zoom in and out
+    Chinese: "\u53CC\u6307\u6ED1\u52A8\u7F29\u653E"
+    English: Double fingers slide to zoom
   - Key: PLACEGUIDE
-    Chinese: "\u6309\u4F4F\u6A21\u5757\u53EF\u62D6\u52A8\n\u70B9\u51FB\u65CB\u8F6C\u6309\u94AE\u6216R\u952E\u53EF\u65CB\u8F6C\n\u8BF7\u5C06\u6A21\u5757\u6446\u653E\u5230\u7EFF\u8272\u5149\u6548\u6240\u793A\u4F4D\u7F6E"
-    English: "Click the module and drag \nRotate it by 'R' or 'rotate button'\nPlease
+    Chinese: "\u6309\u4F4F\u6A21\u5757\u6216\u62D6\u52A8\u6309\u94AE\u53EF\u62D6\u52A8\n\u70B9\u51FB\u65CB\u8F6C\u6309\u94AE\u53EF\u65CB\u8F6C\n\u8BF7\u5C06\u6A21\u5757\u6446\u653E\u5230\u7EFF\u8272\u5149\u6548\u6240\u793A\u4F4D\u7F6E"
+    English: "Click the module or move button to drag \nRotate it by rotate button\nPlease
       place the module to the indicated position"
   - Key: TUTORIALPLACE
     Chinese: "\u8BF7\u6309\u6559\u7A0B\u4F4D\u7F6E\u6446\u653E\u6A21\u5757"
@@ -2131,8 +2131,8 @@ MonoBehaviour:
     Chinese: "\u5FAE\u89C2:\u5730\u56FE\u5927\u5C0F\u53D8\u4E3A15X15"
     English: 'Microcosmic: Change the map size to 15 X 15.'
   - Key: RULE_MACRO
-    Chinese: "\u5B8F\u89C2:\u5730\u56FE\u5927\u5C0F\u53D8\u4E3A35X35"
-    English: 'Macroscopic: Change the map size to 35 X 35.'
+    Chinese: "\u5B8F\u89C2:\u5730\u56FE\u5927\u5C0F\u53D8\u4E3A27X27"
+    English: 'Macroscopic: Change the map size to 27 X 27.'
   - Key: RULE_COLD
     Chinese: "\u5BD2\u51B7:\u654C\u4EBA\u548C\u91CD\u6784\u5854\u7684\u51BB\u7ED3\u65F6\u95F4\u7FFB\u500D"
     English: 'Cold: Double the freeze time of enemies and turrets.'
@@ -2288,7 +2288,7 @@ MonoBehaviour:
     Chinese: "\u5F53\u4F60\u51C6\u5907\u597D\u4E86\u5C31\u5F00\u59CB\u4E0B\u4E00\u6CE2\u6218\u6597\u5427."
     English: Start the next wave when you're ready.
   - Key: Guide25
-    Chinese: "\u76EE\u524D\u6E38\u620F\u4E2D\u5171\u6709\u91D1\u6728\u6C34\u706B\u571F5\u79CD\u4E0D\u540C\u7684\u5143\u7D20\u9632\u5FA1\u5854,\u4EE3\u53F7\u4E3AABCDE."
+    Chinese: "\u76EE\u524D\u6E38\u620F\u4E2D\u5171\u6709\u91D1\u6728\u6C34\u706B\u571F5\u79CD\u4E0D\u540C\u7684\u5143\u7D20\u9632\u5FA1\u5854."
     English: There are 5 Element Turrets, named Metal, Wood, Water, Fire, Earth.
   - Key: Guide26
     Chinese: "\u4EE3\u53F7\u540E\u7684\u6570\u5B57\u4E3A\u5143\u7D20\u5854\u7684\u54C1\u8D28,\u54C1\u8D28\u8D8A\u9AD8\u7684\u5143\u7D20\u5854\u5C5E\u6027\u4E5F\u8D8A\u5F3A."
@@ -2303,7 +2303,7 @@ MonoBehaviour:
     English: 'Here shows your current system level and the tokens needed to upgrade
       the system. Try click the upgrade button.  '
   - Key: Guide29
-    Chinese: "\u505A\u5F97\u597D,\u4F60\u53EF\u4EE5\u5728\u4E4B\u540E\u7684\u6218\u6597\u4E2D\u7EE7\u7EED\u63D0\u5347\u7CFB\u7EDF\u7B49\u7EA7."
+    Chinese: "<color=#FFEA6D>\u957F\u6309\u7CFB\u7EDF\u7B49\u7EA7\u6309\u94AE\uFF0C\u53EF\u4EE5\u67E5\u770B\u5404\u54C1\u8D28\u7684\u62BD\u53D6\u6982\u7387.</color>"
     English: Well done, you can continue to upgrade the system later.
   - Key: Guide30
     Chinese: "\u5173\u4E8E\u6A21\u5757\u548C\u7CFB\u7EDF\u7684\u6559\u5B66\u5C31\u5230\u6B64\u7ED3\u675F,\u68C0\u6D4B\u5230\u672C\u6B21\u5165\u4FB5\u5171\u670910\u6CE2\u654C\u4EBA,\u8BF7\u575A\u5B88\u5230\u6700\u540E!"
@@ -2329,8 +2329,11 @@ MonoBehaviour:
     English: '<color=#FFEA6D>Each recipe is made up of three-element turrets</color>,
       which can be a factor when all of them are assembled.  '
   - Key: Guide205
-    Chinese: "\u6211\u4E3A\u4F60\u63D0\u4F9B\u4E86\u4E00\u7B14\u989D\u5916\u7684\u4EE3\u5E01\uFF0C\u73B0\u5728\u5C31\u6765\u5C1D\u8BD5\u51D1\u9F50\u4E00\u4E2A\u914D\u65B9\u5427\u3002"
+    Chinese: "\u6211\u4E3A\u4F60\u63D0\u4F9B\u4E86\u4E00\u7B14\u989D\u5916\u7684\u4EE3\u5E01\uFF0C\u73B0\u5728\u5C31\u6765\u5C1D\u8BD5\u51D1\u9F50\u4E00\u4E2A\u914D\u65B9\u5427."
     English: Extra token for you! Try to build 3 modules this turn, and get a recipe!
+  - Key: Guide2051
+    Chinese: "\u9009\u62E9\u6A21\u5757\u65F6\uFF0C<color=#FFEA6D>\u6309\u4F4F\u5C06\u8981\u9009\u62E9\u7684\u6A21\u5757\uFF0C\u53EF\u4EE5\u5728\u914D\u65B9\u754C\u9762\u9884\u89C8\u5176\u6EE1\u8DB3\u7684\u7D20\u6750.</color>"
+    English: 
   - Key: Guide206
     Chinese: "\u4F60\u6210\u529F\u51D1\u9F50\u4E86\u91CD\u6784\u5854\u914D\u65B9\u6240\u9700\u7684\u7D20\u6750\uFF0C\u91CD\u6784\u65F6\u4F5C\u4E3A\u7D20\u6750\u7684\u5143\u7D20\u5854\u5C06\u88AB\u6D88\u8017\u3002"
     English: You have successfully got all the elements for the refactor recipe.

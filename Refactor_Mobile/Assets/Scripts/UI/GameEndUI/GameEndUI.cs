@@ -124,8 +124,8 @@ public class GameEndUI : IUserInterface
                     title.text = GameMultiLang.GetTraduction("WIN") + GameMultiLang.GetTraduction("DIFFICULTY") + LevelManager.Instance.CurrentLevel.Level.ToString();
                     GameEvents.Instance.TempWordTrigger(new TempWord(TempWordType.StandardWin, LevelManager.Instance.CurrentLevel.Level));
 
-                    if (LevelManager.Instance.PassDiifcutly < LevelManager.Instance.CurrentLevel.Level + 1)
-                        LevelManager.Instance.PassDiifcutly = LevelManager.Instance.CurrentLevel.Level + 1;
+                    if (LevelManager.Instance.PassDifficulty < LevelManager.Instance.CurrentLevel.Level + 1)
+                        LevelManager.Instance.PassDifficulty = LevelManager.Instance.CurrentLevel.Level + 1;
 
                     titleBG.sprite = TitleBGs[LevelManager.Instance.CurrentLevel.Level + 1];
                     if (LevelManager.Instance.CurrentLevel.Level < LevelManager.Instance.StandardLevels.Length)//当前难度低于最大难度时，显示下一难度

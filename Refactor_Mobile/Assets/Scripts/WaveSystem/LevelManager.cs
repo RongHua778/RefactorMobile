@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using LitJson;
-//using Steamworks;
 using System.Security.Cryptography;
 using System.Text;
 using System;
@@ -67,43 +66,61 @@ public class LevelManager : Singleton<LevelManager>
     public int PermitDifficulty = default;
     public int MaxGameLevel => Mathf.Min(GameLevels.Length - 1, permitGameLevel);
 
+    private int gameLevel;
     public int GameLevel
     {
-        get => PlayerPrefs.GetInt("GameLevel", 0);
-        set
-        {
-            PlayerPrefs.SetInt("GameLevel", Mathf.Min(value, MaxGameLevel));
-            //if (SteamManager.Initialized)
-            //{
-            //    SteamUserStats.RequestCurrentStats();
-            //    int steamLevel;
-            //    if (SteamUserStats.GetStat("Player_Level", out steamLevel))
-            //    {
-            //        if (value > steamLevel)
-            //            SteamUserStats.SetStat("Player_Level", value);
-            //    }
-            //}
-        }
+        get => gameLevel;
+        set => gameLevel = Mathf.Min(MaxGameLevel, value);
     }
-
+    private int gameExp;
     public int GameExp
     {
-        get => PlayerPrefs.GetInt("GameExp", 0);
-        set
-        {
-            PlayerPrefs.SetInt("GameExp", value);
-            //if (SteamManager.Initialized)
-            //{
-            //    SteamUserStats.RequestCurrentStats();
-            //    int steamExp;
-            //    if (SteamUserStats.GetStat("Player_EXP", out steamExp))
-            //    {
-            //        if (value > steamExp)
-            //            SteamUserStats.SetStat("Player_EXP", value);
-            //    }
-            //}
-        }
+        get => gameExp;
+        set => gameExp = value;
     }
+    private int passDifficulty;
+    public int PassDifficulty
+    {
+        get => passDifficulty;
+        set => passDifficulty = Mathf.Clamp(value, 0, 9);
+    }
+    //public int GameLevel
+    //{
+    //    get => PlayerPrefs.GetInt("GameLevel", 0);
+    //    set
+    //    {
+    //        PlayerPrefs.SetInt("GameLevel", Mathf.Min(value, MaxGameLevel));
+    //        //if (SteamManager.Initialized)
+    //        //{
+    //        //    SteamUserStats.RequestCurrentStats();
+    //        //    int steamLevel;
+    //        //    if (SteamUserStats.GetStat("Player_Level", out steamLevel))
+    //        //    {
+    //        //        if (value > steamLevel)
+    //        //            SteamUserStats.SetStat("Player_Level", value);
+    //        //    }
+    //        //}
+    //    }
+    //}
+
+    //public int GameExp
+    //{
+    //    get => PlayerPrefs.GetInt("GameExp", 0);
+    //    set
+    //    {
+    //        PlayerPrefs.SetInt("GameExp", value);
+    //        //if (SteamManager.Initialized)
+    //        //{
+    //        //    SteamUserStats.RequestCurrentStats();
+    //        //    int steamExp;
+    //        //    if (SteamUserStats.GetStat("Player_EXP", out steamExp))
+    //        //    {
+    //        //        if (value > steamExp)
+    //        //            SteamUserStats.SetStat("Player_EXP", value);
+    //        //    }
+    //        //}
+    //    }
+    //}
     public List<ContentAttribute> AllContent;
 
     public LevelAttribute[] StandardLevels = default;
@@ -112,69 +129,32 @@ public class LevelManager : Singleton<LevelManager>
 
     private Dictionary<int, LevelAttribute> LevelDIC;
 
-    public int PassDiifcutly
-    {
-        get => Mathf.Min(PermitDifficulty, PlayerPrefs.GetInt("MaxDiff", 0));
-        set
-        {
-            PlayerPrefs.SetInt("MaxDiff", Mathf.Min(9, value));
-            //if (SteamManager.Initialized)
-            //{
-            //    SteamUserStats.RequestCurrentStats();
-            //    int steamDiff;
-            //    if (SteamUserStats.GetStat("Player_Diff", out steamDiff))
-            //    {
-            //        if (value > steamDiff)
-            //            SteamUserStats.SetStat("Player_Diff", Mathf.Min(7, value));
-            //    }
-            //}
-        }
-    }
-    public int PassChallengeLevel
-    {
-        get => PlayerPrefs.GetInt("PassChallengeLevel", 0);
-        set
-        {
-            PlayerPrefs.SetInt("PassChallengeLevel", Mathf.Min(ChallengeLevels.Length, value));
-            //if (SteamManager.Initialized)
-            //{
-            //    SteamUserStats.RequestCurrentStats();
-            //    int steamChallengeLevel;
-            //    if (SteamUserStats.GetStat("PassChallengeLevel", out steamChallengeLevel))
-            //    {
-            //        if (value > steamChallengeLevel)
-            //            SteamUserStats.SetStat("PassChallengeLevel", Mathf.Min(ChallengeLevels.Length, value));
-            //    }
-            //}
-        }
-    }
+    //public int PassDiifcutly
+    //{
+    //    get => Mathf.Min(PermitDifficulty, PlayerPrefs.GetInt("MaxDiff", 0));
+    //    set
+    //    {
+    //        PlayerPrefs.SetInt("MaxDiff", Mathf.Min(9, value));
+    //        //if (SteamManager.Initialized)
+    //        //{
+    //        //    SteamUserStats.RequestCurrentStats();
+    //        //    int steamDiff;
+    //        //    if (SteamUserStats.GetStat("Player_Diff", out steamDiff))
+    //        //    {
+    //        //        if (value > steamDiff)
+    //        //            SteamUserStats.SetStat("Player_Diff", Mathf.Min(7, value));
+    //        //    }
+    //        //}
+    //    }
+    //}
 
-    // 关卡最高记录
-    public int GetChallengeScore(int level)
-    {
-        return PlayerPrefs.GetInt("ChallengeScore" + level, 0);
-    }
-
-    public void SetChallengeScore(int level, int value)
-    {
-        PlayerPrefs.SetInt("ChallengeScore" + level, value);
-        //if (SteamManager.Initialized)
-        //{
-        //    SteamUserStats.RequestCurrentStats();
-        //    int steamChallengeLevel;
-        //    if (SteamUserStats.GetStat("ChallengeScore" + level, out steamChallengeLevel))
-        //    {
-        //        if (value > steamChallengeLevel)
-        //            SteamUserStats.SetStat("ChallengeScore" + level, value);
-        //    }
-        //}
-    }
 
     public int LifeTotalRefactor//历史总重构次数，成就
     {
         get => PlayerPrefs.GetInt("LifeTotalRefactor", 0);
         set
         {
+            PlayerPrefs.SetInt("LifeTotalRefactor", value);
             //if (value > PlayerPrefs.GetInt("LifeTotalRefactor", 0))
             //{
             //    PlayerPrefs.SetInt("LifeTotalRefactor", value);
@@ -225,7 +205,7 @@ public class LevelManager : Singleton<LevelManager>
         }
 
         //mobileTest
-        PassDiifcutly = 9;
+        PassDifficulty = 9;
     }
 
     private void GetSteamStat()
@@ -496,8 +476,14 @@ public class LevelManager : Singleton<LevelManager>
         if (LastGameSave.HasLastGame)
         {
             CurrentLevel = GetLevelAtt(LastGameSave.SaveRes.Mode);
-            //DeleteGameSave();
         }
+    }
+
+    private void LoadDataSave()
+    {
+        GameLevel = LastGameSave.GameLevel;
+        GameExp = LastGameSave.GameExp;
+        PassDifficulty = LastGameSave.PassDifficulty;
     }
 
 
@@ -511,6 +497,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         if (NeedLoadGame)
         {
+
             if (!LevelEnd && CurrentLevel.CanSaveGame)
             {
                 if (DraggingShape.PickingShape != null)//把当前正在摆放的内容进行撤回
@@ -530,21 +517,24 @@ public class LevelManager : Singleton<LevelManager>
                     );
                 LevelEnd = true;//是否在游戏状态和存档的FLAG
 
-                string filePath2 = Application.persistentDataPath + "/GameSave.json";
-                Debug.Log(filePath2);
-                string saveJsonStr2 = JsonMapper.ToJson(LastGameSave);
-                StreamWriter sw2 = new StreamWriter(filePath2);
-                sw2.Write(EncryptionTool.EncryptString(saveJsonStr2, key));
-                //sw2.Write(saveJsonStr2);
-                sw2.Close();
-                Debug.Log("战斗成功存档");
             }
-            else
+            else if (!LevelEnd && !CurrentLevel.CanSaveGame)
             {
                 LastGameSave.ClearGame();
             }
-            GameSaveContents.Clear();
 
+            GameSaveContents.Clear();
+            LastGameSave.SaveData(GameLevel, GameExp, PassDifficulty);
+
+
+            string filePath2 = Application.persistentDataPath + "/GameSave.json";
+            Debug.Log(filePath2);
+            string saveJsonStr2 = JsonMapper.ToJson(LastGameSave);
+            StreamWriter sw2 = new StreamWriter(filePath2);
+            sw2.Write(EncryptionTool.EncryptString(saveJsonStr2, key));
+
+            sw2.Close();
+            Debug.Log("战斗成功存档");
 
 
             //try
@@ -574,7 +564,6 @@ public class LevelManager : Singleton<LevelManager>
 
     private void LoadByJson()
     {
-        SetGameLevel(GameLevel);//基于等级解锁内容
 
         if (NeedLoadGame && File.Exists(SaveGameFilePath))
         {
@@ -587,6 +576,7 @@ public class LevelManager : Singleton<LevelManager>
                 GameSave save = JsonMapper.ToObject<GameSave>(jsonStr);
                 LastGameSave = save;
                 LoadGameSave();
+                LoadDataSave();
                 Debug.Log("成功读取战斗");
             }
             catch
@@ -601,15 +591,14 @@ public class LevelManager : Singleton<LevelManager>
             LastGameSave = new GameSave();
             Debug.Log("没有可读取战斗");
         }
-
+        SetGameLevel(GameLevel);//基于等级解锁内容
 
     }
 
 
     public void SaveAll()
     {
-        if (Game.Instance.CurrentState == "BattleState")
-            SaveByJson();
+        SaveByJson();
     }
 
 

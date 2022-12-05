@@ -112,7 +112,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
             else
             {
                 GetEndlessVersion();
-                GetChallengeVersion();
+                //GetChallengeVersion();
             }
         }
     }
@@ -120,7 +120,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
     private void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult obj)
     {
         GetEndlessVersion();
-        GetChallengeVersion();
+        //GetChallengeVersion();
 
         Debug.Log("Update display name");
     }
@@ -196,6 +196,8 @@ public class PlayfabManager : Singleton<PlayfabManager>
         GetLeaderBoard(EndlessWeeklyName, OnlineEndlessVersion);
         if (OnlineEndlessVersion > 0)
             GetLeaderBoard(EndlessWeeklyName, OnlineEndlessVersion - 1);
+
+        GetChallengeVersion();
     }
 
     private void OnChallengeVersionGet(GetPlayerStatisticVersionsResult result)
