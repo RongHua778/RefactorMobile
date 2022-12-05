@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class TempTips : IUserInterface
+public class TempTips : IUserInterface,IPointerClickHandler
 {
     //public Canvas myCanvas;
     public RectTransform rect;
@@ -71,6 +72,8 @@ public class TempTips : IUserInterface
         //SetPos(pos);
     }
 
-
-
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Hide();
+    }
 }

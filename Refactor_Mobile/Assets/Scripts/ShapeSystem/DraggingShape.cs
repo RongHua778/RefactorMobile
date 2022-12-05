@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DraggingShape : DraggingActions
 {
@@ -20,16 +21,23 @@ public class DraggingShape : DraggingActions
     bool skillFull = false;
     bool waitingForPath = false;
 
-    Collider2D[] attachedResult = new Collider2D[10];
-
     [SerializeField]
     Color wrongColor, correctColor, transparentColor, holdColor, dropColor, equipColor = default;
 
+
+    protected override void Awake()
+    {
+        base.Awake();
+        menuTrans = transform.Find("DragMenu");
+        mainCam = Camera.main;
+        menuTrans.Find("Btn_Confirm").GetComponent<Button>().onClick.AddListener(ConfirmShape);
+        menuTrans.Find("Btn_Rotate").GetComponent<Button>().onClick.AddListener(RotateShape);
+        menuTrans.Find("Btn_Reset").GetComponent<Button>().onClick.AddListener(UndoShape);
+        menuTrans.Find("Btn_Move").GetComponent<DragButton>().m_Shape = this;
+    }
     public void Initialized(TileShape shape)
     {
-        menuTrans = transform.Find("DragMenu");
         TileShape = shape;
-        mainCam = Camera.main;
     }
 
     private void SetAllColor(Color colorToSet)//底图效果调整
@@ -71,7 +79,6 @@ public class DraggingShape : DraggingActions
         transform.position = new Vector3(Mathf.Round(mousePos.x + pointerOffset.x), Mathf.Round(mousePos.y + pointerOffset.y), transform.position.z);
         if ((Vector2)transform.position != lastPos)
         {
-
             if (CheckCanDrop())
             {
                 StopAllCoroutines();

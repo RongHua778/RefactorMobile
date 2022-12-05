@@ -42,7 +42,7 @@ MonoBehaviour:
   Boss4:
   - {fileID: 11400000, guid: dbb0595b1b4e1be4599c5c9d1e97b9e3, type: 2}
   LevelInfo: LEVEL3INFO
-  TrapCount: 20
+  TrapCount: 15
   EliteWave: 19
   ExpIntensify: 4
   PreTiles: []

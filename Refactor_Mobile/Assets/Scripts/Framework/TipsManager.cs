@@ -145,6 +145,7 @@ public class TipsManager : Singleton<TipsManager>
         m_EnemyTips.CloseTips();
         m_BuyGroundTips.CloseTips();
         m_TechInfoTips.CloseTips();
+        m_TempTips.Hide();
     }
 
     public void ShowMessage(string text)

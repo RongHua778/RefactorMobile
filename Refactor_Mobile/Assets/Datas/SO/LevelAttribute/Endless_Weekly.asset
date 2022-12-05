@@ -57,9 +57,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f1335d5084e31294d829c9a06aa1d2a8, type: 2}
   - {fileID: 11400000, guid: 302b208d8ca20e04e8761c6aaffd2ce3, type: 2}
   LevelInfo: ENDLESSINFO
-  TrapCount: 100
+  TrapCount: 20
   EliteWave: 19
   ExpIntensify: 5
+  PreTiles: []
   Choices: []
   SaveSequences: []
   GuideDialogues: []

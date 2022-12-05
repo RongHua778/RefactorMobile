@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InfoBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InfoBtn : MonoBehaviour,IPointerClickHandler
 {
     [TextArea(2, 3)]
     [SerializeField] string content = default;
@@ -13,7 +13,8 @@ public class InfoBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         this.content = content;
     }
-    public void OnPointerEnter(PointerEventData eventData)
+
+    public void OnPointerClick(PointerEventData eventData)
     {
         if (content == "")
             return;
@@ -21,11 +22,19 @@ public class InfoBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
         TipsManager.Instance.ShowTempTips(content, pos + offset);
     }
+    //public void OnPointerEnter(PointerEventData eventData)
+    //{
+    //    if (content == "")
+    //        return;
+    //    Vector2 pos = RectTransformUtility.WorldToScreenPoint(Camera.main, this.transform.position);
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        TipsManager.Instance.HideTempTips();
-    }
+    //    TipsManager.Instance.ShowTempTips(content, pos + offset);
+    //}
+
+    //public void OnPointerExit(PointerEventData eventData)
+    //{
+    //    TipsManager.Instance.HideTempTips();
+    //}
 
 
 }

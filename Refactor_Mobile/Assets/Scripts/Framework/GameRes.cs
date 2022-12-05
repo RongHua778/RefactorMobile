@@ -95,7 +95,7 @@ public static class GameRes
     //public static int 
 
     [Header("场地数据")]
-    public static int GroundSize = 25;
+    public static int GroundSize = 21;
     public static int TrapDistanceAdjust = 0;
 
 
@@ -372,7 +372,7 @@ public static class GameRes
 
         Reverse = false;
 
-        GroundSize = LevelManager.Instance.CurrentLevel.ModeType == ModeType.Challenge ? 15 : 25;
+        GroundSize = LevelManager.Instance.CurrentLevel.ModeType == ModeType.Challenge ? 15 : 21;
         TrapDistanceAdjust = 0;
         EnemyFrostResist = 0;
         TurretFrostResist = 0f;

@@ -3,28 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LevelBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class LevelBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] LevelInfoPanel infoPanel = default;
     [SerializeField] ParticleSystem LevelUpPartical = default;
+    private float holdCouter;
+    private bool isHolding;
     //[SerializeField] ReusableObject perfectAnim = default;
     private void Start()
     {
         infoPanel.Initialize();
     }
-
-    public void OnPointerEnter(PointerEventData eventData)
+    private void Update()
     {
-        infoPanel.Show();
+        if (isHolding)
+        {
+            if (holdCouter > 0.5f)
+            {
+                infoPanel.Show();
+            }
+            else
+            {
+                holdCouter += Time.deltaTime;
+            }
+        }
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
+        isHolding = true;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        isHolding = false;
+        if (holdCouter <= 0.5f)
+        {
+            LevelBtnClick();
+        }
+        holdCouter = 0;
         infoPanel.Hide();
     }
 
-    public void LevelBtnClick()
+    private void LevelBtnClick()
     {
+
         if (GameRes.SystemLevel < StaticData.Instance.SystemMaxLevel)
         {
             if (GameManager.Instance.ConsumeMoney(GameRes.SystemUpgradeCost))
