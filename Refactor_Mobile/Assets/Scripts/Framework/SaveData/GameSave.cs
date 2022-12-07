@@ -7,7 +7,8 @@ using System;
 [Serializable]
 public class GameSave
 {
-
+    //玩家成就保存
+    public List<AchievementStruct> SaveAchievements = new List<AchievementStruct>();
     //玩家等级保存
     public int GameLevel;
     public int GameExp;
@@ -16,7 +17,7 @@ public class GameSave
 
     //临时游戏保存
     public bool HasLastGame;
-    public List<BlueprintStruct> SaveBluePrints=new List<BlueprintStruct>();
+    public List<BlueprintStruct> SaveBluePrints = new List<BlueprintStruct>();
     public List<TechnologyStruct> SaveTechnologies = new List<TechnologyStruct>();
     public List<TechnologyStruct> SavePickingTechs = new List<TechnologyStruct>();
 
@@ -30,7 +31,7 @@ public class GameSave
 
     public List<string> SaveBattleRecipes = new List<string>();
 
-    public List<EnemySequenceStruct> SaveSequences=new List<EnemySequenceStruct>();
+    public List<EnemySequenceStruct> SaveSequences = new List<EnemySequenceStruct>();
     public List<ShapeInfo> SaveShapes = new List<ShapeInfo>();
 
     public void ClearGame()
@@ -54,16 +55,17 @@ public class GameSave
         PassDifficulty = 0;
     }
 
-    public void SaveData(int gameLevel,int gameExp,int passDifficulty)
+    public void SaveData(int gameLevel, int gameExp, int passDifficulty, List<AchievementStruct> saveAchievements)
     {
         GameLevel = gameLevel;
         GameExp = gameExp;
         PassDifficulty = passDifficulty;
+        SaveAchievements = saveAchievements;
     }
 
-    public void SaveGame(List<TechnologyStruct> saveTechs,List<TechnologyStruct> savePickingTechs, List<BlueprintStruct> saveBlueprints, 
-        GameResStruct saveRes, List<ContentStruct> saveContents, 
-        List<EnemySequenceStruct> saveSequences,List<ShapeInfo> currentShapes,List<int> saveRules,
+    public void SaveGame(List<TechnologyStruct> saveTechs, List<TechnologyStruct> savePickingTechs, List<BlueprintStruct> saveBlueprints,
+        GameResStruct saveRes, List<ContentStruct> saveContents,
+        List<EnemySequenceStruct> saveSequences, List<ShapeInfo> currentShapes, List<int> saveRules,
         List<string> saveRecipes)
     {
         ChallengeChoicePicked = GameRes.ChallengeChoicePicked;
@@ -77,7 +79,6 @@ public class GameSave
         SaveShapes = currentShapes;
         SaveRules = saveRules;
         SaveBattleRecipes = saveRecipes;
-        //SaveDraggingDShapeContent = draggingDshapeContent;
     }
 }
 
@@ -87,6 +88,13 @@ public class BlueprintStruct
     public string Name;
     public List<int> ElementRequirements;
     public List<int> QualityRequirements;
+}
+
+[Serializable]
+public class AchievementStruct
+{
+    public string Key;
+    public bool IsGet;
 }
 
 [Serializable]

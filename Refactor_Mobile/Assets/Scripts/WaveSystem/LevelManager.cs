@@ -21,36 +21,10 @@ public class LevelManager : Singleton<LevelManager>
     #region ³É¾Í
     public bool LevelWin { get; set; }
 
-    //public void ClearAllSteamStats()
-    //{
-    //    SteamUserStats.ResetAllStats(true);
-    //}
-    //private void SetAchievements()
-    //{
-    //    if (!SteamManager.Initialized)
-    //        return;
-    //    foreach (var ach in achievements)
-    //    {
-    //        SteamUserStats.GetAchievement(ach, out bool achieve);
-    //        if (!achieve && PlayerPrefs.GetInt(ach, 0) == 1)
-    //        {
-    //            SteamUserStats.SetAchievement(ach);
-    //            SteamUserStats.StoreStats();
-    //        }
-    //    }
-    //}
+
     public void SetAchievement(string achievement)
     {
         PlayerPrefs.SetInt(achievement, 1);
-        //if (SteamManager.Initialized)
-        //{
-        //    SteamUserStats.GetAchievement(achievement, out bool achieve);
-        //    if (!achieve)
-        //    {
-        //        SteamUserStats.SetAchievement(achievement);
-        //        SteamUserStats.StoreStats();
-        //    }
-        //}
     }
 
 
@@ -368,6 +342,18 @@ public class LevelManager : Singleton<LevelManager>
     {
         return GameManager.Instance.GetCurrentPickingShapes();
     }
+    private List<AchievementStruct> SaveAchievements()
+    {
+        List<AchievementStruct> saveList = new List<AchievementStruct>();
+        foreach (var ach in AchievementManager.Instance.AchList)
+        {
+            AchievementStruct achStruct = new AchievementStruct();
+            achStruct.Key = ach.AchKey;
+            achStruct.IsGet = ach.IsGet;
+            saveList.Add(achStruct);
+        }
+        return saveList;
+    }
 
     private List<string> SaveBattleRecipes()
     {
@@ -398,6 +384,7 @@ public class LevelManager : Singleton<LevelManager>
     public void LoadGame()
     {
         LoadByJson();
+        AchievementManager.Instance.LoadAch();
     }
 
 
@@ -432,7 +419,7 @@ public class LevelManager : Singleton<LevelManager>
             }
 
             GameSaveContents.Clear();
-            LastGameSave.SaveData(GameLevel, GameExp, PassDifficulty);
+            LastGameSave.SaveData(GameLevel, GameExp, PassDifficulty,SaveAchievements());
 
 
             string filePath2 = Application.persistentDataPath + "/GameSave.json";

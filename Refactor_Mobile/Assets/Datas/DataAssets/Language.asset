@@ -2189,6 +2189,42 @@ MonoBehaviour:
     Chinese: "\u56DE\u590D:\u654C\u4EBA\u5B8C\u621050%\u7684\u8DEF\u7EBF\u65F6\uFF0C\u56DE\u590D30%\u5DF2\u635F\u5931\u7684\u751F\u547D\u503C"
     English: Restore:Enemies restore 30% of their lost health after it completes
       the first 50% of route.
+  - Key: ACH_BILLIONS
+    Chinese: "\u4EBA\u6D77\u6218\u672F"
+    English: 
+  - Key: ACH_BILLIONSINFO
+    Chinese: "\u5728\u4E00\u5C40\u6218\u6597\u4E2D\u91CD\u6784\u8D85\u8FC750\u6B21"
+    English: 
+  - Key: ACH_REFACTOR1
+    Chinese: "\u521D\u7EA7\u6307\u6325"
+    English: 
+  - Key: ACH_REFACTOR1INFO
+    Chinese: "\u7D2F\u8BA1\u5B8C\u62105\u6B21\u91CD\u6784"
+    English: 
+  - Key: ACH_REFACTOR2
+    Chinese: "\u4E2D\u7EA7\u6307\u6325"
+    English: 
+  - Key: ACH_REFACTOR2INFO
+    Chinese: "\u7D2F\u8BA1\u5B8C\u621030\u6B21\u91CD\u6784"
+    English: 
+  - Key: ACH_REFACTOR3
+    Chinese: "\u9AD8\u7EA7\u6307\u6325"
+    English: 
+  - Key: ACH_REFACTOR3INFO
+    Chinese: "\u7D2F\u8BA1\u5B8C\u6210100\u6B21\u91CD\u6784"
+    English: 
+  - Key: ACH_CAKE
+    Chinese: "\u5C0F\u83DC\u4E00\u53E0"
+    English: 
+  - Key: ACH_CAKEINFO
+    Chinese: "\u901A\u8FC7\u6807\u51C6\u6A21\u5F0F\u5168\u90E8\u96BE\u5EA6"
+    English: 
+  - Key: ACH_EASY
+    Chinese: "\u5168\u80FD\u638C\u63A7"
+    English: 
+  - Key: ACH_EASYINFO
+    Chinese: "\u4E0D\u635F\u59311\u70B9\u751F\u547D\u503C\u901A\u5173\uFF08\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA64\u4EE5\u4E0A\uFF09"
+    English: 
   - Key: Guide01
     Chinese: "\u5B66\u5458S0666\u53F7,\u8FD9\u91CC\u662F\u4EBA\u9A6C\u5EA7A*\u7B2C\u5341\u4E5D\u63A5\u53E3.\u6211\u662F\u4F60\u7684\u90E8\u7F72\u6559\u5B98\u5A1C\u53EF."
     English: Deployment Officer S0666, this is Sagittarius A* port 19. I'm your instructor,
