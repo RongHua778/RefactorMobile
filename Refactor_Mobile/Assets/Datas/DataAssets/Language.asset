@@ -25,6 +25,9 @@ MonoBehaviour:
   - Key: BLUEPRINT
     Chinese: "\u6E38\u620F\u56FE\u9274"
     English: HANDBOOK
+  - Key: ACHIEVEMENT
+    Chinese: "\u6210\u5C31\u7EDF\u8BA1"
+    English: ACHIEVEMENT
   - Key: SETTING
     Chinese: "\u6E38\u620F\u8BBE\u7F6E"
     English: SETTINGS

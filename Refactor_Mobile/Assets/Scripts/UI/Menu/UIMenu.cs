@@ -40,7 +40,10 @@ public class UIMenu : IUserInterface
     {
         MenuManager.Instance.OpenTujian();
     }
-
+    public void AchievementBtnClick()
+    {
+        MenuManager.Instance.OpenAchievement();
+    }
     public void SettingBtnClick()
     {
         MenuManager.Instance.OpenSetting();

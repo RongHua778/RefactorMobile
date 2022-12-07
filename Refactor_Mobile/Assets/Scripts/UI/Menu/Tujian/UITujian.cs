@@ -9,7 +9,6 @@ public class UITujian : IUserInterface
     private Animator m_Anim;
     [SerializeField] GameLevelHolder gameLevelPrefab = default;
     [SerializeField] UITujian_ListHolder[] listHolders = default;
-    //[SerializeField] UITujian_TechHolder techHolder = default;
 
     [SerializeField] TipsElementConstruct[] elementConstructs = default;
     List<int> skillPreviewElements;

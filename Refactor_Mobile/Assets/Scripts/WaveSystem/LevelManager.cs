@@ -84,43 +84,7 @@ public class LevelManager : Singleton<LevelManager>
         get => passDifficulty;
         set => passDifficulty = Mathf.Clamp(value, 0, 9);
     }
-    //public int GameLevel
-    //{
-    //    get => PlayerPrefs.GetInt("GameLevel", 0);
-    //    set
-    //    {
-    //        PlayerPrefs.SetInt("GameLevel", Mathf.Min(value, MaxGameLevel));
-    //        //if (SteamManager.Initialized)
-    //        //{
-    //        //    SteamUserStats.RequestCurrentStats();
-    //        //    int steamLevel;
-    //        //    if (SteamUserStats.GetStat("Player_Level", out steamLevel))
-    //        //    {
-    //        //        if (value > steamLevel)
-    //        //            SteamUserStats.SetStat("Player_Level", value);
-    //        //    }
-    //        //}
-    //    }
-    //}
 
-    //public int GameExp
-    //{
-    //    get => PlayerPrefs.GetInt("GameExp", 0);
-    //    set
-    //    {
-    //        PlayerPrefs.SetInt("GameExp", value);
-    //        //if (SteamManager.Initialized)
-    //        //{
-    //        //    SteamUserStats.RequestCurrentStats();
-    //        //    int steamExp;
-    //        //    if (SteamUserStats.GetStat("Player_EXP", out steamExp))
-    //        //    {
-    //        //        if (value > steamExp)
-    //        //            SteamUserStats.SetStat("Player_EXP", value);
-    //        //    }
-    //        //}
-    //    }
-    //}
     public List<ContentAttribute> AllContent;
 
     public LevelAttribute[] StandardLevels = default;
@@ -129,24 +93,6 @@ public class LevelManager : Singleton<LevelManager>
 
     private Dictionary<int, LevelAttribute> LevelDIC;
 
-    //public int PassDiifcutly
-    //{
-    //    get => Mathf.Min(PermitDifficulty, PlayerPrefs.GetInt("MaxDiff", 0));
-    //    set
-    //    {
-    //        PlayerPrefs.SetInt("MaxDiff", Mathf.Min(9, value));
-    //        //if (SteamManager.Initialized)
-    //        //{
-    //        //    SteamUserStats.RequestCurrentStats();
-    //        //    int steamDiff;
-    //        //    if (SteamUserStats.GetStat("Player_Diff", out steamDiff))
-    //        //    {
-    //        //        if (value > steamDiff)
-    //        //            SteamUserStats.SetStat("Player_Diff", Mathf.Min(7, value));
-    //        //    }
-    //        //}
-    //    }
-    //}
 
 
     public int LifeTotalRefactor//历史总重构次数，成就
@@ -191,7 +137,6 @@ public class LevelManager : Singleton<LevelManager>
         LitJsonRegister.Register();
         SaveGameFilePath = Application.persistentDataPath + "/GameSave.json";
 
-        GetSteamStat();
         //SetAchievements();
         LevelDIC = new Dictionary<int, LevelAttribute>();
 
@@ -206,33 +151,6 @@ public class LevelManager : Singleton<LevelManager>
 
         //mobileTest
         PassDifficulty = 9;
-    }
-
-    private void GetSteamStat()
-    {
-        //int steamLevel;
-        //int steamExp;
-        //int difficulty;
-        //int challengeLevel;
-        //int challengeScore;
-        //if (SteamManager.Initialized)
-        //{
-        //    SteamUserStats.RequestCurrentStats();
-        //    if (SteamUserStats.GetStat("Player_Level", out steamLevel))
-        //        GameLevel = steamLevel;
-        //    if (SteamUserStats.GetStat("Player_EXP", out steamExp))
-        //        GameExp = steamExp;
-        //    if (SteamUserStats.GetStat("Player_Diff", out difficulty))
-        //        PassDiifcutly = difficulty;
-        //    if (SteamUserStats.GetStat("PassChallengeLevel", out challengeLevel))
-        //        PassChallengeLevel = challengeLevel;
-        //    //for (int i = 0; i < ChallengeLevels.Length; i++)
-        //    //{
-        //    //    if (SteamUserStats.GetStat("ChallengeScore" + i, out challengeScore))
-        //    //        SetChallengeScore(i, challengeScore);
-        //    //}
-        //}
-
     }
 
 
@@ -460,16 +378,6 @@ public class LevelManager : Singleton<LevelManager>
         }
         return saveList;
     }
-
-    //private ContentStruct SaveDraggingContent()
-    //{
-    //    ContentStruct contentSctruct = null;
-    //    if (DraggingShape.PickingShape != null && DraggingShape.PickingShape.TileShape.shapeType == ShapeType.D)
-    //    {
-    //        DraggingShape.PickingShape.TileShape.tiles[0].Content.SaveContent(out contentSctruct);
-    //    }
-    //    return contentSctruct;
-    //}
 
     private void LoadGameSave()
     {

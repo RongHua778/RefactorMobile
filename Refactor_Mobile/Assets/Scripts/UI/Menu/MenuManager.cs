@@ -11,8 +11,8 @@ public class MenuManager : Singleton<MenuManager>
     //界面系统
     [SerializeField] UIMenu m_UIMenu = default;
     [SerializeField] UIMode m_UIMode = default;
-    //[SerializeField] MenuMessage m_UIMessage = default;
     [SerializeField] UITujian m_UITujian = default;
+    [SerializeField] UIAchievement m_UIAchievement = default;
     [SerializeField] UISetting m_UISetting = default;
     [SerializeField] UIBillBoard m_UIBillboard = default;
     [SerializeField] UIWechat m_UIWechat = default;
@@ -29,9 +29,9 @@ public class MenuManager : Singleton<MenuManager>
         LevelManager.Instance.LoadGame();//每次进入菜单页，就读取一次存档
         //UI
         m_UIMenu.Initialize();
-        //m_UIMessage.Initialize();
         m_UIMode.Initialize();
         m_UITujian.Initialize();
+        m_UIAchievement.Initialize();
         m_UISetting.Initialize();
         m_UIBillboard.Initialize();
         m_UIWechat.Initialize();
@@ -39,14 +39,7 @@ public class MenuManager : Singleton<MenuManager>
 
         m_UIRecipeSet.Initialize();
         m_UIRuleSet.Initialize();
-        //TIPS
-        //m_TurretTips.Initialize();
-       // m_TrapTips.Initialize();
-        //m_EnemyInfoTips.Initialize();
-        //m_TechInfoTips.Initialize();
 
-
-        //SteamLeaderboard.DownloadScore();
     }
 
     public void Release()
@@ -80,6 +73,12 @@ public class MenuManager : Singleton<MenuManager>
         m_UIMenu.Show();
     }
 
+    public void OpenAchievement()
+    {
+        m_UIMenu.ClosePanel();
+        m_UIAchievement.Show();
+    }
+
     public void GameUpdate()
     {
 
@@ -91,62 +90,11 @@ public class MenuManager : Singleton<MenuManager>
         m_UITujian.Show();
     }
 
-    //public void ShowTurretTips(TurretAttribute att, Vector2 pos)
-    //{
-    //    SetCanvasPos(m_TurretTips.transform, pos);
-    //    m_TurretTips.Show();
-    //    m_TurretTips.ReadAttribute(att);
-    //}
-
-    //public void ShowTurretTips(StrategyBase strategy, Vector2 pos,int showID)
-    //{
-    //    SetCanvasPos(m_TurretTips.transform, pos);
-    //    m_TurretTips.Show();
-    //    m_TurretTips.ReadTurret(strategy,showID);
-    //}
-
-
-
-    //public void ShowTrapTips(TrapAttribute att, Vector2 pos)
-    //{
-    //    SetCanvasPos(m_TrapTips.transform, pos);
-
-    //    m_TrapTips.Show();
-    //    m_TrapTips.ReadTrapAtt(att);
-    //}
-
-
-
-    //public void ShowEnemyInfoTips(EnemyAttribute att, Vector2 pos)
-    //{
-    //    SetCanvasPos(m_EnemyInfoTips.transform, pos);
-    //    m_EnemyInfoTips.Show();
-    //    m_EnemyInfoTips.ReadEnemyAtt(att);
-    //}
-    private void SetCanvasPos(Transform tr, Vector2 pos)
-    {
-        Vector2 newPos;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(m_Canvas.transform as RectTransform, pos, m_Canvas.worldCamera, out newPos);
-        tr.position = m_Canvas.transform.TransformPoint(newPos);
-    }
     public void OpenSetting()
     {
-        //m_UIMenu.ClosePanel();
         m_UISetting.Show();
     }
 
-    //internal void HideTips()
-    //{
-    //    //m_TurretTips.CloseTips();
-    //    //m_TrapTips.CloseTips();
-    //    //m_EnemyInfoTips.CloseTips();
-    //    m_TechInfoTips.CloseTips();
-    //}
-
-    //public void ShowMessage(string content)
-    //{
-    //    m_UIMessage.SetText(content);
-    //}
 
 
     public void QuitGameBtnClick()
