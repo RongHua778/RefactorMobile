@@ -59,6 +59,11 @@ public class LevelManager : Singleton<LevelManager>
         set => passDifficulty = Mathf.Clamp(value, 0, 9);
     }
 
+    private int lifeTotalRefactor;
+    public int LifeTotalRefactor { get => lifeTotalRefactor; set => lifeTotalRefactor = value; }
+    private int lifeTotalCoin;
+    public int LifeTotalCoin { get => lifeTotalCoin; set => lifeTotalCoin = value; }
+
     public List<ContentAttribute> AllContent;
 
     public LevelAttribute[] StandardLevels = default;
@@ -68,24 +73,6 @@ public class LevelManager : Singleton<LevelManager>
     private Dictionary<int, LevelAttribute> LevelDIC;
 
 
-
-    public int LifeTotalRefactor//历史总重构次数，成就
-    {
-        get => PlayerPrefs.GetInt("LifeTotalRefactor", 0);
-        set
-        {
-            PlayerPrefs.SetInt("LifeTotalRefactor", value);
-            //if (value > PlayerPrefs.GetInt("LifeTotalRefactor", 0))
-            //{
-            //    PlayerPrefs.SetInt("LifeTotalRefactor", value);
-            //    if (SteamManager.Initialized)
-            //    {
-            //        SteamUserStats.SetStat("ACH_TotalRefactor", value);
-            //    }
-            //}
-        }
-
-    }
     public LevelAttribute CurrentLevel;
     #endregion
 
@@ -378,6 +365,8 @@ public class LevelManager : Singleton<LevelManager>
         GameLevel = LastGameSave.GameLevel;
         GameExp = LastGameSave.GameExp;
         PassDifficulty = LastGameSave.PassDifficulty;
+        LifeTotalRefactor = LastGameSave.LifeTotalRefactor;
+        LifeTotalCoin = LastGameSave.LifeTotalCoin;
     }
 
 
@@ -419,7 +408,7 @@ public class LevelManager : Singleton<LevelManager>
             }
 
             GameSaveContents.Clear();
-            LastGameSave.SaveData(GameLevel, GameExp, PassDifficulty,SaveAchievements());
+            LastGameSave.SaveData(SaveAchievements());
 
 
             string filePath2 = Application.persistentDataPath + "/GameSave.json";

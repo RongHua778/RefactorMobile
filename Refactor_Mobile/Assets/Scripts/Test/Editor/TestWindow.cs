@@ -37,6 +37,10 @@ public class TestWindow : EditorWindow
     string trapName = "BLINKTRAP";
     string buildingName = "VAULT";
     string techName = "";
+
+
+    string achName = "";
+
     [MenuItem("Window/TestWindow")]
     public static void ShowWindow()
     {
@@ -134,5 +138,14 @@ public class TestWindow : EditorWindow
         }
         GUILayout.EndHorizontal();
 
+        GUILayout.BeginHorizontal();
+        achName = EditorGUILayout.TextField("成就名", achName);
+        GUILayout.Label("获取与否");
+        abnormal = (Abnormal)EditorGUILayout.EnumPopup("", abnormal, GUILayout.Width(60));
+        if (GUILayout.Button("设置成就", GUILayout.Width(120)))
+        {
+            AchievementManager.Instance.GetAchievement(achName, abnormal == Abnormal.True);
+        }
+        GUILayout.EndHorizontal();
     }
 }

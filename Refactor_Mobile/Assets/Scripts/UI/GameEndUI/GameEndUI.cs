@@ -54,21 +54,7 @@ public class GameEndUI : IUserInterface
         switch (LevelManager.Instance.CurrentLevel.ModeType)
         {
             case ModeType.Challenge:
-                //int starCount = 0;
 
-                //for (int i = 0; i < LevelManager.Instance.CurrentLevel.WaveRequired.Length; i++)
-                //{
-                //    if(GameRes.CurrentWave>= LevelManager.Instance.CurrentLevel.WaveRequired[i])
-                //    {
-                //        win = true;
-                //        starCount = i;
-                //    }
-                //    else
-                //    {
-                //        win = false;
-                //        break;
-                //    }
-                //}
                 int score = 0;
                 score += GameRes.CurrentWave * 100;
                 score += GameRes.Life * 20;
@@ -77,16 +63,7 @@ public class GameEndUI : IUserInterface
                 title.text = GameMultiLang.GetTraduction("SCORE") + ":" + score;
                 ChallengeInfo.gameObject.SetActive(true);
                 ChallengeInfo.SetContent(GameMultiLang.GetTraduction("CHALLENGESCOREINFO"));
-                //if (LevelManager.Instance.CurrentLevel.Level < LevelManager.Instance.ChallengeLevels.Length)
-                //{
-                //    NextLevelBtn.SetActive(win);
-                //    RestartBtn.SetActive(true);
-                //}
-                //else
-                //{
-                //    NextLevelBtn.SetActive(false);
-                //    RestartBtn.SetActive(true);
-                //}
+
                 NextLevelBtn.SetActive(false);
                 RestartBtn.SetActive(true);
                 //LevelManager.Instance.SetChallengeScore(LevelManager.Instance.CurrentLevel.Level,GameRes.CurrentWave);
@@ -150,9 +127,9 @@ public class GameEndUI : IUserInterface
                     RestartBtn.SetActive(true);
                 }
                 break;
-
         }
 
+        GameEvents.Instance.GameEnd(new GameEndStruct());
         m_BillBoard.SetBillBoard();
         StartCoroutine(SetValueCor());
         SetAchievement();

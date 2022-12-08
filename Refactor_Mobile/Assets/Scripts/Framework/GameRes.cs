@@ -59,6 +59,8 @@ public static class GameRes
     public static int MaxPath { get => maxPath; set { maxPath = value > maxPath ? value : maxPath; } }
     public static int MaxMark = 0;
     public static int GainGold = 0;
+    private static int maxSingleDamage = 0;
+    public static int MaxSingleDamage { get => maxSingleDamage; set { maxSingleDamage = value > maxSingleDamage ? value : maxSingleDamage; } }
 
     public static int SkipTimes = 0;
 

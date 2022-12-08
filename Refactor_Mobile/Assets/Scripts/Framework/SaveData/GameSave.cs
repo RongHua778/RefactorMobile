@@ -9,6 +9,8 @@ public class GameSave
 {
     //玩家成就保存
     public List<AchievementStruct> SaveAchievements = new List<AchievementStruct>();
+    public int LifeTotalRefactor;//终生总重构次数
+    public int LifeTotalCoin;
     //玩家等级保存
     public int GameLevel;
     public int GameExp;
@@ -55,11 +57,13 @@ public class GameSave
         PassDifficulty = 0;
     }
 
-    public void SaveData(int gameLevel, int gameExp, int passDifficulty, List<AchievementStruct> saveAchievements)
+    public void SaveData(List<AchievementStruct> saveAchievements)
     {
-        GameLevel = gameLevel;
-        GameExp = gameExp;
-        PassDifficulty = passDifficulty;
+        GameLevel = LevelManager.Instance.GameLevel;
+        GameExp = LevelManager.Instance.GameExp;
+        PassDifficulty = LevelManager.Instance.PassDifficulty;
+        LifeTotalRefactor = LevelManager.Instance.LifeTotalRefactor;
+        LifeTotalCoin = LevelManager.Instance.LifeTotalCoin;
         SaveAchievements = saveAchievements;
     }
 

@@ -11678,6 +11678,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3587913591450722191, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587913591450722191, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587913591450722191, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587913591450722191, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3940100397282842057, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: languageData
+      value: 
+      objectReference: {fileID: 11400000, guid: af6bd4cff502e3d4aa7ddffcc178e9a6, type: 2}
+    - target: {fileID: 3946680987859542432, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946680987859542432, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946680987859542432, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946680987859542432, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3979959846567427920, guid: efad427a633dbca47ac42421b9004594, type: 3}
       propertyPath: m_Name
       value: Game
@@ -11725,6 +11761,14 @@ PrefabInstance:
     - target: {fileID: 3979959846567427949, guid: efad427a633dbca47ac42421b9004594, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634294701451722920, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: AchList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634294701451722920, guid: efad427a633dbca47ac42421b9004594, type: 3}
+      propertyPath: AchList.Array.data[6].AchKey
+      value: ACH_LONGPATH
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efad427a633dbca47ac42421b9004594, type: 3}
@@ -26903,7 +26947,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 800, y: 200}
+  m_CellSize: {x: 700, y: 190}
   m_Spacing: {x: 40, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 2

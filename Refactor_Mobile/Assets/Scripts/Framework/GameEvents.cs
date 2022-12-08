@@ -46,17 +46,26 @@ public struct TempWord
     }
 }
 
-public class GameEvents : Singleton<GameEvents>
+public struct GameEndStruct
 {
-    //battleEvent
-    //public event Action onESlotEquip;//额外技能槽事件
-    //public void ESlotEquip()
+    public ModeType ModeType;
+    public bool Win;
+    public int Level;//难度
+
+    //public int TotalRefactor;
+    //public int LongestPath;
+    //public int TotalMoney;
+    //public GameEndStruct(int totalRefactor,int longestPath,int totalMoney)
     //{
-    //    onESlotEquip?.Invoke();
+    //    this.TotalRefactor = totalRefactor;
+    //    this.LongestPath = longestPath;
+    //    this.TotalMoney = totalMoney;
     //}
 
+}
 
-
+public class GameEvents : Singleton<GameEvents>
+{
 
     public event Action onGuideObjCollect;
     public void GuideObjCollect()
@@ -126,6 +135,15 @@ public class GameEvents : Singleton<GameEvents>
     public void ChallengeLeaderboardGet(bool value)
     {
         onChallengeLeaderBoardGet?.Invoke(value);
+    }
+
+
+    //成就系统
+
+    public event Action<GameEndStruct> onGameEnd;
+    public void GameEnd(GameEndStruct endData)
+    {
+        onGameEnd?.Invoke(endData);
     }
 
     //public void Release()//清理战斗事件

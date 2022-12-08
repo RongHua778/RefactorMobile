@@ -34,6 +34,7 @@ public class TargetBullet : Bullet
 
     public override void TriggerDamage()
     {
+        int totalDamage = 0;
         if (SplashRange > 0)
         {
             HitSize = Physics2D.OverlapCircleNonAlloc(transform.position, SplashRange, hits, StaticData.EnemyLayerMask);
@@ -46,40 +47,24 @@ public class TargetBullet : Bullet
                 cTarget = hits[i].GetComponent<TargetPoint>();
                 if (cTarget == Target)
                 {
-                    DamageProcess(cTarget, true);
+                    totalDamage += DamageProcess(cTarget, true);
                 }
                 else
                 {
-                    DamageProcess(cTarget, i < 9, true);//溅射前8个目标显示伤害跳字
+                    totalDamage += DamageProcess(cTarget, i < 9, true);//溅射前8个目标显示伤害跳字
                 }
 
             }
-            //溅射施加BUFF功能
-            //if (turretParent.Strategy.ContainTurretBuffSkill)
-            //{
-            //    HitSize = Physics2D.OverlapCircleNonAlloc(transform.position, SplashRange, hits, StaticData.TurretLayerMask);
-            //    for (int i = 0; i < HitSize; i++)
-            //    {
-            //        tContent = hits[i].GetComponent<ConcreteContent>();
-            //        TriggerSplashEffect(tContent);
-            //    }
-            //}
-
         }
         else
         {
             if (Target != null)
             {
-                DamageProcess(Target, true);
+                totalDamage += DamageProcess(Target, true);
             }
         }
+        GameRes.MaxSingleDamage = totalDamage;
 
-        //test
-        //if (Target != null)
-        //{
-        //    DamageProcess(Target, true);
-        //}
-        //test
         effect = ObjectPool.Instance.Spawn(SputteringEffect) as ParticalControl;
         effect.transform.position = transform.position;
         effect.transform.localScale = Mathf.Max(0.3f, SplashRange * 2) * Vector3.one;

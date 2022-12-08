@@ -228,7 +228,7 @@ public abstract class Bullet : ReusableObject, IGameBehavior
     private float finalDamage;
     private float realDamage;
     protected int addDamage;
-    public virtual void DealRealDamage(float damage, IDamage target, Vector2 pos, bool showDamage = true, bool isSputtering = false)
+    public virtual int DealRealDamage(float damage, IDamage target, Vector2 pos, bool showDamage = true, bool isSputtering = false)
     {
         slowTemp = isCritical ? SlowRate * CriticalPercentage : SlowRate;
         target.DamageStrategy.ApplyFrost(isSputtering ? FinalSlowPercentage * slowTemp : slowTemp);
@@ -242,12 +242,13 @@ public abstract class Bullet : ReusableObject, IGameBehavior
         GameRes.TotalDamage += addDamage;// ×ÜÉËº¦Í³¼Æ
         if (showDamage)
             StaticData.Instance.ShowJumpDamage(pos, addDamage, isCritical);
+        return addDamage;
     }
 
-    public void DamageProcess(TargetPoint target, bool showDamage = true, bool isSputtering = false)
+    public int DamageProcess(TargetPoint target, bool showDamage = true, bool isSputtering = false)
     {
         float damage = TriggerHitEffect(target.Enemy);
-        DealRealDamage(damage, target.Enemy, target.Position, showDamage, isSputtering);
+        return DealRealDamage(damage, target.Enemy, target.Position, showDamage, isSputtering);
     }
 
 }

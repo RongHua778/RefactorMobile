@@ -2213,6 +2213,18 @@ MonoBehaviour:
   - Key: ACH_REFACTOR3INFO
     Chinese: "\u7D2F\u8BA1\u5B8C\u6210100\u6B21\u91CD\u6784"
     English: 
+  - Key: ACH_REFACTOR4
+    Chinese: "\u4F20\u5947\u6307\u6325"
+    English: 
+  - Key: ACH_REFACTOR4INFO
+    Chinese: "\u7D2F\u8BA1\u5B8C\u6210500\u6B21\u91CD\u6784"
+    English: 
+  - Key: ACH_FAST
+    Chinese: "\u901F\u901A\u73A9\u5BB6"
+    English: 
+  - Key: ACH_FASTINFO
+    Chinese: "10\u5206\u949F\u5185\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA69"
+    English: 
   - Key: ACH_CAKE
     Chinese: "\u5C0F\u83DC\u4E00\u53E0"
     English: 
