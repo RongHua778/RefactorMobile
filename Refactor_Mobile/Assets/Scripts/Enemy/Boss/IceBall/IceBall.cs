@@ -51,10 +51,10 @@ public class IceBall : Boss
         tween.Kill();
     }
 
-    public override void OnDie()
-    {
-        base.OnDie();
-        LevelManager.Instance.SetAchievement("ACH_BEAR");
-    }
+    //public override void OnDie()
+    //{
+    //    base.OnDie();
+    //    LevelManager.Instance.SetAchievement("ACH_BEAR");
+    //}
 
 }

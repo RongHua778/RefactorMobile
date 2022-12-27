@@ -71,7 +71,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
             var request = new LoginWithCustomIDRequest
             {
                 //CustomId = SteamFriends.GetPersonaName(),
-                CustomId ="KingdomJack",
+                CustomId = "KingdomJack",
 
                 CreateAccount = true,
                 InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
@@ -186,7 +186,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
         };
         PlayFabClientAPI.GetPlayerStatisticVersions(request, OnChallengeVersionGet, OnError);
     }
-    
+
 
     private void OnEndlessVersionGet(GetPlayerStatisticVersionsResult result)
     {
@@ -250,7 +250,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
             FirstLogin = false;
         }
         GameEvents.Instance.ChallengeLeaderboardGet(true);
-        Debug.Log("Successfully get leaderboard£º" + ChallengeDailyName);
+        Debug.Log("Successfully get leaderboard£º" + ChallengeDailyName + result.Version);
 
     }
 

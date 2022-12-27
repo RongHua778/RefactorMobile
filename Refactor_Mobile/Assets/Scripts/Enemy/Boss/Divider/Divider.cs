@@ -14,7 +14,7 @@ public class Divider : Boss
         if (!isOutTroing)
             GetSprings();
         base.OnDie();
-        LevelManager.Instance.SetAchievement("ACH_DIVIDER");
+        //LevelManager.Instance.SetAchievement("ACH_DIVIDER");
     }
 
     protected void GetSprings()

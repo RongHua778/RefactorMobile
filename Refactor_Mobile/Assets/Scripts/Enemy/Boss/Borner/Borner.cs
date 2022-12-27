@@ -61,10 +61,10 @@ public class Borner : Boss
         GameManager.Instance.SpawnEnemy((EnemyType)typeInt, PointIndex, (Intensify / 4f) * GameRes.EnemyIntensifyAdjust, DmgResist, BoardSystem.shortestPoints);
     }
 
-    public override void OnDie()
-    {
-        base.OnDie();
-        LevelManager.Instance.SetAchievement("ACH_FORTRESS");
-    }
+    //public override void OnDie()
+    //{
+    //    base.OnDie();
+    //    LevelManager.Instance.SetAchievement("ACH_FORTRESS");
+    //}
 
 }

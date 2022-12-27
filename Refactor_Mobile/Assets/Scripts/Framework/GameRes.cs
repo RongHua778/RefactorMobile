@@ -71,10 +71,6 @@ public static class GameRes
     public static float GameFireIntensify = 0;
     public static float GameDustIntensify = 0;
     public static float EnemyFrostTime;
-    //public static int GlobalExtraSlot = 0;//全局额外技能槽名额
-    //public static int GlobalExtraSlotValue = 0;//全局额外技能槽数量
-    //public static int ConstructorExtraSlot = 0;//加农炮技能槽名额
-    //public static int CoreExtraSlot = 0;//核心机技能槽名额
     public static float TurretUpgradeDiscount = 0;
     public static int SkillChipInterval = 25;
 
@@ -523,6 +519,7 @@ public static class GameRes
 
     public static void PrepareNextWave()
     {
+        GameEvents.Instance.PrepareNextWave();
         CurrentWave++;
         GainGoldBattleTurn = 0;
         GainPerfectBattleTurn = 0;

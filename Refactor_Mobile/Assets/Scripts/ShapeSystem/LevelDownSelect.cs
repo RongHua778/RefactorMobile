@@ -21,7 +21,7 @@ public class LevelDownSelect : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         if (isHolding)
         {
-            if (holdCounter < 0.35f)
+            if (holdCounter < 0.3f * GameRes.GameSpeed)
             {
                 holdCounter += Time.deltaTime;
             }

@@ -129,57 +129,56 @@ public class GameEndUI : IUserInterface
                 break;
         }
 
-        GameEvents.Instance.GameEnd(new GameEndStruct());
+        GameEvents.Instance.GameEnd(new GameEndStruct(win));
         m_BillBoard.SetBillBoard();
         StartCoroutine(SetValueCor());
-        SetAchievement();
 
     }
 
-    private void SetAchievement()
-    {
-        if (LevelManager.Instance.LevelWin)
-        {
-            if (GameRes.MaxPath >= 150)
-            {
-                LevelManager.Instance.SetAchievement("ACH_LONGPATH");//遥不可及
-            }
-            if (GameRes.TotalRefactor >= 50)
-            {
-                LevelManager.Instance.SetAchievement("ACH_BILLIONS");//疯狂重构
-            }
-            if (LevelManager.Instance.CurrentLevel.ModeType == ModeType.Standard && LevelManager.Instance.CurrentLevel.Level == 6)
-            {
-                TimeSpan ts = DateTime.Now - GameRes.LevelStart;
-                if (ts.Minutes <= 9)
-                {
-                    LevelManager.Instance.SetAchievement("ACH_FASTLEVEL6");//速通玩家
-                }
-            }
+    //private void SetAchievement()
+    //{
+    //    if (LevelManager.Instance.LevelWin)
+    //    {
+    //        if (GameRes.MaxPath >= 150)
+    //        {
+    //            LevelManager.Instance.SetAchievement("ACH_LONGPATH");//遥不可及
+    //        }
+    //        if (GameRes.TotalRefactor >= 50)
+    //        {
+    //            LevelManager.Instance.SetAchievement("ACH_BILLIONS");//疯狂重构
+    //        }
+    //        if (LevelManager.Instance.CurrentLevel.ModeType == ModeType.Standard && LevelManager.Instance.CurrentLevel.Level == 6)
+    //        {
+    //            TimeSpan ts = DateTime.Now - GameRes.LevelStart;
+    //            if (ts.Minutes <= 9)
+    //            {
+    //                LevelManager.Instance.SetAchievement("ACH_FASTLEVEL6");//速通玩家
+    //            }
+    //        }
 
-            if (((float)GameRes.GainGold / (float)GameRes.CurrentWave) > 400)
-            {
-                LevelManager.Instance.SetAchievement("ACH_MONEY");//极限操作
-            }
+    //        if (((float)GameRes.GainGold / (float)GameRes.CurrentWave) > 400)
+    //        {
+    //            LevelManager.Instance.SetAchievement("ACH_MONEY");//极限操作
+    //        }
 
-            if (LevelManager.Instance.CurrentLevel.ModeType == ModeType.Standard)//标准模式成就
-            {
-                if (LevelManager.Instance.CurrentLevel.Level >= 2 && GameRes.Life == LevelManager.Instance.CurrentLevel.PlayerHealth)
-                {
-                    LevelManager.Instance.SetAchievement("ACH_EASY");//轻车熟路
-                }
-                if (LevelManager.Instance.CurrentLevel.Level >= 1 && GameRes.TotalRefactor == 0)
-                {
-                    LevelManager.Instance.SetAchievement("ACH_DECEIVE");//蒙混过关
-                }
-                if (GameRes.MaxPath <= 3)
-                {
-                    LevelManager.Instance.SetAchievement("ACH_EXTREME");//极限操作
-                }
+    //        if (LevelManager.Instance.CurrentLevel.ModeType == ModeType.Standard)//标准模式成就
+    //        {
+    //            if (LevelManager.Instance.CurrentLevel.Level >= 2 && GameRes.Life == LevelManager.Instance.CurrentLevel.PlayerHealth)
+    //            {
+    //                LevelManager.Instance.SetAchievement("ACH_EASY");//轻车熟路
+    //            }
+    //            if (LevelManager.Instance.CurrentLevel.Level >= 1 && GameRes.TotalRefactor == 0)
+    //            {
+    //                LevelManager.Instance.SetAchievement("ACH_DECEIVE");//蒙混过关
+    //            }
+    //            if (GameRes.MaxPath <= 3)
+    //            {
+    //                LevelManager.Instance.SetAchievement("ACH_EXTREME");//极限操作
+    //            }
 
-            }
-        }
-    }
+    //        }
+    //    }
+    //}
 
 
 

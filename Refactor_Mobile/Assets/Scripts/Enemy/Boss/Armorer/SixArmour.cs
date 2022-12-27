@@ -17,11 +17,11 @@ public class SixArmour : Boss
         ShowBossText(0.5f);
     }
 
-    public override void OnDie()
-    {
-        base.OnDie();
-        LevelManager.Instance.SetAchievement("ACH_TORTOISE");
-    }
+    //public override void OnDie()
+    //{
+    //    base.OnDie();
+    //    LevelManager.Instance.SetAchievement("ACH_TORTOISE");
+    //}
 
     public override void OnUnSpawn()
     {

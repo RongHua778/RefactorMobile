@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class EnemyInfoTips : TileTips
+public class EnemyInfoTips : TileTips, IPointerClickHandler
 {
     [SerializeField] List<EnemyGrid> grids = default;
 
@@ -22,5 +23,9 @@ public class EnemyInfoTips : TileTips
             }
 
         }
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        CloseTips();
     }
 }

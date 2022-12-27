@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class BossInfoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class BossInfoHolder : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image BossIcon = default;
     EnemyType nextBossType;
@@ -18,13 +18,10 @@ public class BossInfoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         this.nextBossWave = nextBossWave;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         TipsManager.Instance.ShowBossTips(nextBossType,nextBossWave,StaticData.MidTipsPos);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        TipsManager.Instance.HideBossTips();
-    }
+
 }

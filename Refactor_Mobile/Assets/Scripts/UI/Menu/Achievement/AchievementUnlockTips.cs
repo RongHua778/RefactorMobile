@@ -21,7 +21,6 @@ public class AchievementUnlockTips : MonoBehaviour
         yield return new WaitForSeconds(4f);
         grid.transform.DOScaleY(0f, 0.5f);
         yield return new WaitForSeconds(0.5f);
-
         Destroy(grid.gameObject);
     }
 }

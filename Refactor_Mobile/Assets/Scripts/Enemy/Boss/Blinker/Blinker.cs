@@ -41,11 +41,11 @@ public class Blinker : Boss
         }
     }
 
-    public override void OnDie()
-    {
-        base.OnDie();
-        LevelManager.Instance.SetAchievement("ACH_BAT");
-    }
+    //public override void OnDie()
+    //{
+    //    base.OnDie();
+    //    LevelManager.Instance.SetAchievement("ACH_BAT");
+    //}
 
 
 

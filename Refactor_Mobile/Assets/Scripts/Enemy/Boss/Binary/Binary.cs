@@ -46,7 +46,7 @@ public class Binary : Boss
         if (m_brother == null)
         {
             FirstBinary = null;
-            LevelManager.Instance.SetAchievement("ACH_BINARY");
+            //LevelManager.Instance.SetAchievement("ACH_BINARY");
         }
 
     }

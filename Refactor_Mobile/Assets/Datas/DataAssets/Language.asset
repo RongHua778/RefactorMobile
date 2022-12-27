@@ -535,9 +535,12 @@ MonoBehaviour:
     Chinese: "\u9677\u9631"
     English: Trap
   - Key: GUIDEBTN08
+    Chinese: "\u5B8C\u7F8E\u5143\u7D20"
+    English: Perfect Element
+  - Key: GUIDEBTN09
     Chinese: "\u540D\u8BCD\u89E3\u91CA"
     English: Definitions
-  - Key: GUIDEBTN09
+  - Key: GUIDEBTN10
     Chinese: "\u6E38\u620F\u653B\u7565"
     English: Game Tips
   - Key: GUIDETXT01
@@ -625,6 +628,9 @@ MonoBehaviour:
       3. You can pay tokens to relocate a trap. The
       price will increase after each relocation.'
   - Key: GUIDETXT08
+    Chinese: "1.\u5B8C\u7F8E\u5143\u7D20\u53EF\u4EE5\u66FF\u4EE3\u4EFB\u610F\u91CD\u6784\u7D20\u6750\u3002\n\n2.\u83B7\u5F97\u9014\u5F84\uFF1A\u6210\u529F\u6D88\u706D\u5956\u52B1\u6CE2\u7684\u8865\u7ED9\u8F66\u65F6\uFF0C\u53EF\u4EE5\u83B7\u5F971\u4E2A\u5B8C\u7F8E\u5143\u7D20\u3002\u6216\u8005\u901A\u8FC7\u90E8\u5206\u79D1\u6280\u7684\u6548\u679C\u83B7\u5F97\u3002\n"
+    English: 
+  - Key: GUIDETXT09
     Chinese: "<color=#FFCC7F>\u5B50\u5F39\u7C7B\u578B</color>\n\u7A7F\u900F\u578B\u5B50\u5F39\uFF1A\u5B50\u5F39\u4F1A\u671D\u7279\u5B9A\u4F4D\u7F6E\u79FB\u52A8\uFF0C\u76F4\u5230\u62B5\u8FBE\u76EE\u7684\u5730\uFF0C\u5E76\u5BF9\u671F\u95F4\u7A7F\u8FC7\u7684\u6240\u6709\u654C\u4EBA\u9020\u6210\u4F24\u5BB3\uFF1B\u7A7F\u900F\u578B\u5B50\u5F39\u9020\u6210\u6E85\u5C04\u4F24\u5BB3\uFF0C\u6E85\u5C04\u8303\u56F4\u4F1A\u63D0\u9AD8\u7A7F\u900F\u578B\u5B50\u5F39\u7684\u4F53\u79EF\u3002\n\n\u5730\u9762\u5B50\u5F39\uFF1A\u5730\u9762\u5B50\u5F39\u4F1A\u671D\u7279\u5B9A\u4F4D\u7F6E\u79FB\u52A8\uFF0C\u76F4\u5230\u62B5\u8FBE\u76EE\u7684\u5730\uFF0C\u62B5\u8FBE\u540E\u57FA\u4E8E\u6E85\u5C04\u8303\u56F4\u7206\u70B8\u5E76\u9020\u6210\u6E85\u5C04\u4F24\u5BB3\u3002\n\n<color=#FFCC7F>\u654C\u65B9Buff</color>\n\u7834\u7532\uFF1A\u6BCF\u4E2A\u654C\u4EBA\u6700\u591A\u53E0\u52A0100\u5C42\u7834\u7532\uFF0C\u6BCF\u5C42\u7834\u7532\u6548\u679C\u4F7F\u654C\u4EBA\u53D7\u5230\u4F24\u5BB3\u589E\u52A01%\uFF0C\u6301\u7EED3\u79D2\n\n\u5F3A\u51BB\uFF1A\u6BCF\u4E2A\u654C\u4EBA\u6700\u591A\u53E0\u52A0100\u5C42\u5F3A\u51BB\uFF0C\u6BCF\u5C42\u5F3A\u51BB\u6548\u679C\u4F7F\u654C\u4EBA\u51BB\u7ED3\u65F6\u95F4\u589E\u52A01%\uFF0C\u6301\u7EED3\u79D2\n\n\u51CF\u901F\uFF1A\u6BCF\u4E2A\u654C\u4EBA\u6700\u591A\u53E0\u52A06\u5C42\u51CF\u901F\uFF0C\u6BCF\u5C42\u51CF\u901F\u6548\u679C\u4F7F\u654C\u4EBA\u79FB\u52A8\u901F\u5EA6\u964D\u4F4E10%\uFF0C\u6301\u7EED3\u79D2\n\n<color=#FFCC7F>\u540D\u8BCD\u89E3\u91CA</color>\n\u9690\u5F62\uFF1A\u5177\u6709\u9690\u8EAB\u80FD\u529B\u7684\u654C\u4EBA\u5F53\u8303\u56F44\u4EE5\u5185\u6CA1\u6709\u91CD\u6784\u5854\u65F6\uFF0C\u8FDB\u5165\u9690\u8EAB\u72B6\u6001;\u9690\u8EAB\u72B6\u6001\u4E0B\u53D7\u5230\u7684\u4F24\u5BB3\u964D\u4F4E75%"
     English: '<color=#FFCC7F>Type of bullet:</color>
 
@@ -659,7 +665,7 @@ MonoBehaviour:
       Invisible:
       Enemy with invisible ability will be invisible while there are no refactor
       turret within range 4;Invisible enemy reduce 50% damage taken.'
-  - Key: GUIDETXT09
+  - Key: GUIDETXT10
     Chinese: "<color=#FFCC7F>1.\u914D\u65B9\u7684\u5143\u7D20\u6280\u80FD\u6709\u4EC0\u4E48\u89C4\u5F8B\uFF1F</color>\n\u76EE\u524D\u6E38\u620F\u4E2D\u6839\u636E\u5143\u7D20\u7EC4\u5408\u5171\u670935\u79CD\u5143\u7D20\u6280\u80FD\uFF0C<color=#FFCC7F>\u6280\u80FD\u6548\u679C\u4E0E\u5143\u7D20\u7EC4\u5408\u4E00\u4E00\u5BF9\u5E94</color>\u3002\n\n\u51FA\u73B0\u6982\u7387\uFF1A\u6DF7\u8272\u7EC4\u5408>\u4E24\u540C\u8272\u7EC4\u5408>\u4E09\u540C\u8272\u7EC4\u5408\n\u6548\u679C\u5F3A\u5EA6\uFF1A\u4E09\u540C\u8272\u7EC4\u5408>\u4E24\u540C\u8272\u7EC4\u5408>\u6DF7\u8272\u7EC4\u5408\n\n<color=#FFCC7F>2.\u8FDB\u9636\uFF1A\u6280\u80FD\u7684\u7ED3\u7B97\u65F6\u673A\u8BF4\u660E</color>\n\u6280\u80FD\u7C7B\u578B\u987A\u5E8F\uFF1A\u9632\u5FA1\u5854\u6280\u80FD>\u5143\u7D20\u6280\u80FD>\u79D1\u6280\u6548\u679C\n\u6280\u80FD\u65F6\u673A\u987A\u5E8F\uFF1A\u56DE\u5408\u5F00\u59CB\u65F6>\u56DE\u5408\u7ED3\u675F\u65F6>\u6218\u6597\u5F00\u59CB\u65F6\n\n"
     English: '<color=#FFCC7F>1. Element Skill Basics</color>
 
@@ -2189,35 +2195,89 @@ MonoBehaviour:
     Chinese: "\u56DE\u590D:\u654C\u4EBA\u5B8C\u621050%\u7684\u8DEF\u7EBF\u65F6\uFF0C\u56DE\u590D30%\u5DF2\u635F\u5931\u7684\u751F\u547D\u503C"
     English: Restore:Enemies restore 30% of their lost health after it completes
       the first 50% of route.
-  - Key: ACH_BILLIONS
-    Chinese: "\u4EBA\u6D77\u6218\u672F"
-    English: 
-  - Key: ACH_BILLIONSINFO
-    Chinese: "\u5728\u4E00\u5C40\u6218\u6597\u4E2D\u91CD\u6784\u8D85\u8FC750\u6B21"
-    English: 
   - Key: ACH_REFACTOR1
-    Chinese: "\u521D\u7EA7\u6307\u6325"
+    Chinese: "\u4F20\u5947\u6307\u63251"
     English: 
   - Key: ACH_REFACTOR1INFO
     Chinese: "\u7D2F\u8BA1\u5B8C\u62105\u6B21\u91CD\u6784"
     English: 
   - Key: ACH_REFACTOR2
-    Chinese: "\u4E2D\u7EA7\u6307\u6325"
+    Chinese: "\u7D2F\u8BA1\u5B8C\u62105\u6B21\u91CD\u6784"
     English: 
   - Key: ACH_REFACTOR2INFO
     Chinese: "\u7D2F\u8BA1\u5B8C\u621030\u6B21\u91CD\u6784"
     English: 
   - Key: ACH_REFACTOR3
-    Chinese: "\u9AD8\u7EA7\u6307\u6325"
+    Chinese: "\u4F20\u5947\u6307\u63253"
     English: 
   - Key: ACH_REFACTOR3INFO
     Chinese: "\u7D2F\u8BA1\u5B8C\u6210100\u6B21\u91CD\u6784"
     English: 
   - Key: ACH_REFACTOR4
-    Chinese: "\u4F20\u5947\u6307\u6325"
+    Chinese: "\u4F20\u5947\u6307\u63254"
     English: 
   - Key: ACH_REFACTOR4INFO
-    Chinese: "\u7D2F\u8BA1\u5B8C\u6210500\u6B21\u91CD\u6784"
+    Chinese: "\u7D2F\u8BA1\u5B8C\u6210300\u6B21\u91CD\u6784"
+    English: 
+  - Key: ACH_MONEY1
+    Chinese: "\u6253\u94B1\u72C2\u4EBA1"
+    English: 
+  - Key: ACH_MONEY1INFO
+    Chinese: "\u7D2F\u8BA1\u83B7\u5F975000\u4EE3\u5E01"
+    English: 
+  - Key: ACH_MONEY2
+    Chinese: "\u6253\u94B1\u72C2\u4EBA2"
+    English: 
+  - Key: ACH_MONEY2INFO
+    Chinese: "\u7D2F\u8BA1\u83B7\u5F9730000\u4EE3\u5E01"
+    English: 
+  - Key: ACH_MONEY3
+    Chinese: "\u6253\u94B1\u72C2\u4EBA3"
+    English: 
+  - Key: ACH_MONEY3INFO
+    Chinese: "\u7D2F\u8BA1\u83B7\u5F97100000\u4EE3\u5E01"
+    English: 
+  - Key: ACH_MONEY4
+    Chinese: "\u6253\u94B1\u72C2\u4EBA4"
+    English: 
+  - Key: ACH_MONEY4INFO
+    Chinese: "\u7D2F\u8BA1\u83B7\u5F97300000\u4EE3\u5E01"
+    English: 
+  - Key: ACH_ENDLESS1
+    Chinese: "\u65E0\u5C3D\u4E4B\u8DEF1"
+    English: 
+  - Key: ACH_ENDLESS1INFO
+    Chinese: "\u65E0\u5C3D\u6A21\u5F0F\u8FBE\u523060\u6CE2\uFF08\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219\uFF09"
+    English: 
+  - Key: ACH_ENDLESS2
+    Chinese: "\u65E0\u5C3D\u4E4B\u8DEF2"
+    English: 
+  - Key: ACH_ENDLESS2INFO
+    Chinese: "\u65E0\u5C3D\u6A21\u5F0F\u8FBE\u523080\u6CE2\uFF08\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219\uFF09"
+    English: 
+  - Key: ACH_ENDLESS3
+    Chinese: "\u65E0\u5C3D\u4E4B\u8DEF3"
+    English: 
+  - Key: ACH_ENDLESS3INFO
+    Chinese: "\u65E0\u5C3D\u6A21\u5F0F\u8FBE\u5230100\u6CE2\uFF08\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219\uFF09"
+    English: 
+  - Key: ACH_ENDLESS4
+    Chinese: "\u65E0\u5C3D\u4E4B\u8DEF4"
+    English: 
+  - Key: ACH_ENDLESS4INFO
+    Chinese: "\u65E0\u5C3D\u6A21\u5F0F\u8FBE\u5230120\u6CE2\uFF08\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219\uFF09"
+    English: 
+  - Key: ACH_INCOME
+    Chinese: "\u8D22\u6E90\u6EDA\u6EDA"
+    English: 
+  - Key: ACH_INCOMEINFO
+    Chinese: "\u5728\u4E00\u4E2A\u56DE\u5408\u7684\u6218\u6597\u9636\u6BB5\u4E2D\u91D1\u5E01\u6536\u5165\u8D85\u8FC72000"
+    English: 
+  - Key: ACH_ONLYBULLET
+    Chinese: "\u4E00\u53D1\u5165\u9B42"
+    English: 
+  - Key: ACH_ONLYBULLETINFO
+    Chinese: "\u5355\u53D1\u5B50\u5F39\u9020\u6210\u7684\u603B\u4F24\u5BB3\u8D85\u8FC71\u4EBF"
     English: 
   - Key: ACH_FAST
     Chinese: "\u901F\u901A\u73A9\u5BB6"
@@ -2235,7 +2295,145 @@ MonoBehaviour:
     Chinese: "\u5168\u80FD\u638C\u63A7"
     English: 
   - Key: ACH_EASYINFO
-    Chinese: "\u4E0D\u635F\u59311\u70B9\u751F\u547D\u503C\u901A\u5173\uFF08\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA64\u4EE5\u4E0A\uFF09"
+    Chinese: "\u4E0D\u635F\u59311\u70B9\u751F\u547D\u503C\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA64\u4EE5\u4E0A"
+    English: 
+  - Key: ACH_BILLIONS
+    Chinese: "\u4EBA\u6D77\u6218\u672F"
+    English: 
+  - Key: ACH_BILLIONSINFO
+    Chinese: "\u5728\u4E00\u5C40\u6218\u6597\u4E2D\u91CD\u6784\u8D85\u8FC750\u6B21"
+    English: 
+  - Key: ACH_LONGPATH
+    Chinese: "\u6F2B\u6F2B\u957F\u8DEF"
+    English: 
+  - Key: ACH_LONGPATHINFO
+    Chinese: "\u4F7F\u8DEF\u7EBF\u957F\u5EA6\u8FBE\u5230200\u683C"
+    English: 
+  - Key: ACH_SUPERCORE
+    Chinese: "\u7EDD\u5BF9\u6838\u5FC3"
+    English: 
+  - Key: ACH_SUPERCOREINFO
+    Chinese: "\u6392\u540D\u7B2C\u4E00\u7684\u9632\u5FA1\u5854\u8F93\u51FA\u5360\u6BD4\u5927\u4E8E90%"
+    English: 
+  - Key: ACH_DECEIVE
+    Chinese: "\u8499\u6DF7\u8FC7\u5173"
+    English: 
+  - Key: ACH_DECEIVEINFO
+    Chinese: "\u5728\u4E0D\u8FDB\u884C\u91CD\u6784\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA64\u4EE5\u4E0A"
+    English: 
+  - Key: ACH_EXTREME
+    Chinese: "\u6781\u9650\u64CD\u4F5C"
+    English: 
+  - Key: ACH_EXTREMEINFO
+    Chinese: "\u5728\u4E0D\u4F7F\u7528\u6B7B\u4EA1\u4FDD\u62A4\u4E14\u6700\u7EC8\u8DEF\u7EBF\u957F\u5EA6\u53EA\u67091\u683C\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u5173\u6807\u51C6\u6A21\u5F0F\u96BE\u5EA64\u4EE5\u4E0A"
+    English: 
+  - Key: ACH_CONSTRUCTOR
+    Chinese: "\u52A0\u519C\u638C\u63E1"
+    English: 
+  - Key: ACH_CONSTRUCTORINFO
+    Chinese: "\u52A0\u519C\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_RAPIDER
+    Chinese: "\u75BE\u5C04\u638C\u63E1"
+    English: 
+  - Key: ACH_RAPIDERINFO
+    Chinese: "\u75BE\u5C04\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_CHILLER
+    Chinese: "\u51B0\u51BB\u638C\u63E1"
+    English: 
+  - Key: ACH_CHILLERINFO
+    Chinese: "\u51B0\u51BB\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_SCATTER
+    Chinese: "\u6563\u5C04\u638C\u63E1"
+    English: 
+  - Key: ACH_SCATTERINFO
+    Chinese: "\u6563\u5C04\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_COORDINATOR
+    Chinese: "\u534F\u540C\u638C\u63E1"
+    English: 
+  - Key: ACH_COORDINATORINFO
+    Chinese: "\u534F\u540C\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_FIRER
+    Chinese: "\u55B7\u706B\u638C\u63E1"
+    English: 
+  - Key: ACH_FIRERINFO
+    Chinese: "\u55B7\u706B\u5854\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_ROTARY
+    Chinese: "\u8F6E\u8F6C\u638C\u63E1"
+    English: 
+  - Key: ACH_ROTARYINFO
+    Chinese: "\u8F6E\u8F6C\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_SNOW
+    Chinese: "\u96EA\u7403\u638C\u63E1"
+    English: 
+  - Key: ACH_SNOWINFO
+    Chinese: "\u96EA\u7403\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_LASER
+    Chinese: "\u956D\u5C04\u638C\u63E1"
+    English: 
+  - Key: ACH_LASERINFO
+    Chinese: "\u956D\u5C04\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_MORTAR
+    Chinese: "\u8FEB\u51FB\u638C\u63E1"
+    English: 
+  - Key: ACH_MORTARINFO
+    Chinese: "\u8FEB\u51FB\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_SNIPER
+    Chinese: "\u72D9\u51FB\u638C\u63E1"
+    English: 
+  - Key: ACH_SNIPERINFO
+    Chinese: "\u72D9\u51FB\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_BOMBARD
+    Chinese: "\u8F70\u51FB\u638C\u63E1"
+    English: 
+  - Key: ACH_BOMBARDINFO
+    Chinese: "\u8F70\u51FB\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_SUPER
+    Chinese: "\u8D85\u80FD\u638C\u63E1"
+    English: 
+  - Key: ACH_SUPERINFO
+    Chinese: "\u8D85\u80FD\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_BOOMERRANG
+    Chinese: "\u7834\u51B0\u638C\u63E1"
+    English: 
+  - Key: ACH_BOOMERRANGINFO
+    Chinese: "\u7834\u51B0\u8F6E\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_MINER
+    Chinese: "\u5E03\u96F7\u638C\u63E1"
+    English: 
+  - Key: ACH_MINERINFO
+    Chinese: "\u5E03\u96F7\u673A\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_ULTRA
+    Chinese: "\u7194\u5CA9\u638C\u63E1"
+    English: 
+  - Key: ACH_ULTRAINFO
+    Chinese: "\u7194\u5CA9\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_CORE
+    Chinese: "\u6838\u5FC3\u638C\u63E1"
+    English: 
+  - Key: ACH_COREINFO
+    Chinese: "\u6838\u5FC3\u673A\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
+    English: 
+  - Key: ACH_NUCLEAR
+    Chinese: "\u6838\u5F39\u638C\u63E1"
+    English: 
+  - Key: ACH_NUCLEARINFO
+    Chinese: "\u6838\u5F39\u70AE\u8F93\u51FA\u6392\u540D\u7B2C\u4E00\u7684\u60C5\u51B5\u4E0B\uFF0C\u901A\u8FC7\u65E0\u5C3D\u6A21\u5F0F\u81F3\u5C1180\u6CE2(\u65E0\u81EA\u5B9A\u4E49\u89C4\u5219)"
     English: 
   - Key: Guide01
     Chinese: "\u5B66\u5458S0666\u53F7,\u8FD9\u91CC\u662F\u4EBA\u9A6C\u5EA7A*\u7B2C\u5341\u4E5D\u63A5\u53E3.\u6211\u662F\u4F60\u7684\u90E8\u7F72\u6559\u5B98\u5A1C\u53EF."
@@ -2266,10 +2464,10 @@ MonoBehaviour:
     English: 'This is your current <color=#FFEA6D>health </color>, and every missed
       enemy will damage your health.  '
   - Key: Guide08
-    Chinese: "\u5C4F\u5E55\u4E0A\u65B9\u663E\u793A\u4E86<color=#FFEA6D>\u5F53\u524D\u6CE2\u6570</color>\u53CA<color=#FFEA6D>\u4E0B\u4E00\u6CE2\u654C\u4EBA\u7684\u4FE1\u606F</color>,\u5C06\u9F20\u6807\u60AC\u505C\u5728\u56FE\u6807\u4E0A\u53EF\u663E\u793A\u654C\u4EBA\u4FE1\u606F."
+    Chinese: "\u5C4F\u5E55\u4E0A\u65B9\u663E\u793A\u4E86<color=#FFEA6D>\u5F53\u524D\u6CE2\u6570</color>\u53CA<color=#FFEA6D>\u4E0B\u4E00\u6CE2\u654C\u4EBA\u7684\u4FE1\u606F</color>,\u70B9\u51FB\u56FE\u6807\u53EF\u663E\u793A\u654C\u4EBA\u4FE1\u606F."
     English: The top of the screen displays the <color=#FFEA6D>current wave</color>
-      and <color=#FFEA6D>the info of the next wave of enemies</color>. Hover the
-      mouse cursor over the icon to display the enemy info.
+      and <color=#FFEA6D>the info of the next wave of enemies</color>. You can display
+      the enemy info by clicking the icon.
   - Key: Guide09
     Chinese: "\u53F3\u4E0B\u89D2\u662F<color=#FFEA6D>\u6784\u9020\u6A21\u5757\u529F\u80FD</color>,\u6784\u9020\u6A21\u5757\u83B7\u53D6\u9632\u5FA1\u5854\u8FDB\u884C\u9632\u5FA1\u7684\u4E3B\u8981\u65B9\u5F0F."
     English: The lower right corner is <color=#FFEA6D>the module button,</color>.Building
@@ -2450,7 +2648,7 @@ MonoBehaviour:
     Chinese: "\u901A\u8FC7<color=#FFEA6D>\u5C06\u4E00\u4E2A\u91CD\u6784\u5854\u90E8\u7F72\u5728\u53E6\u4E00\u4E2A\u5DF2\u7ECF\u90E8\u7F72\u7684\u91CD\u6784\u5854\u4E0A\uFF0C\u5373\u53EF\u4F7F\u8BE5\u91CD\u6784\u5854\u7EE7\u627F\u65B0\u91CD\u6784\u5854\u7684\u5143\u7D20\u6280\u80FD.</color>"
     English: 
   - Key: Guide304
-    Chinese: "\u73B0\u5728\u573A\u4E0A\u5DF2\u7ECF\u6709\u8DB3\u591F\u7684\u5408\u6210\u7D20\u6750\uFF0C\u5C31\u6765\u5C1D\u8BD5\u4E00\u4E0B\u5427\u3002"
+    Chinese: "\u73B0\u5728\u573A\u4E0A\u5DF2\u7ECF\u6709\u8DB3\u591F\u7684\u5408\u6210\u7D20\u6750\uFF0C\u5148\u5C1D\u8BD5\u5408\u6210\u4E00\u4E2A\u91CD\u6784\u5854\u5427\uFF01"
     English: 
   - Key: Guide305
     Chinese: "\u9996\u5148\u91CD\u6784\u4E00\u4E2A\u91CD\u6784\u5854\u5E76\u90E8\u7F72\u5728\u6218\u573A\u4E0A\u3002"
@@ -2487,6 +2685,9 @@ MonoBehaviour:
     English: 
   - Key: Guide316
     Chinese: "\u672C\u6B21\u6559\u7A0B\u5230\u6B64\u7ED3\u675F\uFF0C\u4F60\u53EF\u4EE5\u968F\u65F6\u901A\u8FC7\u5DE6\u4E0A\u89D2\u7684\u6559\u7A0B\u5165\u53E3\u67E5\u770B\u6240\u6709\u6559\u5B66\u5185\u5BB9\u3002"
+    English: 
+  - Key: Guide317
+    Chinese: "\u73B0\u5728\u5F00\u59CB\u5C31\u5EFA\u9020\u66F4\u591A\u7684\u91CD\u6784\u5854\u6765\u62B5\u5FA1\u5165\u4FB5\u5427\uFF01"
     English: 
   - Key: Guide401
     Chinese: "\u7559\u610F\u5230\u573A\u4E0A\u7684\u95EE\u53F7\u683C\u5B50\u4E86\u5417\uFF0C\u8FD9\u4E9B\u662F\u65B0\u52A0\u5165\u7684<color=#FFEA6D>\u9677\u9631\u683C.</color>"

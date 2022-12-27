@@ -9,6 +9,7 @@ using System.Text;
 using System;
 
 
+
 [System.Serializable]
 public struct GameLevelInfo
 {
@@ -20,12 +21,10 @@ public class LevelManager : Singleton<LevelManager>
 {
     #region 成就
     public bool LevelWin { get; set; }
-
-
-    public void SetAchievement(string achievement)
-    {
-        PlayerPrefs.SetInt(achievement, 1);
-    }
+    //public void SetAchievement(string achievement)
+    //{
+    //    PlayerPrefs.SetInt(achievement, 1);
+    //}
 
 
     #endregion
@@ -59,8 +58,10 @@ public class LevelManager : Singleton<LevelManager>
         set => passDifficulty = Mathf.Clamp(value, 0, 9);
     }
 
+    [SerializeField]
     private int lifeTotalRefactor;
     public int LifeTotalRefactor { get => lifeTotalRefactor; set => lifeTotalRefactor = value; }
+    [SerializeField]
     private int lifeTotalCoin;
     public int LifeTotalCoin { get => lifeTotalCoin; set => lifeTotalCoin = value; }
 
@@ -416,7 +417,7 @@ public class LevelManager : Singleton<LevelManager>
             string saveJsonStr2 = JsonMapper.ToJson(LastGameSave);
             StreamWriter sw2 = new StreamWriter(filePath2);
             sw2.Write(EncryptionTool.EncryptString(saveJsonStr2, key));
-
+            //sw2.Write(saveJsonStr2);
             sw2.Close();
             Debug.Log("战斗成功存档");
 

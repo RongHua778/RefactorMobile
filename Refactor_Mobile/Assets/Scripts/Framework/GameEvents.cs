@@ -48,20 +48,23 @@ public struct TempWord
 
 public struct GameEndStruct
 {
-    public ModeType ModeType;
     public bool Win;
-    public int Level;//难度
+    public GameEndStruct(bool win)
+    {
+        this.Win = win;
+    }
 
-    //public int TotalRefactor;
-    //public int LongestPath;
-    //public int TotalMoney;
-    //public GameEndStruct(int totalRefactor,int longestPath,int totalMoney)
-    //{
-    //    this.TotalRefactor = totalRefactor;
-    //    this.LongestPath = longestPath;
-    //    this.TotalMoney = totalMoney;
-    //}
+}
 
+public struct BillBoardInfo
+{
+    public TurretContent Turret;
+    public int Rank;
+    public BillBoardInfo(TurretContent content,int rank)
+    {
+        this.Turret = content;
+        this.Rank = rank;
+    }
 }
 
 public class GameEvents : Singleton<GameEvents>
@@ -146,6 +149,16 @@ public class GameEvents : Singleton<GameEvents>
         onGameEnd?.Invoke(endData);
     }
 
+    public event Action<BillBoardInfo> onBillboardSort;
+    public void BillBoardSort(BillBoardInfo billboardInfo)
+    {
+        onBillboardSort?.Invoke(billboardInfo);
+    }
+    public event Action onPrepareNextWave;
+    public void PrepareNextWave()
+    {
+        onPrepareNextWave?.Invoke();
+    }
     //public void Release()//清理战斗事件
     //{
     //    onESlotEquip = null;

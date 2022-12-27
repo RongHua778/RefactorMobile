@@ -19,6 +19,8 @@ public class MainUI : IUserInterface
     [SerializeField] TechListPanel m_TechPanel = default;
 
     [SerializeField] InfoBtn m_RuleBtn = default;
+    [SerializeField] GameObject techBtn = default;
+
 
     public int CurrentWave
     {
@@ -68,10 +70,22 @@ public class MainUI : IUserInterface
         LifeAnim = m_RootUI.transform.Find("Life").GetComponent<Animator>();
         WaveAnim = m_RootUI.transform.Find("Wave").GetComponent<Animator>();
         m_TechPanel.Initialize();
+        SetTechBtn();
         SetRules();
     }
 
-
+    private void SetTechBtn()
+    {
+        if (LevelManager.Instance.CurrentLevel.ModeType == ModeType.Standard
+                    && LevelManager.Instance.CurrentLevel.ModeID <= 5)
+        {
+            techBtn.SetActive(false);
+        }
+        else
+        {
+            techBtn.SetActive(true);
+        }
+    }
 
     public override void Release()
     {

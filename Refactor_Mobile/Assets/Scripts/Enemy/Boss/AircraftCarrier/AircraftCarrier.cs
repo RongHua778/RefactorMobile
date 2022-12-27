@@ -68,11 +68,11 @@ public class AircraftCarrier : Boss
         aircrafts.Add(a);
     }
 
-    public override void OnDie()
-    {
-        base.OnDie();
-        LevelManager.Instance.SetAchievement("ACH_BATTLESHIP");
-    }
+    //public override void OnDie()
+    //{
+    //    base.OnDie();
+    //    LevelManager.Instance.SetAchievement("ACH_BATTLESHIP");
+    //}
 
     public override void OnUnSpawn()
     {

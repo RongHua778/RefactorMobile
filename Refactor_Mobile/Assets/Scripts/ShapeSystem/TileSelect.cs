@@ -36,7 +36,7 @@ public class TileSelect : MonoBehaviour, IPointerDownHandler, IPointerUpHandler/
         {
             m_LevelDownSelect.gameObject.SetActive(false);
         }
-        ElementTxt.text= StaticData.FormElementName(strategy.Attribute.element, strategy.Quality);
+        ElementTxt.text = StaticData.FormElementName(strategy.Attribute.element, strategy.Quality);
         selectFrame.SetActive(false);
         CheckElementNum();
     }
@@ -77,7 +77,7 @@ public class TileSelect : MonoBehaviour, IPointerDownHandler, IPointerUpHandler/
     {
         if (isHolding)
         {
-            if (holdCounter < 0.35f)
+            if (holdCounter < 0.3f * GameRes.GameSpeed)
             {
                 holdCounter += Time.deltaTime;
             }
@@ -89,7 +89,6 @@ public class TileSelect : MonoBehaviour, IPointerDownHandler, IPointerUpHandler/
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("Down");
         GameManager.Instance.PreviewComposition(true, Shape.m_ElementTurret.Strategy.Attribute.element, Shape.m_ElementTurret.Strategy.Quality);
         isPreview = false;
         isHolding = true;
@@ -100,7 +99,6 @@ public class TileSelect : MonoBehaviour, IPointerDownHandler, IPointerUpHandler/
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("Up");
         if (!isPreview)
         {
             OnShapeClick(false);

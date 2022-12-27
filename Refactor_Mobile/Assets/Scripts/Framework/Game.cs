@@ -23,7 +23,7 @@ public class Game : Singleton<Game>
         base.Awake();
         if (!alreadyExist)
         {
-            Application.targetFrameRate = 60;
+            Application.targetFrameRate = 30;
             Application.runInBackground = true;
             DontDestroyOnLoad(this.gameObject);
             StaticData.Instance.Initialize();

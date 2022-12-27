@@ -12,10 +12,10 @@ public class AircraftCarrier2 : AircraftCarrier
         BuffInfo buff = new BuffInfo(EnemyBuffName.Invisible, 1);
         DamageStrategy.ApplyBuff(buff);
     }
-    public override void OnDie()
-    {
-        base.OnDie();
-        if (!LevelManager.Instance.LevelEnd)
-            LevelManager.Instance.SetAchievement("ACH_DRAGON");
-    }
+    //public override void OnDie()
+    //{
+    //    base.OnDie();
+    //    if (!LevelManager.Instance.LevelEnd)
+    //        LevelManager.Instance.SetAchievement("ACH_DRAGON");
+    //}
 }

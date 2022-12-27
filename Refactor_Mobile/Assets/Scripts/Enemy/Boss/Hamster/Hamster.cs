@@ -40,10 +40,10 @@ public class Hamster : Boss
         {
             hamster.DamageStrategy.ApplyBuffDmgIntensify(0.25f); 
         }
-        if (AllHamsters.Count <= 0)
-        {
-            LevelManager.Instance.SetAchievement("ACH_HAMSTER");
-        }
+        //if (AllHamsters.Count <= 0)
+        //{
+        //    LevelManager.Instance.SetAchievement("ACH_HAMSTER");
+        //}
 
     }
 

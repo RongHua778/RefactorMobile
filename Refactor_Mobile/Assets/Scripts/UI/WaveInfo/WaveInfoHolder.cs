@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class WaveInfoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class WaveInfoHolder : MonoBehaviour,IPointerClickHandler
 {
     [SerializeField] Image[] enemyIcons = default;
     List<EnemyAttribute> currentAtts = new List<EnemyAttribute>();
@@ -24,7 +24,7 @@ public class WaveInfoHolder : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         TipsManager.Instance.ShowEnemyTips(currentAtts, StaticData.MidUpPos);
     }

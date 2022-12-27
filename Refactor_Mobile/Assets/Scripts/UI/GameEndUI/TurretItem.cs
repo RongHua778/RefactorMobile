@@ -29,19 +29,6 @@ public class TurretItem : MonoBehaviour
         icon.sprite = turret.Strategy.Attribute.TurretLevels[m_Turret.Strategy.Quality - 1].TurretIcon;
         damageValue.text = turret.Strategy.TotalDamage.ToString();
         TotalDamage = turret.Strategy.TotalDamage;
-
-        if (LevelManager.Instance.LevelWin)
-        {
-            if (((float)TotalDamage / (float)GameRes.TotalDamage) > 0.7f)
-            {
-                LevelManager.Instance.SetAchievement("ACH_SUPERCORE");//³¬¼¶ºËÐÄ
-            }
-            if (turret.Strategy.TotalElementCount >= 15)
-            {
-                LevelManager.Instance.SetAchievement("ACH_15ELEMENTS");//ÔªËØ±¬Õ¨
-            }
-        }
-
     }
 
     public void SetRank(int rank)
@@ -58,6 +45,8 @@ public class TurretItem : MonoBehaviour
             rankTxt.gameObject.SetActive(true);
             medalImg.gameObject.SetActive(false);
         }
+        BillBoardInfo billboardInfo = new BillBoardInfo(m_Turret, rank);
+        GameEvents.Instance.BillBoardSort(billboardInfo);
     }
 
     public void LocateTurret()

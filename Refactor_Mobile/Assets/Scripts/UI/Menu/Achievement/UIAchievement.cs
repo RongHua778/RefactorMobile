@@ -38,7 +38,7 @@ public class UIAchievement : IUserInterface
 
         float progress = (float)getAch / AchievementManager.Instance.AchList.Count;
         achProgress.fillAmount = progress;
-        achProgressTxt.text = string.Format("{0:N1}", progress * 100) + "%";
+        achProgressTxt.text = string.Format("{0:N0}", progress * 100) + "%";
     }
 
     public override void Show()
