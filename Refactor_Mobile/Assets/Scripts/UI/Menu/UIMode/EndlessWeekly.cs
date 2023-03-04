@@ -25,12 +25,29 @@ public class EndlessWeekly : MonoBehaviour
     public void Initialize()
     {
         m_BattleRecipe.Initialize();
-
+        SetArea(false);
         //≈≈––∞Ò…Ë÷√
         GameEvents.Instance.onEndlessLeaderBoardGet += GetLeaderboardCallback;
-        //≈–∂œ «∑Ò≥…π¶µ«¬º
-        SetArea(PlayfabManager.Instance.EndlessLeaderboardGot);
+
     }
+
+    //private void SetArea(bool value)
+    //{
+    //    reconnectArea.SetActive(!value);
+    //    mainArea.SetActive(value);
+    //    if (value)
+    //    {
+    //        List<Rule> rules = new List<Rule>();
+    //        foreach (var ruleName in EndlessParamData.EndlessParams[PlayfabManager.Instance.OnlineEndlessVersion % 10].RuleNames)
+    //        {
+    //            Rule rule = RuleFactory.GetRule((int)ruleName);
+    //            rules.Add(rule);
+    //        }
+    //        m_BattleRule.SetRules(rules);
+    //        m_BattleRecipe.SetRecipes(EndlessParamData.EndlessParams[PlayfabManager.Instance.OnlineEndlessVersion % 10].Recipes);
+    //    }
+    //    playerScoreTxt.text= GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + PlayfabManager.Instance.EndlessWave + GameMultiLang.GetTraduction("WAVE");
+    //}
 
     private void SetArea(bool value)
     {
@@ -39,18 +56,18 @@ public class EndlessWeekly : MonoBehaviour
         if (value)
         {
             List<Rule> rules = new List<Rule>();
-            foreach (var ruleName in EndlessParamData.EndlessParams[PlayfabManager.Instance.OnlineEndlessVersion % 10].RuleNames)
+            foreach (var ruleName in EndlessParamData.EndlessParams[LevelManager.Instance.LocalEndlessVersion % 10].RuleNames)
             {
                 Rule rule = RuleFactory.GetRule((int)ruleName);
                 rules.Add(rule);
             }
             m_BattleRule.SetRules(rules);
-            m_BattleRecipe.SetRecipes(EndlessParamData.EndlessParams[PlayfabManager.Instance.OnlineEndlessVersion % 10].Recipes);
+            m_BattleRecipe.SetRecipes(EndlessParamData.EndlessParams[LevelManager.Instance.LocalEndlessVersion % 10].Recipes);
         }
-        playerScoreTxt.text= GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + PlayfabManager.Instance.EndlessWave + GameMultiLang.GetTraduction("WAVE");
+        playerScoreTxt.text = GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + LevelManager.Instance.LocalEndlessWave + GameMultiLang.GetTraduction("WAVE");
     }
 
-    private void GetLeaderboardCallback(bool value)
+    private void GetLeaderboardCallback()
     {
         SetArea(true);
     }

@@ -16,6 +16,12 @@ public class GameSave
     public int GameExp;
     public int PassDifficulty;
 
+    //无尽分数保存
+    public int LocalEndlessVersion;
+    public int LocalEndlessWave;
+
+    //挑战模式保存
+
 
     //临时游戏保存
     public bool HasLastGame;
@@ -64,6 +70,9 @@ public class GameSave
         PassDifficulty = LevelManager.Instance.PassDifficulty;
         LifeTotalRefactor = LevelManager.Instance.LifeTotalRefactor;
         LifeTotalCoin = LevelManager.Instance.LifeTotalCoin;
+
+        LocalEndlessVersion = LevelManager.Instance.LocalEndlessVersion;
+        LocalEndlessWave = LevelManager.Instance.LocalEndlessWave;
         SaveAchievements = saveAchievements;
     }
 

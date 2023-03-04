@@ -17,15 +17,24 @@ public struct GameLevelInfo
     public ContentAttribute[] UnlockItems;
 }
 
-public class LevelManager : Singleton<LevelManager>
+public class LevelManager : MySingleton<LevelManager>
 {
-    #region 成就
     public bool LevelWin { get; set; }
-    //public void SetAchievement(string achievement)
-    //{
-    //    PlayerPrefs.SetInt(achievement, 1);
-    //}
-
+    #region 无尽模式
+    [SerializeField]
+    private int localEndlessVersion;//本地无尽版本
+    public int LocalEndlessVersion
+    {
+        get => localEndlessVersion;
+        set => localEndlessVersion = value;
+    }
+    [SerializeField]
+    private int localEndlessWave;//本地无尽分数
+    public int LocalEndlessWave
+    {
+        get => localEndlessWave;
+        set => localEndlessWave = value;
+    }
 
     #endregion
 
@@ -368,6 +377,9 @@ public class LevelManager : Singleton<LevelManager>
         PassDifficulty = LastGameSave.PassDifficulty;
         LifeTotalRefactor = LastGameSave.LifeTotalRefactor;
         LifeTotalCoin = LastGameSave.LifeTotalCoin;
+
+        LocalEndlessVersion = LastGameSave.LocalEndlessVersion;
+        localEndlessWave = LastGameSave.LocalEndlessWave;
     }
 
 

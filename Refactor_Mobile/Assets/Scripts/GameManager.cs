@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Linq;
 
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : MySingleton<GameManager>
 {
     [Header("系统")]
     [SerializeField] private BoardSystem m_BoardSystem = default;//版图系统

@@ -6,7 +6,7 @@ using System;
 using Pathfinding;
 
 
-public class StaticData : Singleton<StaticData>
+public class StaticData : MySingleton<StaticData>
 {
 
     [Header("静态数据")]

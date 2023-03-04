@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Sound : Singleton<Sound>
+public class Sound : MySingleton<Sound>
 {
 
     [SerializeField] AudioClip[] bgs = default;

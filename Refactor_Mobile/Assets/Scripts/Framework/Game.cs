@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Sound))]
-public class Game : Singleton<Game>
+public class Game : MySingleton<Game>
 {
     public string CurrentState => m_SceneStateController.m_State.StateName;
     SceneStateController m_SceneStateController = new SceneStateController();
@@ -23,7 +23,7 @@ public class Game : Singleton<Game>
         base.Awake();
         if (!alreadyExist)
         {
-            Application.targetFrameRate = 30;
+            Application.targetFrameRate = 45;
             Application.runInBackground = true;
             DontDestroyOnLoad(this.gameObject);
             StaticData.Instance.Initialize();
@@ -137,8 +137,7 @@ public class Game : Singleton<Game>
         return PlayFabClientAPI.IsClientLoggedIn();
     }
 
-    
-
+ 
 
     public void QuitGame()
     {

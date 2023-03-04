@@ -18,31 +18,31 @@ MonoBehaviour:
     RuleNames: 0000000004000000020000000d000000
     Recipes:
     - {fileID: 11400000, guid: e3e54c1bced6a334b9535d9abfcb8bb5, type: 2}
-    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
     - {fileID: 11400000, guid: f258f850157d22f47b339af2c0ef6e49, type: 2}
     - {fileID: 11400000, guid: 283069950a321db438ba311f3de6f03d, type: 2}
     - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
+    - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
     - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
   - Tips: "\u96BE\u5EA6\u4E2D\uFF0CAOE\u5C38\u6F6E\u5927\u66B4\u8D70"
     Version: 1
     RuleNames: 07000000080000000a00000003000000
     Recipes:
-    - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
     - {fileID: 11400000, guid: 49b78835926160f46b82645449e248b6, type: 2}
     - {fileID: 11400000, guid: 8696283088f82e64c8c5bb20bd9ef79f, type: 2}
     - {fileID: 11400000, guid: 33e33721f8e10504dba35cde5c1041e0, type: 2}
+    - {fileID: 11400000, guid: 5f7cf3a0a6511714ca19786b2b7f5b48, type: 2}
     - {fileID: 11400000, guid: 8c0106e337765e044b9ce1dd0f6f7417, type: 2}
     - {fileID: 11400000, guid: 9061b9baec821234b8474f052693dc8b, type: 2}
   - Tips: "\u96BE\u5EA6\u9AD8\u9AD8\u95F4\u9694\u51B0\u51BB\u6253\u6CD5"
     Version: 2
     RuleNames: 01000000060000000b000000
     Recipes:
-    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
     - {fileID: 11400000, guid: ce57488ac1b2193489c982bd6c711025, type: 2}
     - {fileID: 11400000, guid: 5b4fc6b2f1f50624a9801389b31a9dfb, type: 2}
     - {fileID: 11400000, guid: 95641219ac7af8c4e9a6a2cefe944374, type: 2}
     - {fileID: 11400000, guid: 01c4629df9a687746811ce639dee3704, type: 2}
     - {fileID: 11400000, guid: 8ab8442024210ec4f8786111aead38c8, type: 2}
+    - {fileID: 11400000, guid: c10d0ad6d60f8eb419d0ea97cd6014b0, type: 2}
   - Tips: "\u51B2\u523A\u654C\u4EBA\uFF0C\u524D\u671F\u9547\u5B88"
     Version: 3
     RuleNames: 020000000500000003000000

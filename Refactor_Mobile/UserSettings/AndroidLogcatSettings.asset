@@ -1,0 +1,145 @@
+{
+    "m_SelectedDeviceId": "3139694192000CU",
+    "m_SelectedPackage": {
+        "deviceId": "3139694192000CU",
+        "name": "com.GAGAStudio.Refactor",
+        "processId": 4603,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.taptap",
+            "processId": 27262,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 31593,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 32435,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 3402,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 17659,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 2715,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 5841,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 9735,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 15727,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 17587,
+            "exited": false
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 4603,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_FilterOptions": {
+        "m_Filter": "",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    }
+}

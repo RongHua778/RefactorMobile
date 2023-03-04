@@ -11,7 +11,7 @@ public class Achievement
     public Sprite AchIcon;
 }
 
-public class AchievementManager : Singleton<AchievementManager>
+public class AchievementManager : MySingleton<AchievementManager>
 {
     public List<Achievement> AchList;
 

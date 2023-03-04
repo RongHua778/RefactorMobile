@@ -12,7 +12,7 @@ public struct LeaderBoardInfo
     public GetLeaderboardResult LeaderBoardResult;
 }
 
-public class PlayfabManager : Singleton<PlayfabManager>
+public class PlayfabManager : MySingleton<PlayfabManager>
 {
 
     //√ø÷‹Œﬁæ°
@@ -263,7 +263,7 @@ public class PlayfabManager : Singleton<PlayfabManager>
             UpdateLoacalScore();
             FirstLogin = false;
         }
-        GameEvents.Instance.EndlessLeaderboardGet(true);
+        //GameEvents.Instance.EndlessLeaderboardGet();
         Debug.Log("Successfully get leaderboard£∫" + EndlessWeeklyName);
     }
 

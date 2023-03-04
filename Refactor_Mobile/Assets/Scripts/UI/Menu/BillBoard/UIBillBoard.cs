@@ -43,21 +43,33 @@ public class UIBillBoard : IUserInterface
             StartCoroutine(RefreashCor());
     }
 
+    //private IEnumerator RefreashCor()
+    //{
+    //    refreashBtn.SetActive(false);
+    //    refreashingLeaderboard = true;
+    //    PlayfabManager.Instance.UpdateLoacalScore();
+    //    yield return new WaitForSeconds(2f);
+    //    switch (LeaderBoardType)
+    //    {
+    //        case LeaderBoard.Endless:
+    //            PlayfabManager.Instance.GetEndlessVersion();
+    //            break;
+    //        case LeaderBoard.Challenge:
+    //            PlayfabManager.Instance.GetChallengeVersion();
+    //            break;
+    //    }
+    //    yield return new WaitForSeconds(2f);
+    //    refreashingLeaderboard = false;
+    //    SetLeaderBoard();
+    //    refreashBtn.SetActive(true);
+    //}
     private IEnumerator RefreashCor()
     {
         refreashBtn.SetActive(false);
         refreashingLeaderboard = true;
-        PlayfabManager.Instance.UpdateLoacalScore();
+        TaptapManager.Instance.UpdateScore(LeaderBoardType);
         yield return new WaitForSeconds(2f);
-        switch (LeaderBoardType) 
-        {
-            case LeaderBoard.Endless:
-                PlayfabManager.Instance.GetEndlessVersion();
-                break;
-            case LeaderBoard.Challenge:
-                PlayfabManager.Instance.GetChallengeVersion();
-                break;
-        }
+        TaptapManager.Instance.GetLeaderBoard();
         yield return new WaitForSeconds(2f);
         refreashingLeaderboard = false;
         SetLeaderBoard();
@@ -103,24 +115,67 @@ public class UIBillBoard : IUserInterface
         anim.SetBool("isOpen", false);
     }
 
+    //public void SetLeaderBoard()
+    //{
+    //    ClearBillBoard();
+    //    switch (LeaderBoardType)
+    //    {
+    //        case LeaderBoard.Endless:
+    //            if (PlayfabManager.Instance.EndlessResult[0].LeaderBoardResult != null)
+    //                foreach (var item in PlayfabManager.Instance.EndlessResult[0].LeaderBoardResult.Leaderboard)
+    //                {
+    //                    BillboardItem billBoardItem = Instantiate(billboardItemPrefab, todayParent);
+    //                    billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue,true);
+    //                    m_Items.Add(billBoardItem);
+    //                }
+    //            if (PlayfabManager.Instance.EndlessResult[1].LeaderBoardResult != null)
+    //                foreach (var item in PlayfabManager.Instance.EndlessResult[1].LeaderBoardResult.Leaderboard)
+    //                {
+    //                    BillboardItem billBoardItem = Instantiate(billboardItemPrefab, yesterdayParent);
+    //                    billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue, true);
+    //                    m_Items.Add(billBoardItem);
+    //                }
+    //            break;
+
+    //        case LeaderBoard.Challenge:
+    //            if (PlayfabManager.Instance.ChallengeResults[0].LeaderBoardResult != null)
+    //                foreach (var item in PlayfabManager.Instance.ChallengeResults[0].LeaderBoardResult.Leaderboard)
+    //                {
+    //                    BillboardItem billBoardItem = Instantiate(billboardItemPrefab, todayParent);
+    //                    billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue, false);
+    //                    m_Items.Add(billBoardItem);
+    //                }
+    //            if (PlayfabManager.Instance.ChallengeResults[1].LeaderBoardResult != null)
+    //                foreach (var item in PlayfabManager.Instance.ChallengeResults[1].LeaderBoardResult.Leaderboard)
+    //                {
+    //                    BillboardItem billBoardItem = Instantiate(billboardItemPrefab, yesterdayParent);
+    //                    billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue, false);
+    //                    m_Items.Add(billBoardItem);
+    //                }
+    //            break;
+    //    }
+    //    //playerScoreTxt.text = GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + score + GameMultiLang.GetTraduction("WAVE");
+
+    //}
+
     public void SetLeaderBoard()
     {
         ClearBillBoard();
         switch (LeaderBoardType)
         {
             case LeaderBoard.Endless:
-                if (PlayfabManager.Instance.EndlessResult[0].LeaderBoardResult != null)
-                    foreach (var item in PlayfabManager.Instance.EndlessResult[0].LeaderBoardResult.Leaderboard)
+                if (TaptapManager.Instance.CurrentEndlessRankings != null)
+                    foreach (var item in TaptapManager.Instance.CurrentEndlessRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, todayParent);
-                        billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue,true);
+                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
                         m_Items.Add(billBoardItem);
                     }
-                if (PlayfabManager.Instance.EndlessResult[1].LeaderBoardResult != null)
-                    foreach (var item in PlayfabManager.Instance.EndlessResult[1].LeaderBoardResult.Leaderboard)
+                if (TaptapManager.Instance.LastEndlessRankings != null)
+                    foreach (var item in TaptapManager.Instance.LastEndlessRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, yesterdayParent);
-                        billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue, true);
+                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
                         m_Items.Add(billBoardItem);
                     }
                 break;
@@ -145,7 +200,6 @@ public class UIBillBoard : IUserInterface
         //playerScoreTxt.text = GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + score + GameMultiLang.GetTraduction("WAVE");
 
     }
-
 
     private void ClearBillBoard()
     {

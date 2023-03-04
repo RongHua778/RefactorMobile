@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : Singleton<ObjectPool>
+public class ObjectPool : MySingleton<ObjectPool>
 {
     public string ResourceDir = "";
     Dictionary<string, SubPool> m_pools = new Dictionary<string, SubPool>();

@@ -145,19 +145,19 @@ public class HeavyRule : Rule
     }
 }
 
-//public class RichRule : Rule
-//{
-//    public override RuleName RuleName => RuleName.RULE_RICH;
-//    public override void OnGameInit()
-//    {
-//        GameRes.CoinAdjust += 1f;
-//    }
+public class RichRule : Rule
+{
+    public override RuleName RuleName => RuleName.RULE_RICH;
+    public override void OnGameInit()
+    {
+        GameRes.CoinAdjust += 1f;
+    }
 
-//    public override void OnGameLoad()
-//    {
+    public override void OnGameLoad()
+    {
 
-//    }
-//}
+    }
+}
 
 public class RuleFrost : Rule
 {

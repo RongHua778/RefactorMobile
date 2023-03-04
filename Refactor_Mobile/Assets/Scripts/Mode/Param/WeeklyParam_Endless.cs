@@ -9,7 +9,7 @@ public class EndlessParam
     public string Tips;
     public int Version;
     public List<RuleName> RuleNames;
-    [AssetList(Path = "Resources/SO/RefactorAttribute/")]
+    [AssetList(Path = "Datas/SO/RefactorAttribute/")]
     public List<TurretAttribute> Recipes;
 }
 

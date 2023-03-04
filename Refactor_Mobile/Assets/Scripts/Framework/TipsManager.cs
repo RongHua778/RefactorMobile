@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class TipsManager : Singleton<TipsManager>
+public class TipsManager : MySingleton<TipsManager>
 {
     [SerializeField] private TempTips m_TempTips = default;
     [SerializeField] private TurretTips m_TurretTips = default;

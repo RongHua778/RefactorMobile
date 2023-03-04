@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f4c8a7ae378344bbb9d3aa81855637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultLang: en
+  defaultLang: ch
   languageData: {fileID: 11400000, guid: af6bd4cff502e3d4aa7ddffcc178e9a6, type: 2}
-  SpriteDatas: []
+  SpriteDatas:
+  - Key: LOGO
+    Chinese: {fileID: 21300000, guid: 319537e221f92e746b3fbcc31fad9419, type: 3}
+    English: {fileID: 21300000, guid: 6466fb14f206a114fbb7f0f83c2fe623, type: 3}
+  - Key: GUIDEIMG04
+    Chinese: {fileID: 21300000, guid: 0c4f7a7bfc6d25841a43f9ddccec6e10, type: 3}
+    English: {fileID: 21300000, guid: b5bbd87005945fd4495cbd15ed9aec6c, type: 3}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GuideGirlSystem : Singleton<GuideGirlSystem>
+public class GuideGirlSystem : MySingleton<GuideGirlSystem>
 {
     [SerializeField] int startIndex = default;
 

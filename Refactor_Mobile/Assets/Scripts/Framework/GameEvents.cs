@@ -67,7 +67,7 @@ public struct BillBoardInfo
     }
 }
 
-public class GameEvents : Singleton<GameEvents>
+public class GameEvents : MySingleton<GameEvents>
 {
 
     public event Action onGuideObjCollect;
@@ -127,11 +127,11 @@ public class GameEvents : Singleton<GameEvents>
         onShowDamageIntensify?.Invoke(value);
     }
 
-    public event Action<bool> onEndlessLeaderBoardGet;
+    public event Action onEndlessLeaderBoardGet;
 
-    public void EndlessLeaderboardGet(bool value)
+    public void EndlessLeaderboardGet()
     {
-        onEndlessLeaderBoardGet?.Invoke(value);
+        onEndlessLeaderBoardGet?.Invoke();
     }
     public event Action<bool> onChallengeLeaderBoardGet;
 

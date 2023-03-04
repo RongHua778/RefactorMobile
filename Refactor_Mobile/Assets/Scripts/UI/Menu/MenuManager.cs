@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 //using Steamworks;
 
-public class MenuManager : Singleton<MenuManager>
+public class MenuManager : MySingleton<MenuManager>
 {
     Canvas m_Canvas;
     //界面系统
@@ -16,6 +16,8 @@ public class MenuManager : Singleton<MenuManager>
     [SerializeField] UISetting m_UISetting = default;
     [SerializeField] UIBillBoard m_UIBillboard = default;
     [SerializeField] UIWechat m_UIWechat = default;
+    [SerializeField] UITestPanel m_UITestPanel = default;
+
     [SerializeField] ThanksPanel m_ThanksPanel = default;
 
     [SerializeField] UIRecipeSet m_UIRecipeSet = default;
@@ -35,6 +37,7 @@ public class MenuManager : Singleton<MenuManager>
         m_UISetting.Initialize();
         m_UIBillboard.Initialize();
         m_UIWechat.Initialize();
+        m_UITestPanel.Initialize();
         m_ThanksPanel.Initialize();
 
         m_UIRecipeSet.Initialize();
@@ -95,12 +98,17 @@ public class MenuManager : Singleton<MenuManager>
         m_UISetting.Show();
     }
 
-
+    public void OpenTestPanel()
+    {
+        m_UITestPanel.Show();
+    }
 
     public void QuitGameBtnClick()
     {
         Game.Instance.QuitGame();
     }
+
+   
 
 
 
