@@ -3,75 +3,51 @@
     "m_SelectedPackage": {
         "deviceId": "3139694192000CU",
         "name": "com.GAGAStudio.Refactor",
-        "processId": 4603,
+        "processId": 4722,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "3139694192000CU",
-            "name": "com.taptap",
-            "processId": 27262,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
             "name": "com.GAGAStudio.Refactor",
-            "processId": 31593,
+            "processId": 31699,
             "exited": true
         },
         {
             "deviceId": "3139694192000CU",
             "name": "com.GAGAStudio.Refactor",
-            "processId": 32435,
+            "processId": 7010,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 10479,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.tencent.mm",
+            "processId": 30721,
             "exited": false
         },
         {
             "deviceId": "3139694192000CU",
             "name": "com.GAGAStudio.Refactor",
-            "processId": 3402,
+            "processId": 28458,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.bbk.launcher2",
+            "processId": 19003,
             "exited": false
         },
         {
             "deviceId": "3139694192000CU",
             "name": "com.GAGAStudio.Refactor",
-            "processId": 17659,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 2715,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 5841,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 9735,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 15727,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 17587,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 4603,
+            "processId": 4722,
             "exited": false
         }
     ],

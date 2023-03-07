@@ -28,7 +28,6 @@ public class EndlessWeekly : MonoBehaviour
         SetArea(false);
         //≈≈––∞Ò…Ë÷√
         GameEvents.Instance.onEndlessLeaderBoardGet += GetLeaderboardCallback;
-
     }
 
     //private void SetArea(bool value)
@@ -82,10 +81,10 @@ public class EndlessWeekly : MonoBehaviour
     {
         isReconnecting = true;
         connectTips.text = GameMultiLang.GetTraduction("LEADERBOARDTIPS");
-        Game.Instance.InitializeNetworks();
+        TaptapManager.Instance.TapLogin();
         reConnectBtn.SetActive(false);
         yield return new WaitForSeconds(5f);
-        SetArea(PlayfabManager.Instance.EndlessLeaderboardGot);
+        SetArea(TaptapManager.Instance.LoginSuccessful);
         connectTips.text = GameMultiLang.GetTraduction("LEADERBOARDTIPS2");
         reConnectBtn.SetActive(true);
         isReconnecting = false;

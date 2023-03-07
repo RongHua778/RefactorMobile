@@ -13,16 +13,12 @@ public struct TextSet
     public float time;
     public Color color;
 }
-public class JumpDamage : ReusableObject
+public class JumpDamage : ReusableObject,IGameBehavior
 {
     [SerializeField] TextMeshPro Text = default;
 
     private Vector2 randomOffset;
     float offset = 0.1f;
-    //float size;
-    //float time;
-    //[SerializeField] Color normalColor = default;
-    //[SerializeField] Color critColor = default;
 
     [SerializeField] TextSet normal = default;
     [SerializeField] TextSet crit = default;
@@ -31,13 +27,20 @@ public class JumpDamage : ReusableObject
     private Vector2 endPos;
     float progress;
 
-    private void Update()
+
+    public bool GameUpdate()
     {
         progress += jumpSpeed * Time.deltaTime;
         if (progress <= 1)
+        {
             transform.position = Vector2.Lerp(startPos, endPos, progress);
+        }
         else if (progress >= 2f)
-            RecycleObject();
+        {
+            ObjectPool.Instance.UnSpawn(this);
+            return false;
+        }
+        return true;
     }
 
     private void SetValue(long amount, Vector2 pos, bool isCritical)
@@ -57,25 +60,14 @@ public class JumpDamage : ReusableObject
     public void Jump(long amount, Vector2 pos, bool isCritical)
     {
         SetValue(amount, pos, isCritical);
-        //StartCoroutine(JumpCor(amount, pos, isCritical));
+       
     }
 
-    //IEnumerator JumpCor(long amount, Vector2 pos, bool isCritical)
-    //{
-    //    TextSet set = isCritical ? crit : normal;
-    //    Text.color = set.color;
-    //    transform.localScale = Vector2.one * Mathf.Clamp(set.size * (Mathf.Log10(amount) + 1), 0.1f, 5f);
-    //    randomOffset = new Vector2(Random.Range(-offset, offset), Random.Range(-offset, offset));
-    //    transform.position = pos + randomOffset;
-    //    Text.text = amount.ToString();
-    //    transform.DOMove((Vector2)transform.position + Vector2.up * 0.5f, 0.25f);
-    //    yield return new WaitForSeconds(set.time);
-    //    RecycleObject();
-    //}
-
-    public void RecycleObject()
+    public override void OnSpawn()
     {
-        ObjectPool.Instance.UnSpawn(this);
+        base.OnSpawn();
+        GameManager.Instance.nonEnemies.Add(this);
     }
+
 
 }

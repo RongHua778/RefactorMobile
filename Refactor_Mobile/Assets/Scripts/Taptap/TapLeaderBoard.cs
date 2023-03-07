@@ -11,52 +11,79 @@ public class TapLeaderBoard : MonoBehaviour
     public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> CurrentEndlessRankings { get; private set; }
     public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> LastEndlessRankings { get; private set; }
 
-
-    public async void GetLeaderBoard()
+    public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> CurrentChallengeRankings { get; private set; }
+    public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> LastChallengeRankings { get; private set; }
+    public async void GetLeaderBoard(LeaderBoard leaderBoardType)
     {
-        var leaderboard = LCLeaderboard.CreateWithoutData(EndlessWeeklyName);
-        int currentVersion = leaderboard.Version;
-
-        if (LevelManager.Instance.LocalEndlessVersion == currentVersion)
+        switch (leaderBoardType)
         {
-            UpdateScore(LeaderBoard.Endless);
-            Debug.Log("版本一致，更新分数,当前波数:" + LevelManager.Instance.LocalEndlessWave);
-        }
-        else
-        {
-            LevelManager.Instance.LocalEndlessVersion = currentVersion;
-            LevelManager.Instance.LocalEndlessWave = 0;
-            Debug.Log("版本不一致，重置分数，当前波数:" + LevelManager.Instance.LocalEndlessWave);
+            case LeaderBoard.Endless:
+                var endlessLeaderBoard = LCLeaderboard.CreateWithoutData(EndlessWeeklyName);
+                int endlessVersion = endlessLeaderBoard.Version;
+
+                if (LevelManager.Instance.LocalEndlessVersion == endlessVersion)
+                {
+                    UpdateScore(leaderBoardType);
+                    Debug.Log("版本一致，更新分数,当前波数:" + LevelManager.Instance.LocalEndlessWave);
+                }
+                else
+                {
+                    LevelManager.Instance.LocalEndlessVersion = endlessVersion;
+                    LevelManager.Instance.LocalEndlessWave = 0;
+                    Debug.Log("版本不一致，重置分数，当前波数:" + LevelManager.Instance.LocalEndlessWave);
+                }
+
+                CurrentEndlessRankings = await endlessLeaderBoard.GetResults(limit: 50, selectKeys: new List<string> { "nickname" });
+                if (endlessVersion > 0)
+                    LastEndlessRankings = await endlessLeaderBoard.GetResults(endlessVersion - 1, limit: 50, selectKeys: new List<string> { "nickname" });
+
+                GameEvents.Instance.EndlessLeaderboardGet();
+                break;
+            case LeaderBoard.Challenge:
+                var challengeLeaderBoard = LCLeaderboard.CreateWithoutData(ChallengeDayName);
+                int challengeVersion = challengeLeaderBoard.Version;
+
+                if (LevelManager.Instance.LocalChallengeVersion == challengeVersion)
+                {
+                    UpdateScore(leaderBoardType);
+                    Debug.Log("版本一致，更新分数,当前波数:" + LevelManager.Instance.LocalChallengeScore);
+                }
+                else
+                {
+                    LevelManager.Instance.LocalChallengeVersion = challengeVersion;
+                    LevelManager.Instance.LocalChallengeScore = 0;
+                    Debug.Log("版本不一致，重置分数，当前波数:" + LevelManager.Instance.LocalChallengeScore);
+                }
+
+                CurrentChallengeRankings = await challengeLeaderBoard.GetResults(limit: 50, selectKeys: new List<string> { "nickname" });
+                if (challengeVersion > 0)
+                    LastChallengeRankings = await challengeLeaderBoard.GetResults(challengeVersion - 1, limit: 50, selectKeys: new List<string> { "nickname" });
+
+                GameEvents.Instance.ChallengeLeaderboardGet();
+                break;
         }
 
-
-        CurrentEndlessRankings = await leaderboard.GetResults(limit: 10, selectKeys: new List<string> { "username", "nickname" });
-        for (int i = 0; i < CurrentEndlessRankings.Count; i++)
-        {
-            Debug.Log("玩家:" + CurrentEndlessRankings[i].User["nickname"] + "排名:" + CurrentEndlessRankings[i].Rank + "分数:" + CurrentEndlessRankings[i].Value);
-        }
-        GameEvents.Instance.EndlessLeaderboardGet();
     }
 
 
     public async void UpdateScore(LeaderBoard leaderBoardType)
     {
-        int wave = 0;
-        string leaderBoard="";
+        int value = 0;
+        string leaderBoard = "";
         switch (leaderBoardType)
         {
             case LeaderBoard.Endless:
                 leaderBoard = EndlessWeeklyName;
-                wave = LevelManager.Instance.LocalEndlessWave;
+                value = LevelManager.Instance.LocalEndlessWave;
                 break;
             case LeaderBoard.Challenge:
                 leaderBoard = ChallengeDayName;
+                value = LevelManager.Instance.LocalChallengeScore;
                 break;
         }
         var statistic = new Dictionary<string, double>();
-        statistic[leaderBoard] = wave;
+        statistic[leaderBoard] = value;
         await LCLeaderboard.UpdateStatistics(TaptapManager.Instance.CurentUser, statistic);
-        Debug.Log("上传分数" + TaptapManager.Instance.CurentUser["nickname"] + LevelManager.Instance.LocalEndlessWave);
     }
     //public void UpdateLoacalScore()
     //{

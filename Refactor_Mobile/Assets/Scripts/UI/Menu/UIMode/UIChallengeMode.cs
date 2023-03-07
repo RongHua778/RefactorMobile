@@ -36,13 +36,13 @@ public class UIChallengeMode : MonoBehaviour
         }
         else
         {
+            SetArea(false);
             challengeUnlockText.gameObject.SetActive(false);
             GameEvents.Instance.onChallengeLeaderBoardGet += GetLeaderboardCallback;
-            SetArea(PlayfabManager.Instance.ChallengeLeaderboardGot);
         }
     }
 
-    private void GetLeaderboardCallback(bool value)
+    private void GetLeaderboardCallback()
     {
         SetArea(true);
     }
@@ -53,11 +53,11 @@ public class UIChallengeMode : MonoBehaviour
         mainArea.SetActive(value);
         if (value)
         {
-            levelAtt = daylyChallengeParam.ChallengeLevels[PlayfabManager.Instance.OnlineChallengeVersion % daylyChallengeParam.ChallengeLevels.Count];
+            levelAtt = daylyChallengeParam.ChallengeLevels[LevelManager.Instance.LocalChallengeVersion % daylyChallengeParam.ChallengeLevels.Count];
             SetBossInfo();
             SetStarInfo();
         }
-        playerScoreTxt.text = GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + PlayfabManager.Instance.ChallngeScore;
+        playerScoreTxt.text = GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + LevelManager.Instance.LocalChallengeScore;
     }
 
 
@@ -70,20 +70,8 @@ public class UIChallengeMode : MonoBehaviour
 
     private void SetStarInfo()
     {
-        int score = PlayfabManager.Instance.ChallngeScore;
+        int score = LevelManager.Instance.LocalChallengeScore;
         highScore_Txt.text = score.ToString();
-        //foreach (var star in stars)
-        //{
-        //    star.gameObject.SetActive(false);
-        //}
-        //for(int i = 0; i < 3; i++)//4,8,12
-        //{
-        //    if (wave >= 4 * i)
-        //    {
-        //        stars[i].gameObject.SetActive(true);
-        //    }
-        //}
-        //waveProgress.fillAmount = (float)wave / 12;
     }
 
     public void ReconnectBtnClick()
@@ -96,10 +84,10 @@ public class UIChallengeMode : MonoBehaviour
     {
         isReconnecting = true;
         connectTips.text = GameMultiLang.GetTraduction("LEADERBOARDTIPS");
-        Game.Instance.InitializeNetworks();
+        TaptapManager.Instance.TapLogin();
         reConnectBtn.SetActive(false);
         yield return new WaitForSeconds(5f);
-        SetArea(PlayfabManager.Instance.ChallengeLeaderboardGot);
+        SetArea(TaptapManager.Instance.LoginSuccessful);
         connectTips.text = GameMultiLang.GetTraduction("LEADERBOARDTIPS2");
         reConnectBtn.SetActive(true);
         isReconnecting = false;

@@ -20,7 +20,7 @@ public struct GameLevelInfo
 public class LevelManager : MySingleton<LevelManager>
 {
     public bool LevelWin { get; set; }
-    #region 无尽模式
+    #region 排名模式
     [SerializeField]
     private int localEndlessVersion;//本地无尽版本
     public int LocalEndlessVersion
@@ -34,6 +34,21 @@ public class LevelManager : MySingleton<LevelManager>
     {
         get => localEndlessWave;
         set => localEndlessWave = value;
+    }
+
+    [SerializeField]
+    private int localChallengeVersion;//本地挑战版本
+    public int LocalChallengeVersion
+    {
+        get => localChallengeVersion;
+        set => localChallengeVersion = value;
+    }
+    [SerializeField]
+    private int localChallengeScore;//本地挑战分数
+    public int LocalChallengeScore
+    {
+        get => localChallengeScore;
+        set => localChallengeScore = value;
     }
 
     #endregion
@@ -379,7 +394,10 @@ public class LevelManager : MySingleton<LevelManager>
         LifeTotalCoin = LastGameSave.LifeTotalCoin;
 
         LocalEndlessVersion = LastGameSave.LocalEndlessVersion;
-        localEndlessWave = LastGameSave.LocalEndlessWave;
+        LocalEndlessWave = LastGameSave.LocalEndlessWave;
+
+        LocalChallengeVersion = LastGameSave.LocalChallengeVersion;
+        LocalChallengeScore = LastGameSave.LocalChalleneScore;
     }
 
 

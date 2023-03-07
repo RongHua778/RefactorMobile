@@ -133,11 +133,11 @@ public class GameEvents : MySingleton<GameEvents>
     {
         onEndlessLeaderBoardGet?.Invoke();
     }
-    public event Action<bool> onChallengeLeaderBoardGet;
+    public event Action onChallengeLeaderBoardGet;
 
-    public void ChallengeLeaderboardGet(bool value)
+    public void ChallengeLeaderboardGet()
     {
-        onChallengeLeaderBoardGet?.Invoke(value);
+        onChallengeLeaderBoardGet?.Invoke();
     }
 
 

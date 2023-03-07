@@ -21,7 +21,8 @@ public class GameSave
     public int LocalEndlessWave;
 
     //挑战模式保存
-
+    public int LocalChallengeVersion;
+    public int LocalChalleneScore;
 
     //临时游戏保存
     public bool HasLastGame;
@@ -73,6 +74,9 @@ public class GameSave
 
         LocalEndlessVersion = LevelManager.Instance.LocalEndlessVersion;
         LocalEndlessWave = LevelManager.Instance.LocalEndlessWave;
+
+        LocalChallengeVersion = LevelManager.Instance.LocalChallengeVersion;
+        LocalChalleneScore = LevelManager.Instance.LocalChallengeScore;
         SaveAchievements = saveAchievements;
     }
 

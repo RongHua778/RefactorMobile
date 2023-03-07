@@ -23,7 +23,7 @@ public class Game : MySingleton<Game>
         base.Awake();
         if (!alreadyExist)
         {
-            Application.targetFrameRate = 45;
+            Application.targetFrameRate = 60;
             Application.runInBackground = true;
             DontDestroyOnLoad(this.gameObject);
             StaticData.Instance.Initialize();
@@ -32,6 +32,7 @@ public class Game : MySingleton<Game>
             TurretBuffFactory.Initialize();
             TechnologyFactory.Initialize();
             RuleFactory.Initialize();
+            TaptapManager.Instance.Initialized();
         }
     }
 
@@ -39,14 +40,12 @@ public class Game : MySingleton<Game>
 
     private void Start()
     {
-        
         //判断当前初始场景在哪里，根据不同场景初始化当前State
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         switch (currentSceneIndex)
         {
             case 0://menu
                 StaticData.Instance.ContentFactory.SetDefaultRecipes();//进入游戏时设置为默认配方
-
                 m_SceneStateController.SetState(new MenuState(m_SceneStateController));
                 break;
             case 1://battle//测试
@@ -54,6 +53,7 @@ public class Game : MySingleton<Game>
                 m_SceneStateController.SetState(new BattleState(m_SceneStateController));
                 break;
         }
+        
         Sound.Instance.BgVolume = 0.5f;
     }
 
@@ -130,12 +130,12 @@ public class Game : MySingleton<Game>
     #endregion
 
 
-    public bool InitializeNetworks()
-    {
-        //SteamManager.Instance.Initialize();
-        PlayfabManager.Instance.Login();
-        return PlayFabClientAPI.IsClientLoggedIn();
-    }
+    //public bool InitializeNetworks()
+    //{
+    //    //SteamManager.Instance.Initialize();
+    //    PlayfabManager.Instance.Login();
+    //    return PlayFabClientAPI.IsClientLoggedIn();
+    //}
 
  
 

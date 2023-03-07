@@ -12,7 +12,7 @@ public class MenuState : ISceneState
 	// é_Ê¼
 	public override void StateBegin()
 	{
-		Game.Instance.InitializeNetworks();
+		//Game.Instance.InitializeNetworks();
 		LevelManager.Instance.Initialize();
 
 		MenuManager.Instance.Initinal();
@@ -26,7 +26,7 @@ public class MenuState : ISceneState
 		TipsManager.Instance.SetCanvasCam();
 
 		RuleFactory.Release();
-
+		TaptapManager.Instance.TapLogin();
 	}
 
 	// ½YÊø

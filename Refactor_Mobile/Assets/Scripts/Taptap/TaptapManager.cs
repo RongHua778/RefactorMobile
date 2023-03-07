@@ -8,6 +8,7 @@ using System;
 using TapTap.AntiAddiction;
 using TapTap.AntiAddiction.Model;
 using LeanCloud.Storage;
+using TapTap.TapDB;
 
 public class TaptapManager : MySingleton<TaptapManager>
 {
@@ -17,12 +18,15 @@ public class TaptapManager : MySingleton<TaptapManager>
 
     public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> CurrentEndlessRankings => tapLeaderBoard.CurrentEndlessRankings;
     public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> LastEndlessRankings => tapLeaderBoard.LastEndlessRankings;
+
+    public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> CurrentChallengeRankings => tapLeaderBoard.CurrentChallengeRankings;
+    public System.Collections.ObjectModel.ReadOnlyCollection<LCRanking> LastChallengeRankings => tapLeaderBoard.LastChallengeRankings;
     // Start is called before the first frame update
-    void Start()
+
+    public void Initialized()
     {
         InitTaptap();
         InitAntiAddiction();
-        //TapLogin();
     }
 
     private static void StartAntiAddiction()
@@ -62,6 +66,7 @@ public class TaptapManager : MySingleton<TaptapManager>
                 .ClientToken("cBCS3rrso0aQqk3mVhxlSVwGLlviCtCRXukt7LV6")
                 .ServerURL("https://gjbbmb3i.cloud.tds1.tapapis.cn")
                 .RegionType(RegionType.CN)
+                .TapDBConfig(true, "", "", true)
                 .ConfigBuilder();
         TapBootstrap.Init(config);
     }
@@ -87,7 +92,10 @@ public class TaptapManager : MySingleton<TaptapManager>
                 LoginSuccessful = true;
                 Debug.Log("登录成功:" + nickname);
                 StartAntiAddiction();
-                tapLeaderBoard.GetLeaderBoard();
+                TapDB.SetUser(CurentUser.ObjectId);
+                tapLeaderBoard.GetLeaderBoard(LeaderBoard.Endless);
+                tapLeaderBoard.GetLeaderBoard(LeaderBoard.Challenge);
+
             }
             catch (Exception e)
             {
@@ -104,8 +112,10 @@ public class TaptapManager : MySingleton<TaptapManager>
         else
         {
             Debug.Log("已登录");
+            TapDB.SetUser(CurentUser.ObjectId);
             LoginSuccessful = true;
-            tapLeaderBoard.GetLeaderBoard();
+            tapLeaderBoard.GetLeaderBoard(LeaderBoard.Endless);
+            tapLeaderBoard.GetLeaderBoard(LeaderBoard.Challenge);
             // 进入游戏
         }
 
@@ -120,15 +130,19 @@ public class TaptapManager : MySingleton<TaptapManager>
         Debug.Log("成功登出");
     }
 
-
+    public void TrackEvents()
+    {
+        TapDB.TrackEvent("#TestEvent", "{\"player\":\"Kingdomjack\"}");
+        Debug.Log("#TestEvent事件测试"+ "{\"player\":\"Kingdomjack\"}");
+    }
 
     public void UpdateScore(LeaderBoard leaderBoardType)
     {
         tapLeaderBoard.UpdateScore(leaderBoardType);
     }
 
-    public void GetLeaderBoard()
+    public void GetLeaderBoard(LeaderBoard leaderBoardType)
     {
-        tapLeaderBoard.GetLeaderBoard();
+        tapLeaderBoard.GetLeaderBoard(leaderBoardType);
     }
 }

@@ -243,13 +243,13 @@ public class PlayfabManager : MySingleton<PlayfabManager>
     {
         ChallengeResults[OnlineChallengeVersion - result.Version].LeaderBoardResult = result;
         ChallengeLeaderboardGot = true;
-        GameEvents.Instance.ChallengeLeaderboardGet(true);
+        //GameEvents.Instance.ChallengeLeaderboardGet(true);
         if (FirstLogin)
         {
             UpdateLoacalScore();
             FirstLogin = false;
         }
-        GameEvents.Instance.ChallengeLeaderboardGet(true);
+        //GameEvents.Instance.ChallengeLeaderboardGet(true);
         Debug.Log("Successfully get leaderboard£º" + ChallengeDailyName + result.Version);
 
     }

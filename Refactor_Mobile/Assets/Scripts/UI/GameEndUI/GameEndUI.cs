@@ -66,8 +66,14 @@ public class GameEndUI : IUserInterface
 
                 NextLevelBtn.SetActive(false);
                 RestartBtn.SetActive(true);
+
+                if (score > LevelManager.Instance.LocalChallengeScore)
+                {
+                    LevelManager.Instance.LocalChallengeScore = score;
+                    TaptapManager.Instance.UpdateScore(LeaderBoard.Challenge);
+                }
                 //LevelManager.Instance.SetChallengeScore(LevelManager.Instance.CurrentLevel.Level,GameRes.CurrentWave);
-                PlayfabManager.Instance.ChallngeScore = score;
+                //PlayfabManager.Instance.ChallngeScore = score;
                 break;
 
             case ModeType.Endless:
@@ -78,8 +84,13 @@ public class GameEndUI : IUserInterface
                 title.text = GameMultiLang.GetTraduction("PASSLEVEL") + (GameRes.CurrentWave) + GameMultiLang.GetTraduction("WAVE");
 
                 if (LevelManager.Instance.CurrentLevel.Level == 1)//每周无尽,更新分数
-                    PlayfabManager.Instance.EndlessWave = GameRes.CurrentWave;
-
+                {
+                    if (GameRes.CurrentWave > LevelManager.Instance.LocalEndlessWave)
+                    {
+                        LevelManager.Instance.LocalEndlessWave = GameRes.CurrentWave;
+                        TaptapManager.Instance.UpdateScore(LeaderBoard.Endless);
+                    }
+                }
                 int tempWordID = Mathf.Clamp(GameRes.CurrentWave / 20, 0, 5);
                 titleBG.sprite = TitleBGs[tempWordID + 2];
                 GameEvents.Instance.TempWordTrigger(new TempWord(TempWordType.EndlessEnd, tempWordID));

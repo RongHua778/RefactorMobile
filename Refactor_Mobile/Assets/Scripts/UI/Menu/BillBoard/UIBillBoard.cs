@@ -69,7 +69,7 @@ public class UIBillBoard : IUserInterface
         refreashingLeaderboard = true;
         TaptapManager.Instance.UpdateScore(LeaderBoardType);
         yield return new WaitForSeconds(2f);
-        TaptapManager.Instance.GetLeaderBoard();
+        TaptapManager.Instance.GetLeaderBoard(LeaderBoardType);
         yield return new WaitForSeconds(2f);
         refreashingLeaderboard = false;
         SetLeaderBoard();
@@ -181,18 +181,18 @@ public class UIBillBoard : IUserInterface
                 break;
 
             case LeaderBoard.Challenge:
-                if (PlayfabManager.Instance.ChallengeResults[0].LeaderBoardResult != null)
-                    foreach (var item in PlayfabManager.Instance.ChallengeResults[0].LeaderBoardResult.Leaderboard)
+                if (TaptapManager.Instance.CurrentChallengeRankings != null)
+                    foreach (var item in TaptapManager.Instance.CurrentChallengeRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, todayParent);
-                        billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue, false);
+                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
                         m_Items.Add(billBoardItem);
                     }
-                if (PlayfabManager.Instance.ChallengeResults[1].LeaderBoardResult != null)
-                    foreach (var item in PlayfabManager.Instance.ChallengeResults[1].LeaderBoardResult.Leaderboard)
+                if (TaptapManager.Instance.LastChallengeRankings != null)
+                    foreach (var item in TaptapManager.Instance.LastChallengeRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, yesterdayParent);
-                        billBoardItem.SetContent(item.Position + 1, item.DisplayName, item.StatValue, false);
+                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
                         m_Items.Add(billBoardItem);
                     }
                 break;
