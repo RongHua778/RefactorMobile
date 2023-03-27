@@ -32,13 +32,8 @@ public class GameEndUI : IUserInterface
     int changeSpeed = 10;
     float waittime = 0.05f;
     float result = 0;
-    Animator anim;
     int gainExp = 0;
 
-    private void Awake()
-    {
-        anim = this.GetComponent<Animator>();
-    }
     public override void Initialize()
     {
         base.Initialize();

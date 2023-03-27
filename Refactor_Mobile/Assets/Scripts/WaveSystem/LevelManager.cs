@@ -101,8 +101,8 @@ public class LevelManager : MySingleton<LevelManager>
     public LevelAttribute CurrentLevel;
     #endregion
 
-    private string SaveGameFilePath;
-
+    private string saveGameFilePath;
+    public string SaveGameFilePath => saveGameFilePath;
 
     //防连续开始游戏
     [HideInInspector]
@@ -121,7 +121,7 @@ public class LevelManager : MySingleton<LevelManager>
     public void Initialize()
     {
         LitJsonRegister.Register();
-        SaveGameFilePath = Application.persistentDataPath + "/GameSave.json";
+        saveGameFilePath = Application.persistentDataPath + "/GameSave.json";
 
         //SetAchievements();
         LevelDIC = new Dictionary<int, LevelAttribute>();
@@ -143,8 +143,8 @@ public class LevelManager : MySingleton<LevelManager>
 
     private void DeleteGameSave()//删除对局存档文件
     {
-        if (File.Exists(SaveGameFilePath))
-            File.Delete(SaveGameFilePath);
+        if (File.Exists(saveGameFilePath))
+            File.Delete(saveGameFilePath);
     }
 
     public LevelAttribute GetLevelAtt(int mode)
@@ -480,11 +480,11 @@ public class LevelManager : MySingleton<LevelManager>
     private void LoadByJson()
     {
 
-        if (NeedLoadGame && File.Exists(SaveGameFilePath))
+        if (NeedLoadGame && File.Exists(saveGameFilePath))
         {
             try
             {
-                StreamReader sr = new StreamReader(SaveGameFilePath);
+                StreamReader sr = new StreamReader(saveGameFilePath);
                 string jsonStr = sr.ReadToEnd();
                 jsonStr = EncryptionTool.DecryptString(jsonStr, key);
                 sr.Close();

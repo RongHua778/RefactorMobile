@@ -5,17 +5,11 @@ using UnityEngine.UI;
 
 public class UnlockBonusTips : IUserInterface
 {
-    private Animator anim;
     [SerializeField] ToggleGroup m_ToggleGroup = default;
     [SerializeField] Transform parentObj = default;
     [SerializeField] TurretItemSlot turretSlotPrefab = default;
     [SerializeField] TrapItemSlot trapSlotPrefab = default;
     private List<ItemSlot> m_SlotList = new List<ItemSlot>();
-    public override void Initialize()
-    {
-        base.Initialize();
-        anim = this.GetComponent<Animator>();
-    }
 
     public override void Show()
     {

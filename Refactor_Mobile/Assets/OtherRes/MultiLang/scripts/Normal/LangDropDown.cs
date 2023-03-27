@@ -34,7 +34,7 @@ public class LangDropDown : MonoBehaviour
 
     void ApplyLanguageChanges()
     {
-        LevelManager.Instance.SaveAll();
+        //LevelManager.Instance.SaveAll();
         Game.Instance.ReloadScene();
         GameMultiLang.Instance.LoadLanguage();
         TipsManager.Instance.UpdateTranslators();

@@ -14,7 +14,6 @@ public enum LeaderBoard
 
 public class UIBillBoard : IUserInterface
 {
-    Animator anim;
     [SerializeField] BillboardItem billboardItemPrefab = default;
     [SerializeField] Transform todayParent = default;
     [SerializeField] Transform yesterdayParent = default;
@@ -31,11 +30,6 @@ public class UIBillBoard : IUserInterface
 
 
     private LeaderBoard LeaderBoardType;
-    public override void Initialize()
-    {
-        base.Initialize();
-        anim = this.GetComponent<Animator>();
-    }
 
     public void RefreashBtnClick()
     {
@@ -172,12 +166,15 @@ public class UIBillBoard : IUserInterface
                         m_Items.Add(billBoardItem);
                     }
                 if (TaptapManager.Instance.LastEndlessRankings != null)
+                {
+                    Debug.Log("GetLastEndlessRankings");
                     foreach (var item in TaptapManager.Instance.LastEndlessRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, yesterdayParent);
                         billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
                         m_Items.Add(billBoardItem);
                     }
+                }
                 break;
 
             case LeaderBoard.Challenge:
@@ -185,16 +182,19 @@ public class UIBillBoard : IUserInterface
                     foreach (var item in TaptapManager.Instance.CurrentChallengeRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, todayParent);
-                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
+                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, false);
                         m_Items.Add(billBoardItem);
                     }
                 if (TaptapManager.Instance.LastChallengeRankings != null)
+                {
+                    Debug.Log("GetLastChallengeRankings");
                     foreach (var item in TaptapManager.Instance.LastChallengeRankings)
                     {
                         BillboardItem billBoardItem = Instantiate(billboardItemPrefab, yesterdayParent);
-                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, true);
+                        billBoardItem.SetContent(item.Rank + 1, (string)item.User["nickname"], (int)item.Value, false);
                         m_Items.Add(billBoardItem);
                     }
+                }
                 break;
         }
         //playerScoreTxt.text = GameMultiLang.GetTraduction("PLAYERSCORE") + ":" + score + GameMultiLang.GetTraduction("WAVE");

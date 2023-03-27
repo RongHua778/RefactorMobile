@@ -6,17 +6,16 @@ using System.Linq;
 
 public class UITujian : IUserInterface
 {
-    private Animator m_Anim;
     [SerializeField] GameLevelHolder gameLevelPrefab = default;
     [SerializeField] UITujian_ListHolder[] listHolders = default;
 
     [SerializeField] TipsElementConstruct[] elementConstructs = default;
     List<int> skillPreviewElements;
     ToggleGroup m_ToggleGroup;
+
     public override void Initialize()
     {
         base.Initialize();
-        m_Anim = this.GetComponent<Animator>();
         m_ToggleGroup = this.GetComponent<ToggleGroup>();
 
         foreach (var item in listHolders)
@@ -44,7 +43,7 @@ public class UITujian : IUserInterface
     public override void Show()
     {
         base.Show();
-        m_Anim.SetBool("OpenLevel", true);
+        anim.SetBool("OpenLevel", true);
         gameLevelPrefab.SetData();
     }
 
@@ -56,7 +55,7 @@ public class UITujian : IUserInterface
 
     public override void ClosePanel()
     {
-        m_Anim.SetBool("OpenLevel", false);
+        anim.SetBool("OpenLevel", false);
         MenuManager.Instance.ShowMenu();
     }
 }

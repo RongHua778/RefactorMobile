@@ -203,11 +203,13 @@ public class AchievementManager : MySingleton<AchievementManager>
                 if (LevelManager.Instance.CurrentLevel.Level >= 9)//小菜一碟，通关难度9
                 {
                     if (endData.Win)
-                        GetAchievement("ACH_CAKE");//小菜一碟，通关难度9
-                    TimeSpan ts = DateTime.Now - GameRes.LevelStart;
-                    if (ts.Minutes <= 9)
                     {
-                        GetAchievement("ACH_FAST");//速通玩家,10分钟通关难度9
+                        GetAchievement("ACH_CAKE");//小菜一碟，通关难度9
+                        TimeSpan ts = DateTime.Now - GameRes.LevelStart;
+                        if (ts.Minutes <= 9)
+                        {
+                            GetAchievement("ACH_FAST");//速通玩家,10分钟通关难度9
+                        }
                     }
                 }
                 break;

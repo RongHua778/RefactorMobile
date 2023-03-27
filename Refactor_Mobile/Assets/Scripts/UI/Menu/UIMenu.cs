@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class UIMenu : IUserInterface
 {
-    Animator anim;
     [SerializeField] GameObject m_ContinueGameBtn = default;
+
 
     public override void Initialize()
     {
         base.Initialize();
-        anim = this.GetComponent<Animator>();
         m_ContinueGameBtn.SetActive(LevelManager.Instance.LastGameSave.HasLastGame);
     }
 

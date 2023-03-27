@@ -3,51 +3,45 @@
     "m_SelectedPackage": {
         "deviceId": "3139694192000CU",
         "name": "com.GAGAStudio.Refactor",
-        "processId": 4722,
+        "processId": 17181,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 31699,
-            "exited": true
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 7010,
-            "exited": true
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 10479,
-            "exited": true
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.tencent.mm",
-            "processId": 30721,
-            "exited": false
-        },
-        {
-            "deviceId": "3139694192000CU",
-            "name": "com.GAGAStudio.Refactor",
-            "processId": 28458,
-            "exited": true
-        },
-        {
-            "deviceId": "3139694192000CU",
             "name": "com.bbk.launcher2",
-            "processId": 19003,
+            "processId": 2826,
             "exited": false
         },
         {
             "deviceId": "3139694192000CU",
             "name": "com.GAGAStudio.Refactor",
-            "processId": 4722,
+            "processId": 27511,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 6461,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 7554,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 7928,
+            "exited": true
+        },
+        {
+            "deviceId": "3139694192000CU",
+            "name": "com.GAGAStudio.Refactor",
+            "processId": 17181,
             "exited": false
         }
     ],

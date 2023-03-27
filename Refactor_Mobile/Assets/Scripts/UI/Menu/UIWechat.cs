@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UIWechat : IUserInterface
 {
-    Animator anim;
 
     public override void Initialize()
     {

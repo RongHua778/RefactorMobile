@@ -22,12 +22,13 @@ public class EndlessWeekly : MonoBehaviour
 
     private bool isReconnecting;
 
+
     public void Initialize()
     {
         m_BattleRecipe.Initialize();
         SetArea(false);
-        //≈≈––∞Ò…Ë÷√
         GameEvents.Instance.onEndlessLeaderBoardGet += GetLeaderboardCallback;
+
     }
 
     //private void SetArea(bool value)
@@ -74,16 +75,16 @@ public class EndlessWeekly : MonoBehaviour
     public void ReconnectBtnClick()
     {
         if (!isReconnecting)
-            StartCoroutine(ReconnectCor());
+            ReconnectCor();
     }
 
-    IEnumerator ReconnectCor()
+    private async void ReconnectCor()
     {
         isReconnecting = true;
         connectTips.text = GameMultiLang.GetTraduction("LEADERBOARDTIPS");
-        TaptapManager.Instance.TapLogin();
         reConnectBtn.SetActive(false);
-        yield return new WaitForSeconds(5f);
+        await TaptapManager.Instance.TapLogin();
+        //yield return new WaitForSeconds(5f);
         SetArea(TaptapManager.Instance.LoginSuccessful);
         connectTips.text = GameMultiLang.GetTraduction("LEADERBOARDTIPS2");
         reConnectBtn.SetActive(true);

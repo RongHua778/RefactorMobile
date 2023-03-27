@@ -10,23 +10,38 @@ public class MenuState : ISceneState
 		this.StateName = "MenuState";
 	}
 	// é_Ê¼
-	public override void StateBegin()
-	{
-		//Game.Instance.InitializeNetworks();
-		LevelManager.Instance.Initialize();
+	//public override void StateBegin()
+	//{
+	//	//Game.Instance.InitializeNetworks();
+	//	//LevelManager.Instance.Initialize();
 
-		MenuManager.Instance.Initinal();
+	//	//MenuManager.Instance.Initinal();//LoadData£¬¶Áµµ
+	//	//GameManager.Instance = null;
+	//	//Sound.Instance.PlayBg("menu");
+	//	//Game.Instance.Tutorial = false;
+	//	//TechnologyFactory.ResetAllTech();
+		
+	//	//StaticData.LockKeyboard = false;
+	//	//GameParam.ResetGameParam();
+	//	//TipsManager.Instance.SetCanvasCam();
+
+	//	//RuleFactory.Release();
+	//	//TaptapManager.Instance.TapLogin();
+	//}
+
+    public override async void StateBegin()
+    {
 		GameManager.Instance = null;
 		Sound.Instance.PlayBg("menu");
 		Game.Instance.Tutorial = false;
 		TechnologyFactory.ResetAllTech();
-		
 		StaticData.LockKeyboard = false;
 		GameParam.ResetGameParam();
 		TipsManager.Instance.SetCanvasCam();
-
 		RuleFactory.Release();
-		TaptapManager.Instance.TapLogin();
+		await TaptapManager.Instance.TapLogin();
+		await TaptapManager.Instance.GetTapGameSave();
+		MenuManager.Instance.Initinal();
 	}
 
 	// ½YÊø

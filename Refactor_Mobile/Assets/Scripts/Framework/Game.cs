@@ -32,6 +32,7 @@ public class Game : MySingleton<Game>
             TurretBuffFactory.Initialize();
             TechnologyFactory.Initialize();
             RuleFactory.Initialize();
+            LevelManager.Instance.Initialize();
             TaptapManager.Instance.Initialized();
         }
     }

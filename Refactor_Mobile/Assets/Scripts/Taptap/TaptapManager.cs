@@ -9,6 +9,10 @@ using TapTap.AntiAddiction;
 using TapTap.AntiAddiction.Model;
 using LeanCloud.Storage;
 using TapTap.TapDB;
+using System.Threading.Tasks;
+using LeanCloud;
+using UnityEngine.Networking;
+using System.IO;
 
 public class TaptapManager : MySingleton<TaptapManager>
 {
@@ -25,8 +29,27 @@ public class TaptapManager : MySingleton<TaptapManager>
 
     public void Initialized()
     {
+        LCLogger.LogDelegate = (LCLogLevel level, string info) =>
+        {
+            switch (level)
+            {
+                case LCLogLevel.Debug:
+                    Debug.Log($"[DEBUG] {DateTime.Now} {info}\n");
+                    break;
+                case LCLogLevel.Warn:
+                    Debug.Log($"[WARNING] {DateTime.Now} {info}\n");
+                    break;
+                case LCLogLevel.Error:
+                    Debug.Log($"[ERROR] {DateTime.Now} {info}\n");
+                    break;
+                default:
+                    Debug.Log(info);
+                    break;
+            }
+        };
         InitTaptap();
         InitAntiAddiction();
+        //UpdateGame();
     }
 
     private static void StartAntiAddiction()
@@ -34,6 +57,22 @@ public class TaptapManager : MySingleton<TaptapManager>
         string userIdentifier = "RefactorMobile";
         AntiAddictionUIKit.Startup(userIdentifier);
 
+    }
+
+    private async void UpdateGame()
+    {
+        //TapCommon.UpdateGameInTapTap("228703",callSuccess=>
+        //{
+        //    if (callSuccess)
+        //    {
+        //        Debug.Log("Taptap 唤起成功");
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("Taptap 唤起失败");
+        //    }
+        //});
+        bool isSuccess = await TapCommon.UpdateGameAndFailToWebInTapTap("228703");
     }
 
     private static void InitAntiAddiction()
@@ -71,7 +110,7 @@ public class TaptapManager : MySingleton<TaptapManager>
         TapBootstrap.Init(config);
     }
 
-    public async void TapLogin()
+    public async Task TapLogin()
     {
         LoginSuccessful = false;
         CurentUser = await TDSUser.GetCurrent();
@@ -121,6 +160,135 @@ public class TaptapManager : MySingleton<TaptapManager>
 
 
     }
+    //TapGameSave gameSave;
+    public async Task UpLoadTapGameSave()
+    {
+        if (File.Exists(LevelManager.Instance.SaveGameFilePath))//存在本地存档
+        {
+            var gameSave = new TapGameSave
+            {
+                Name = "RefactorGameSave",
+                Summary = "data",
+                ModifiedAt = DateTime.Now.ToLocalTime(),
+                PlayedTime = LevelManager.Instance.GameExp, // ms
+                ProgressValue = LevelManager.Instance.GameLevel,
+                //CoverFilePath = image_local_path, // jpg/png
+                GameFilePath = LevelManager.Instance.SaveGameFilePath
+            };
+            await gameSave.Save();
+        }
+    }
+
+    public async Task SaveTapGame()
+    {
+        await myGameSave.Save();
+        Debug.Log("Save Tap Game");
+    }
+
+    //public void DebugCurrentData()
+    //{
+    //    Debug.Log()
+    //}
+
+
+    private TapGameSave myGameSave;
+    public async Task GetTapGameSave()
+    {
+        //确保本地低经验存档不会覆盖高经验存档
+        var collection = await TapGameSave.GetCurrentUserGameSaves();
+
+        if (collection.Count > 0)
+        {
+            Debug.Log("Game Save Collection has:" + collection.Count);
+            string gameFileUrl = "";
+            int onlineExp = 0;
+            int onlineLevel = 0;
+            foreach (var gameSave in collection)
+            {
+                var summary = gameSave.Summary;
+                var modifiedAt = gameSave.ModifiedAt;
+                onlineLevel = (int)gameSave.PlayedTime;
+                onlineExp = gameSave.ProgressValue;
+                var coverFile = gameSave.Cover;
+                var gameFile = gameSave.GameFile;
+                gameFileUrl = gameFile.Url;
+                myGameSave = gameSave;
+                break;
+            }
+            //与本地文件进行比较
+            if (onlineLevel == LevelManager.Instance.GameLevel)//等级相同时比较经验值
+            {
+                if (onlineExp > LevelManager.Instance.GameExp)//线上版本的经验值更高，只有大于时才下载
+                {
+                    await DownloadFileAsync(gameFileUrl);
+                }
+                else
+                {
+                    await SaveTapGame();//更新线上版本
+                }
+            }
+            else if (onlineLevel > LevelManager.Instance.GameLevel)//线上版本的等级更高
+            {
+                await DownloadFileAsync(gameFileUrl);//下载
+            }
+            else//线下版本的等级比较高
+            {
+                await SaveTapGame();//更新线上版本
+            }
+
+        }
+        else
+        {
+            await UpLoadTapGameSave();//没有存档时上传存档
+            Debug.Log("无在线存档");
+        }
+    }
+
+    //private async Task DownLoadFile(string url)
+    //{
+    //    string localurl = Application.persistentDataPath + "/GameSave.json";
+    //    UnityWebRequest webRequest = new UnityWebRequest(url);
+    //    DownloadHandlerFile downLoad = new DownloadHandlerFile(localurl);
+    //    webRequest.downloadHandler = downLoad;
+    //    yield return webRequest.SendWebRequest();
+    //    while (!webRequest.isDone)
+    //    {
+    //        yield return null;
+    //    }
+    //    if (string.IsNullOrEmpty(webRequest.error))
+    //    {
+    //        Debug.Log("下载成功");
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("下载失败");
+    //    }
+    //}
+
+    private async Task DownloadFileAsync(string url)
+    {
+        using (var request = UnityWebRequest.Get(url))
+        {
+            var operation = request.SendWebRequest();
+            while (!operation.isDone)
+            {
+                await Task.Yield();
+            }
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                throw new UnityWebRequestException(request.error);
+            }
+
+            var filePath = Application.persistentDataPath + "/GameSave.json";
+            await File.WriteAllBytesAsync(filePath, request.downloadHandler.data);
+            Debug.Log($"File GameSave.json downloaded from {url} and saved to {filePath}");
+        }
+    }
+
+    public class UnityWebRequestException : System.Exception
+    {
+        public UnityWebRequestException(string message) : base(message) { }
+    }
 
     public void TapLogout()
     {
@@ -132,8 +300,8 @@ public class TaptapManager : MySingleton<TaptapManager>
 
     public void TrackEvents()
     {
-        TapDB.TrackEvent("#TestEvent", "{\"player\":\"Kingdomjack\"}");
-        Debug.Log("#TestEvent事件测试"+ "{\"player\":\"Kingdomjack\"}");
+        TapDB.TrackEvent("#TestEvent", "{\"#player\":\"kingdomjack\"}");
+        Debug.Log("#TestEvent事件测试" + "{\"#player\":\"Kingdomjack\"}");
     }
 
     public void UpdateScore(LeaderBoard leaderBoardType)

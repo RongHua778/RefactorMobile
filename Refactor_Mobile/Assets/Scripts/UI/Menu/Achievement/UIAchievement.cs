@@ -12,11 +12,11 @@ public class UIAchievement : IUserInterface
     [SerializeField] private Image achProgress = default;
     [SerializeField] private TextMeshProUGUI achProgressTxt = default;
     private List<AchievementGrid> generatedGrids = new List<AchievementGrid>();
-    private Animator m_Anim;
+
     public override void Initialize()
     {
         base.Initialize();
-        m_Anim = this.GetComponent<Animator>();
+        anim = this.GetComponent<Animator>();
         SetAchievements();
     }
 
@@ -44,12 +44,12 @@ public class UIAchievement : IUserInterface
     public override void Show()
     {
         base.Show();
-        m_Anim.SetBool("OpenLevel", true);
+        anim.SetBool("OpenLevel", true);
     }
 
     public override void ClosePanel()
     {
-        m_Anim.SetBool("OpenLevel", false);
+        anim.SetBool("OpenLevel", false);
         MenuManager.Instance.ShowMenu();
     }
 }

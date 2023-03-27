@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UIRecipeSet : IUserInterface
 {
-    private Animator m_Anim;
     [SerializeField] List<RecipeHolder> m_RecipeHolders = default;
     public BattleRecipe m_BattleRecipe;
     List<TurretAttribute> attList = new List<TurretAttribute>();
@@ -12,7 +11,6 @@ public class UIRecipeSet : IUserInterface
     public override void Initialize()
     {
         base.Initialize();
-        m_Anim = this.GetComponent<Animator>();
         foreach (var holder in m_RecipeHolders)
         {
             holder.Initialize();
@@ -40,14 +38,14 @@ public class UIRecipeSet : IUserInterface
     public override void Show()
     {
         base.Show();
-        m_Anim.SetBool("isOpen", true);
+        anim.SetBool("isOpen", true);
     }
 
     public override void ClosePanel()
     {
         if (SaveSetting())
         {
-            m_Anim.SetBool("isOpen", false);
+            anim.SetBool("isOpen", false);
         }
         else
         {

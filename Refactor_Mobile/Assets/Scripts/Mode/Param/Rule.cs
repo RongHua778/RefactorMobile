@@ -57,7 +57,7 @@ public class MacroRule : Rule
     public override RuleName RuleName => RuleName.RULE_MACRO;
     public override void OnGameInit()
     {
-        GameRes.GroundSize = 27;
+        GameRes.GroundSize = 35;
     }
 
     public override void OnGameLoad()

@@ -18,7 +18,7 @@ public class LevelBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         if (isHolding)
         {
-            if (holdCouter > 0.25f)
+            if (holdCouter > 0.25f * GameRes.GameSpeed)
             {
                 if (!infoPanel.IsVisible())
                     infoPanel.Show();

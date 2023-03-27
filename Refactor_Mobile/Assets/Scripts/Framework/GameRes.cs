@@ -370,7 +370,7 @@ public static class GameRes
 
         Reverse = false;
 
-        GroundSize = LevelManager.Instance.CurrentLevel.ModeType == ModeType.Challenge ? 15 : 21;
+        GroundSize = LevelManager.Instance.CurrentLevel.ModeType == ModeType.Challenge ? 15 : 25;
         TrapDistanceAdjust = 0;
         EnemyFrostResist = 0;
         TurretFrostResist = 0f;

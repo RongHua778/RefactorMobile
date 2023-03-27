@@ -6,10 +6,15 @@ public abstract class IUserInterface : MonoBehaviour
 {
     protected GameObject m_RootUI;
     protected bool m_Active = false;
-
-    public virtual void Initialize()
+    protected Animator anim;
+    protected virtual void Awake()
     {
         m_RootUI = transform.Find("Root").gameObject;
+        anim = this.GetComponent<Animator>();
+    }
+    public virtual void Initialize()
+    {
+
     }
     public bool IsVisible()
     {

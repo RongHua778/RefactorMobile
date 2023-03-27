@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UIMode : IUserInterface
 {
-    private Animator m_Anim;
 
     [SerializeField] UIStandardMode m_UIStandardMode = default;
     [SerializeField] UIEndlessMode m_UIEndlessMode = default;
@@ -15,7 +14,6 @@ public class UIMode : IUserInterface
     public override void Initialize()
     {
         base.Initialize();
-        m_Anim = this.GetComponent<Animator>();
         m_UIStandardMode.Initialize();
         m_UIEndlessMode.Initialize();
         m_UIChallengeMode.Initialize();
@@ -29,13 +27,13 @@ public class UIMode : IUserInterface
     public override void Show()
     {
         base.Show();
-        m_Anim.SetBool("OpenLevel", true);
+        anim.SetBool("OpenLevel", true);
 
     }
 
     public override void ClosePanel()
     {
-        m_Anim.SetBool("OpenLevel", false);
+        anim.SetBool("OpenLevel", false);
         MenuManager.Instance.ShowMenu();
     }
 

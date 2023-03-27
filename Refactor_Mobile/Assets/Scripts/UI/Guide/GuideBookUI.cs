@@ -6,14 +6,11 @@ using UnityEngine.UI;
 public class GuideBookUI :IUserInterface
 {
     [SerializeField] Toggle[] tabs = default;
-    Animator anim;
 
     public override void Initialize()
     {
         base.Initialize();
-        anim = this.GetComponent<Animator>();
         ShowPage(0);
-        
     }
 
     public override void Show()

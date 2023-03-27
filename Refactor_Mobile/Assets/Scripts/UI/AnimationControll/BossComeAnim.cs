@@ -5,16 +5,10 @@ using UnityEngine.UI;
 
 public class BossComeAnim : IUserInterface
 {
-    private Animator anim;
     //[SerializeField] Image lineMaterial1 = default;
     [SerializeField] Material material = default;
     private Vector2 flowSpeed = new Vector2(0.2f, 0);
 
-    public override void Initialize()
-    {
-        base.Initialize();
-        anim = this.GetComponent<Animator>();
-    }
 
     public override void Show()
     {

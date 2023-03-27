@@ -10,7 +10,6 @@ public class BluePrintShopUI : IUserInterface
 {
     private bool isRefreshing = false;
     bool Showing = false;//¿ØÖÆ¶¯»­
-    Animator anim;
     [SerializeField] private GameObject ShopBtnObj;
 
     [SerializeField] BluePrintGrid bluePrintGridPrefab = default;
@@ -59,7 +58,6 @@ public class BluePrintShopUI : IUserInterface
 
     public override void Initialize()
     {
-        anim = this.GetComponent<Animator>();
         CurrentLock = 0;
         RefactorTrigger = new TempWord(TempWordType.Refactor, 0);
         perfectInfo.SetContent(GameMultiLang.GetTraduction("PERFECTINFO"));

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TileTips : IUserInterface
 {
-    [SerializeField] protected Animator anim;
     [SerializeField] protected Image Icon = default;
     [SerializeField] protected TextMeshProUGUI Name = default;
     [SerializeField] protected TextMeshProUGUI Description = default;

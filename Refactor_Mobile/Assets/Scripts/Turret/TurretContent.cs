@@ -21,8 +21,6 @@ public abstract class TurretContent : ConcreteContent
     protected AudioClip ShootClip;
     [SerializeField] protected ParticleSystem ShootEffect = default;
 
-    private const float invisibleDistance = 3.5f;
-
 
     protected override void Awake()
     {
@@ -95,13 +93,7 @@ public abstract class TurretContent : ConcreteContent
                 targetList.Remove(Target[i]);
                 Target.Remove(Target[i]);
             }
-            //else if (Target[i].Enemy.DamageStrategy.InVisible)
-            //{
-            //    if (Vector2.Distance(Target[i].Position, transform.position) > invisibleDistance)
-            //    {
-            //        Target.Remove(Target[i]);
-            //    }
-            //}
+
         }
         if (Target.Count < Strategy.FinalTargetCount)
             return false;

@@ -9,14 +9,8 @@ public class GoldKeeperAnim : IUserInterface
     [SerializeField] Material lineMaterial = default;
     [SerializeField] Material speedMaterial = default;
     [SerializeField] Material bonusMaterial = default;
-    private Animator anim;
     private Vector2 flowSpeed = new Vector2(0.2f, 0);
 
-    public override void Initialize()
-    {
-        base.Initialize();
-        anim = this.GetComponent<Animator>();
-    }
 
     public override void Show()
     {
